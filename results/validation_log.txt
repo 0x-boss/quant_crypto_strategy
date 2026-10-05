@@ -1,0 +1,84 @@
+
+====================================================================================================
+A. Sub-period / start-date sensitivity (same rules, nothing re-fitted)
+====================================================================================================
+from 2016: CAGR  60.5%  Sharpe 1.73  MaxDD  -31.1%  Vol 30.0%  Calmar 1.94
+from 2017: CAGR  56.6%  Sharpe 1.66  MaxDD  -31.1%  Vol 29.6%  Calmar 1.82
+from 2018: CAGR  35.3%  Sharpe 1.21  MaxDD  -31.1%  Vol 28.3%  Calmar 1.13
+from 2019: CAGR  43.1%  Sharpe 1.35  MaxDD  -31.1%  Vol 29.8%  Calmar 1.38
+from 2020: CAGR  42.0%  Sharpe 1.32  MaxDD  -31.1%  Vol 30.0%  Calmar 1.35
+from 2021: CAGR  25.6%  Sharpe 0.94  MaxDD  -31.1%  Vol 28.5%  Calmar 0.82
+from 2022: CAGR  19.1%  Sharpe 0.78  MaxDD  -31.1%  Vol 27.2%  Calmar 0.61
+from 2023: CAGR  29.4%  Sharpe 0.99  MaxDD  -31.1%  Vol 30.8%  Calmar 0.94
+2016-2017 (bubble)  : ret   982.1%  Sharpe  3.46  MaxDD  -21.6%
+2018 bear           : ret   -10.1%  Sharpe -0.82  MaxDD  -20.7%
+2019-2021           : ret   556.8%  Sharpe  2.06  MaxDD  -21.0%
+2022 bear           : ret   -10.3%  Sharpe -2.02  MaxDD  -11.2%
+2023-2024           : ret   125.6%  Sharpe  1.35  MaxDD  -31.1%
+2025-26             : ret     6.3%  Sharpe  0.30  MaxDD  -21.2%
+rolling 1y windows: {'frac_positive': 0.86, 'frac_over_50pct': 0.53, 'median_ret': 0.514, 'p10_ret': -0.058, 'worst_ret': -0.259, 'sharpe_median': 1.576, 'frac_sharpe_over_1_5': 0.534}
+
+====================================================================================================
+B. Stress tests (full sample from 2016)
+====================================================================================================
+base (10bp BTC/ETH one-way)     : CAGR  60.5%  Sharpe 1.73  MaxDD  -31.1%  Vol 30.0%  Calmar 1.94
+costs x2 (20bp)                 : CAGR  58.5%  Sharpe 1.68  MaxDD  -32.2%  Vol 30.0%  Calmar 1.82
+costs x4 (40bp)                 : CAGR  54.1%  Sharpe 1.59  MaxDD  -34.3%  Vol 30.0%  Calmar 1.58
++1 day execution lag            : CAGR  57.9%  Sharpe 1.65  MaxDD  -38.1%  Vol 30.5%  Calmar 1.52
++2 day execution lag            : CAGR  54.5%  Sharpe 1.56  MaxDD  -42.5%  Vol 31.1%  Calmar 1.28
+financing 20%                   : CAGR  60.2%  Sharpe 1.72  MaxDD  -31.2%  Vol 30.0%  Calmar 1.93
+no leverage (cap 1.0)           : CAGR  49.1%  Sharpe 1.71  MaxDD  -26.6%  Vol 25.3%  Calmar 1.85
+costs x2 + 1d lag + fin 20%     : CAGR  55.4%  Sharpe 1.59  MaxDD  -40.1%  Vol 30.6%  Calmar 1.38
+idle cash earns 4%              : CAGR  64.6%  Sharpe 1.81  MaxDD  -30.1%  Vol 30.0%  Calmar 2.14
+
+====================================================================================================
+C. Placebo: circularly shifted positions (timing destroyed, exposure profile kept)
+====================================================================================================
+true Sharpe 1.72 | placebo mean 0.82, 95th pct 1.26, max 1.54 | p = 0.0000
+
+====================================================================================================
+D. Block-bootstrap (20d blocks, 2000 draws), full sample
+====================================================================================================
+{
+ "sharpe_ci90": [
+  1.1500333441899704,
+  2.3149825984628913
+ ],
+ "p_sharpe_gt_1": 0.9815,
+ "p_sharpe_gt_1_5": 0.755,
+ "cagr_ci90": [
+  0.35610268854850646,
+  0.9533539886644935
+ ],
+ "maxdd_ci90": [
+  -0.4865512811486772,
+  -0.2463302437196442
+ ]
+}
+from 2018: Sharpe 90% CI [0.55, 1.78]  P(Sharpe>1)=0.69
+from 2022: Sharpe 90% CI [-0.05, 1.66]  P(Sharpe>1)=0.33
+
+====================================================================================================
+E. Neighbouring-parameter plateau (each row changes ONE choice)
+====================================================================================================
+base                          : CAGR  60.5%  Sharpe 1.73  MaxDD  -31.1%  Vol 30.0%  Calmar 1.94 | from 2018: Sharpe 1.21 CAGR  35.3%
+gates (200,)                  : CAGR  60.2%  Sharpe 1.71  MaxDD  -30.2%  Vol 30.1%  Calmar 1.99 | from 2018: Sharpe 1.17 CAGR  33.8%
+gates (100,)                  : CAGR  55.5%  Sharpe 1.61  MaxDD  -35.7%  Vol 30.2%  Calmar 1.56 | from 2018: Sharpe 1.13 CAGR  32.8%
+gates (50,100,150,200,250)    : CAGR  61.3%  Sharpe 1.75  MaxDD  -31.9%  Vol 29.8%  Calmar 1.92 | from 2018: Sharpe 1.22 CAGR  35.5%
+vol spans (30,)               : CAGR  60.6%  Sharpe 1.73  MaxDD  -31.3%  Vol 30.1%  Calmar 1.94 | from 2018: Sharpe 1.20 CAGR  35.1%
+vol spans (10,20,30,60,90)    : CAGR  60.5%  Sharpe 1.73  MaxDD  -31.8%  Vol 30.0%  Calmar 1.90 | from 2018: Sharpe 1.18 CAGR  34.2%
+signal mom only               : CAGR  66.7%  Sharpe 1.85  MaxDD  -28.2%  Vol 30.2%  Calmar 2.37 | from 2018: Sharpe 1.26 CAGR  37.3%
+signal sma only               : CAGR  63.3%  Sharpe 1.78  MaxDD  -33.1%  Vol 30.0%  Calmar 1.91 | from 2018: Sharpe 1.17 CAGR  34.0%
+signal ewmac only             : CAGR  53.1%  Sharpe 1.57  MaxDD  -39.7%  Vol 30.0%  Calmar 1.34 | from 2018: Sharpe 1.03 CAGR  28.5%
+target vol 0.25               : CAGR  42.0%  Sharpe 1.64  MaxDD  -26.7%  Vol 23.0%  Calmar 1.57 | from 2018: Sharpe 1.10 CAGR  23.8%
+target vol 0.30               : CAGR  50.8%  Sharpe 1.67  MaxDD  -28.2%  Vol 26.7%  Calmar 1.80 | from 2018: Sharpe 1.13 CAGR  28.5%
+target vol 0.40               : CAGR  65.5%  Sharpe 1.70  MaxDD  -33.1%  Vol 32.8%  Calmar 1.98 | from 2018: Sharpe 1.18 CAGR  37.5%
+max lev 1.0                   : CAGR  49.1%  Sharpe 1.71  MaxDD  -26.6%  Vol 25.3%  Calmar 1.85 | from 2018: Sharpe 1.18 CAGR  29.0%
+max lev 2.0                   : CAGR  62.3%  Sharpe 1.67  MaxDD  -35.1%  Vol 31.9%  Calmar 1.78 | from 2018: Sharpe 1.15 CAGR  34.7%
+band 0                        : CAGR  58.3%  Sharpe 1.68  MaxDD  -31.3%  Vol 30.0%  Calmar 1.86 | from 2018: Sharpe 1.16 CAGR  33.2%
+BTC only                      : CAGR  50.0%  Sharpe 1.46  MaxDD  -31.7%  Vol 31.1%  Calmar 1.58 | from 2018: Sharpe 0.99 CAGR  28.0%
+-> Sharpe across 16 neighbours: min 1.46, median 1.70, max 1.85
+
+====================================================================================================
+F. Walk-forward selection (expanding window, choose on trailing 2y Sharpe, hold 6 months)
+====================================================================================================
