@@ -26,11 +26,13 @@ ALIAS = {"avaxc": "avax", "vet_eth": "vet", "shib_eth": "shib", "matic_eth": "ma
          "icx_eth": "icx", "qtum_eth": "qtum", "leo_eth": "leo", "lrc_eth": "lrc", "ae_eth": "ae"}
 
 
-def load_panels(start: str | None = None, end: str | None = None):
-    """Return (price, volume) DataFrames (date x asset) restricted to tradable candidates."""
+def load_panels(start: str | None = None, end: str | None = None, include: tuple = ()):
+    """Return (price, volume) DataFrames (date x asset) restricted to tradable candidates.
+
+    ``include`` re-admits names that are excluded by default (e.g. ``("paxg",)`` for tokenised gold)."""
     P = pd.read_parquet(os.path.join(DATA_DIR, "panel_price.parquet"))
     V = pd.read_parquet(os.path.join(DATA_DIR, "panel_volume.parquet"))
-    cols = [c for c in P.columns if c not in EXCLUDE]
+    cols = [c for c in P.columns if c not in EXCLUDE or c in include]
     P = P[cols]
     Vm = pd.DataFrame(index=P.index, columns=cols, dtype="float64")
     for c in cols:

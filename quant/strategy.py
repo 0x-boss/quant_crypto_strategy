@@ -63,14 +63,14 @@ def target_weights(P: pd.DataFrame, R: pd.DataFrame, cfg: Config = Config()) -> 
     """Target weights decided at each day's close (fractions of NAV) - what a live system would send."""
     U = _universe(P, cfg.assets)
     return build_weights_bagged(P, R, U, gates=cfg.gates, signals=cfg.signals, vol_spans=cfg.vol_spans,
-                                asset_vol_tgt=cfg.asset_vol_tgt, n_min=len(cfg.assets),
+                                asset_vol_tgt=cfg.asset_vol_tgt, n_min=2,
                                 target_vol=cfg.target_vol, max_lev=cfg.max_lev, max_gross=cfg.max_gross, port_span=cfg.port_span,
                                 engine_kwargs=dict(tier1_bps=cfg.tier1_bps, other_bps=cfg.other_bps,
-                                                   fin_rate=cfg.fin_rate, band=cfg.band))
+                                                   fin_rate=cfg.fin_rate, cash_rate=cfg.cash_rate, band=cfg.band))
 
 
 def run(cfg: Config = Config(), details: bool = False):
-    P, _ = load_panels()
+    P, _ = load_panels(include=tuple(cfg.assets))
     R = P.pct_change(fill_method=None)
     W = target_weights(P, R, cfg)
     out = run_backtest(W, R, return_details=details, **cfg.engine_kwargs())

@@ -14,10 +14,11 @@ battery of anti-overfitting tests.
 >
 > The three targets are met on the full 10-year history and on 2017+, with a drawdown roughly one third of
 > BTC's. They are **not** met on windows that exclude the 2016-17 bubble (2018+: Sharpe 1.2, CAGR 35 %) or in the
-> post-2022 regime (Sharpe 0.8). I could not find - despite ~180 backtests of alternatives (see
+> post-2022 regime (Sharpe 0.8). I could not find - despite ~350 backtests of alternatives (see
 > [`research/RESEARCH_LOG.md`](research/RESEARCH_LOG.md)) - any robust, honestly-testable edge that lifts the
 > recent regime to Sharpe 1.5 with the data available (daily closes, no funding/order-book data).
 > I would rather report that than present a curve-fit number. Expect forward Sharpe nearer 1.0-1.3 than 1.7.
+> **Round 2** (see below) attacked the 2022-26 weakness directly: the hindsight ceiling of this strategy family in that window is Sharpe ~1.2.
 
 ![equity](results/equity_drawdown.png)
 ![years](results/yearly_monthly.png)
@@ -59,6 +60,43 @@ Calendar years: 2016 +104 % | 2017 +432 % | 2018 -10 % | 2019 +50 % | 2020 +175 
 
 Sharpe is ~flat across the dial: the target is a pure risk-appetite choice. Return and drawdown scale together.
 
+## Round 2 - attacking the weak 2022-2026 window (what I tried, what is honest)
+
+2022-26 (Sharpe 0.78) is weak because BTC itself is weak there (buy&hold Sharpe 0.48) and only ~4 independent trend legs occurred
+(the system captured the big ones - e.g. +103 % vs BTC's +101 % in Oct-2023 -> Jul-2024 - and bleeds in many small chop episodes).
+I ran ~170 further backtests aimed at this window (full list: [`research/RESEARCH_LOG.md`](research/RESEARCH_LOG.md) #28-39).
+
+**1. The ceiling is ~1.2, even with hindsight.** I ran 105 single long-only trend rules (SMA / momentum / EWMAC / Donchian, 9-12 speeds each,
+with and without a 100/200-day gate) on BTC+ETH, vol-targeted, and looked at the *best-in-hindsight* 2022-26 Sharpe:
+**max 1.22**, 90th percentile 0.89, median 0.60 (`results/ceiling_grid.csv`). The rank of a rule in 2018-21 is only 0.26-correlated with its
+rank in 2022-26, so "pick the winner" is noise. **Sharpe 1.5 in this window is not reachable by this family of strategies - not even by overfitting it.**
+
+**2. What failed again (adding to round 1):** rebounds after liquidation cascades (there is none - 5-day forward returns are *negative*),
+shock circuit-breakers, stretch/overbought trims, rising-SMA / golden-cross / 365-day gates, trend-quality (slope t-stat) signals, chandelier exits,
+smoothing and hysteresis, BTC-heavier weights, ETH relative-strength gating, walk-forward adaptive speed tilting, and **a gated bear-regime short sleeve**
+(+47 % in 2018 and +6 % in 2022, but it gives it all back in bull years: Sharpe 0.58 vs 0.78 in 2022-26).
+One candidate (SMA50 second gate + "ETH only when BTC is up") scored **1.03** in 2022-26 - and **I did not adopt it**: the neighbours (SMA20/30/75/none)
+score 0.65/0.77/0.91/0.80, i.e. it is a spike, exactly the overfitting this task forbids.
+
+**3. Increments that do have an economic rationale** (config switches, not the default):
+
+| Variant (2022-01 -> 2026-05) | CAGR | Sharpe | Sortino | MaxDD | Honesty grade |
+|---|---|---|---|---|---|
+| **A. TrendCore core (default)** | 19.1 % | 0.78 | 0.89 | -31.1 % | no hindsight |
+| B. + 4 % yield on idle cash (`Config(cash_rate=0.04)`) | 22.1 % | 0.87 | 0.99 | -30.1 % | real, data-grounded: sDAI earned 4.2 %, sUSDe 6.5 % in 2025. Sharpe here is total-return (rf = 0) |
+| C. + tokenised gold as equal-risk member (`Config(assets=("btc","eth","paxg"))`) | 33.3 % | 1.21 | 1.58 | -32.6 % | **hindsight-flavoured**: gain comes from 2025 (+74 % vs +9 %); it *lowers* 2020-21 (Sharpe 2.55 -> 1.91), deepens full-period DD (-31 % -> -38 %), PAXG volume was only $3-8M/day until 2025 |
+| D. B + C | 34.6 % | 1.25 | 1.63 | -32.1 % | as C |
+
+![round2](results/round2_variants.png)
+
+I would run **A or B**. C/D are shown because you asked for a better 2022-26 number; I expect gold to add something like +0.05-0.10 Sharpe
+*going forward*, not the +0.43 it shows in-sample.
+
+**4. Bottom line.** With daily closes only, 2022-26 Sharpe ~0.8-0.9 is what the evidence supports; the hindsight ceiling is 1.2 and the best graded
+variant is 1.25. Statistically, using only the 2022+ data, P(true Sharpe > 1.5) is about 6 %. A genuinely different return source - funding-rate/basis carry,
+or intraday data - is the realistic way to a 1.5. Both are blocked here (every market-data host returns 403; PyPI/npm have no bundled datasets).
+If you allow `fapi.binance.com`, `data.binance.vision` (or Bybit/OKX equivalents) in the environment's Network access settings, the next step is a carry sleeve.
+
 ## Strategy (all choices canonical / a-priori; nothing optimised on returns)
 
 1. **Universe** - the two deepest-liquidity assets, BTC and ETH.
@@ -86,13 +124,13 @@ All of this is reproducible with `python validate.py` -> [`results/validation.js
 | **Pre-sample test** - identical BTC-only rule on **2011-2015**, never examined during development | Sharpe 1.8-2.0 at 10-60 bp costs, DD -35..-40 % vs -84 % buy&hold; also positive (Sharpe 0.2-0.4) in the 2014-15 bear/sideways phase where B&H was ~0. |
 | **Cost / lag / financing stress** | 4x costs: 54.1 % / 1.59; +2 days execution lag: 54.5 % / 1.56 (DD -42.5 %); 2x costs + 1d lag + 20 % financing: 55.4 % / 1.59 (DD -40.1 %); **no leverage at all (cap 1.0): 49.1 % / 1.71 / DD -26.6 %**. |
 | **Block bootstrap** (20-day blocks) | Sharpe 90 % CI [1.15, 2.31], P(Sharpe>1)=98 %, P(>1.5)=76 %; CAGR CI [36 %, 95 %]; MaxDD CI [-49 %, -25 %]. |
-| **Deflated Sharpe** (Bailey-Lopez de Prado) with 150 trials | 1.00 for Sharpe-dispersion 0.25, 0.90 for a very pessimistic 0.5. |
+| **Deflated Sharpe** (Bailey-Lopez de Prado) with ~350 trials | 1.00 for Sharpe-dispersion 0.25, 0.80 for a pessimistic 0.5 (full sample). For **2022+ alone**: P(true Sharpe > 1) = 32 %, P(> 1.5) = **6 %**. |
 | **Cross-asset generalisation** - same rule on 64 other liquid assets it was never designed on | Sharpe beat buy&hold in only **50 %** (median 0.33 vs 0.30) - *no Sharpe edge on alts* - but max drawdown was shallower in **100 %** (median -44 % vs -97 %) and median CAGR +5 % vs -26 %. The rule is a robust *risk* control everywhere; the Sharpe uplift is specific to BTC/ETH. |
 
 **Where I do not claim robustness (please weigh these):**
 
 * Design decisions (BTC+ETH only, the 200-day gate, no alts/shorts/ML) were made *after* looking at results on this
-  same history; the ~180-trial ledger is in `research/RESEARCH_LOG.md`. The 2011-15 pre-sample and the cross-asset
+  same history; the ~350-trial ledger is in `research/RESEARCH_LOG.md`. The 2011-15 pre-sample and the cross-asset
   test are the nearest thing to true out-of-sample.
 * Performance is **regime dependent**: strategy Sharpe is roughly 1.6-1.7x BTC's own Sharpe in every window
   (1.08 -> 1.73 full, 0.48 -> 0.78 since 2022). If BTC's forward drift is weak, so is the strategy's absolute Sharpe.
