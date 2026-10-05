@@ -3,7 +3,7 @@
 Everything below was run on the same real data (CoinMetrics daily `PriceUSD`, 2010-2026-05-23).  Metrics
 are net of costs.  "Dev" = 2016/17-2021, "Hold" = 2022-2026 unless stated.  The ledger exists so the
 number of trials behind the final design is on the record (see *Deflated Sharpe* in the README) and so
-the dead ends are visible, not just the winner.  ~170 backtests were run in total.
+the dead ends are visible, not just the winner.  ~180 backtests were run in total.
 
 | # | Script | Idea | Outcome |
 |---|--------|------|---------|
@@ -33,7 +33,9 @@ the dead ends are visible, not just the winner.  ~170 backtests were run in tota
 | 23 | `23_band.py` | 0-10 % no-trade band | Turnover 17x -> 13x/yr at no cost. **Adopted 5 %.** |
 | 24 | `24_leadlag.py` | Alt-basket -> BTC/ETH next-day lead-lag | Sign flips across regimes. **Rejected.** |
 | 25 | `25_presample.py` | Same rule, BTC-only, **2011-2015 (never examined)** | Sharpe 1.8-2.0 at 10-60 bp costs, DD -35..-40 % vs -84 % B&H. Supports generalisation. |
-| - | (inline) | Day-of-week / month effects | |t| < 2.5, unstable. **Rejected.** |
+| 26 | `26_risk_dial_table.py` | Vol target 15-50 % with the final strategy | Sharpe flat 1.6-1.73; return and DD scale together (table in README). |
+| 27 | `27_whipsaw_control.py` | EWMA-smoothed score (span 3/7/14), Schmitt-trigger hysteresis (3 settings) | Smoothing lowers Sharpe (1.66-1.69 vs 1.73); hysteresis +/-0.02 = noise. **Rejected, baseline unchanged.** |
+| - | (inline) | Day-of-week / month effects | abs(t) < 2.5, unstable. **Rejected.** |
 
 ## What this says
 
