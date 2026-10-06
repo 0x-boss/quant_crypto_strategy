@@ -73,3 +73,16 @@ Acceptance: higher CAGR and Sharpe >= baseline in BOTH eras and max drawdown no 
 ### Round D result (recorded)
 Q1: idle months are predictable from exposure at month start (31 of 36 idle months flagged; 8 false alarms; idle-start months: mean +0.9 %, worst -0.8 %); underperformance is NOT: 15 loss months worse than -3 %, 9 began >50 % invested, 6 partly in, 0 idle. Strategy < BTC in 33 of 35 big BTC-up months (by design, ~37 % upside capture).
 Q2: gold on idle capital FAILS acceptance. G1 always-PAXG: Sharpe 1.24 / 1.53 (era1 / era2) vs baseline 1.56 / 1.17, DD -29.2 % vs -19.2 %. G2 trend-gated: 1.12 / 1.51, DD -32.5 %. Gain is entirely gold's 2024-25 rally (+30 %, +65 %); era1 worse; drawdown rises ~10 pts. Not adopted.
+
+---
+## Round E (written BEFORE running): SPY < 200-EMA as a risk-off regime -> hold gold   (user idea; spot-only)
+Regime: s = 1 when SPY close < EMA(200) of SPY closes (pandas ewm span=200, adjust=False; SPY daily closes from Yahoo). Known after the US close of
+day t-1, applied to the crypto/gold period starting 00:00 UTC of day t (weekends/holidays carry the last value). No parameter tuning (200 as specified).
+Part A - does the mechanism exist? (long history, bootstrap CIs, sub-periods)
+  A1 gold (GLD, 2004-2026): return and Sharpe when s=1 vs s=0.   A2 BTC (2014-2026): same.   A3 ETH (2016-2026).
+  Mechanism is supported only if gold does better AND crypto does worse when s=1, with the sign stable across sub-periods.
+Part B - strategy variants on the final BTC+ETH strategy (6h, spot-only), GLD as gold (PAXG variant for crypto-venue implementability):
+  S0 baseline | S1 crypto x0 when s=1 (cash; no gold) | S2 crypto unchanged, idle capital -> gold when s=1 | S3 when s=1 crypto x0 and 100 % gold.
+Costs: 10 bp crypto, 5 bp GLD (25 bp PAXG) on regime-flip turnover.  Eras: 2018-03..2022-12 and 2023-01..2026-10.
+Acceptance: Part A supports the mechanism AND the variant raises full-period Sharpe and lowers max drawdown AND is not worse in era 2 (Sharpe >= baseline - 0.02)
+AND positive effect in era 1.  Trials: 3 variants (S1-S3) + PAXG repeat of the winner only.
