@@ -217,8 +217,8 @@ drawdown overlay (cuts CAGR as much as DD), efficiency-ratio filter (unstable). 
 |---|---|---|
 | C | Signal on BTC, hold ETH / SOL / alt basket instead | Better Sharpe in 2020-22 only; survivor-corrected alt basket is worse than BTC (17.1 % / 0.77 vs 28.8 % / 1.19); SOL gains are hindsight |
 | D | Predict idle / losing months; park idle capital in spot gold (PAXG) | Idle months are predictable from exposure (31 of 36), losing months are not; gold adds Sharpe only through its 2024-25 rally and deepens DD by ~10 pts |
-| F | Participation: scale up when OI / funding show light positioning; constant BTC core | Crowding both ways: no effect (OI) or worse (funding). A BTC core is dominated by simply raising `ASSET_VOL` (see the risk dial above) |
 | E | SPY below its 200-day EMA -> hold gold (GLD) | Mechanism not supported (gold's edge flips sign across sub-periods; ETH/BTC are not reliably worse in those spells); the strategy is already ~flat then (9 % average exposure). Best variant 1.36 -> 1.42 Sharpe but max DD -20 % -> -27 % |
+| F | Participation: scale up when OI / funding show light positioning; constant BTC core | Crowding both ways: no effect (OI) or worse (funding). A BTC core is dominated by simply raising `ASSET_VOL` (see the risk dial above) |
 
 ## Caveats for real trading
 
