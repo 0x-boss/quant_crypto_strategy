@@ -30,7 +30,7 @@ def universe(C, QV, top_n=20, min_hist=90):
     adv = adv.where(ok & C.notna())
     adv = adv.drop(columns=[c for c in adv.columns if c in NON_CRYPTO])
     rk = adv.rank(axis=1, ascending=False)
-    return (rk <= top_n)
+    return (rk <= top_n).reindex(columns=C.columns, fill_value=False)
 
 
 def scores(C, F, name):
