@@ -206,6 +206,14 @@ on-chain & exchange-flow features (weak, and retro-labelled data = hindsight ris
 net Sharpe negative), 1-5 day fast momentum/lead-lag/day-of-week effects, tokenised-gold sleeve (hindsight-driven),
 drawdown overlay (cuts CAGR as much as DD), efficiency-ratio filter (unstable). Details in the ledger.
 
+**Pre-registered follow-ups on the spot-only version** (rules written in `research/PREREGISTRATION.md` before running; all rejected):
+
+| Round | Idea | Outcome (2018-03..2026-10 unless stated) |
+|---|---|---|
+| C | Signal on BTC, hold ETH / SOL / alt basket instead | Better Sharpe in 2020-22 only; survivor-corrected alt basket is worse than BTC (17.1 % / 0.77 vs 28.8 % / 1.19); SOL gains are hindsight |
+| D | Predict idle / losing months; park idle capital in spot gold (PAXG) | Idle months are predictable from exposure (31 of 36), losing months are not; gold adds Sharpe only through its 2024-25 rally and deepens DD by ~10 pts |
+| E | SPY below its 200-day EMA -> hold gold (GLD) | Mechanism not supported (gold's edge flips sign across sub-periods; ETH/BTC are not reliably worse in those spells); the strategy is already ~flat then (9 % average exposure). Best variant 1.36 -> 1.42 Sharpe but max DD -20 % -> -27 % |
+
 ## Caveats for real trading
 
 * Data are CoinMetrics daily reference rates (00:00 UTC), not exchange fills. 10 bp one-way for BTC/ETH is realistic for

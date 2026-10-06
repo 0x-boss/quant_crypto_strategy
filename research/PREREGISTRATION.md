@@ -86,3 +86,12 @@ Part B - strategy variants on the final BTC+ETH strategy (6h, spot-only), GLD as
 Costs: 10 bp crypto, 5 bp GLD (25 bp PAXG) on regime-flip turnover.  Eras: 2018-03..2022-12 and 2023-01..2026-10.
 Acceptance: Part A supports the mechanism AND the variant raises full-period Sharpe and lowers max drawdown AND is not worse in era 2 (Sharpe >= baseline - 0.02)
 AND positive effect in era 1.  Trials: 3 variants (S1-S3) + PAXG repeat of the winner only.
+
+### Round E result (recorded; `research/56_spy_gold.py`, `results/spy_gold.{log,json}`, `spy_gold_{episodes,years,daily}.csv`)
+Part A (mechanism): **not supported**. Gold (GLD 2004-11..2026-10): s=1 +13.0 %/yr vs s=0 +11.2 % (diff +1.9 pts, 90 % block-bootstrap CI [-17.6, +21.7]; Sharpe 0.54 vs 0.68);
+sub-periods 2004-10 -35.3 pts, 2011-16 +41.2, 2017-21 +13.7, 2022-26 +6.1 -> sign not stable. BTC (2014-): -54.4 pts (CI [-139.5, +29.9]); 2014-16 -17.9, 2017-19 -346, 2020-22 -99, **2023-26 +219** -> not stable.
+ETH (2016-): **+53.8 pts** (crypto better in s=1; CI [-130.6, +243.0]); the first ETH block holds 2016 only. Gold-better = False, BTC-worse = False, ETH-worse = False -> mechanism fails (it also fails under a looser "full-sample sign" reading because of ETH).
+Part B (2018-03..2026-10, Sharpe era1 / era2 / full, max DD): S0 1.49 / 1.17 / 1.36, -20.2 % | S1 1.64 / 0.90 / 1.33, -19.9 % | S2 1.45 / 1.41 / 1.43, -30.5 % | S3 1.59 / 1.18 / 1.42, -27.0 %.
+Acceptance (all conditions): S1 fails (full Sharpe down, era 2 -0.27), S2 fails (DD, era 1 Sharpe down), S3 fails (DD +6.8 pts worse), and Part A fails for all -> **0 of 3 accepted; no PAXG repeat**.
+Context: s=1 on 23 % of trading days; 35 runs since 2018-03 (27 lasting < 20 days, ~8 flips per year); the baseline had mean exposure 9 % in s=1 days vs 32 % in s=0 days (+14 % compounded in s=1 days vs +890 %).
+Stress (not trials): gold entered 1 / 3 days after the signal -> S3 full Sharpe 1.49 / 1.44; gold cost 25 bp -> 1.35.
