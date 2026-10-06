@@ -23,6 +23,7 @@ D = os.path.join(os.path.dirname(__file__), "..", "data", "intraday")
 
 @dataclass
 class IConfig:
+    assets: tuple = ("btc", "eth")
     k: int = 4                      # bars per day (decisions every 24/k hours)
     rv_vol: bool = True             # hourly realised-vol sizing
     gates: tuple = (100, 150, 200)
@@ -32,6 +33,7 @@ class IConfig:
     max_lev: float = 1.5
     max_gross: float = 2.0
     tier1_bps: float = 10.0
+    other_bps: float = 25.0        # one-way cost for assets outside BTC/ETH (e.g. SOL)
     fin_rate: float = 0.10
     band: float = 0.05
     lag_bars: int = 0
@@ -44,8 +46,8 @@ class IConfig:
         return asdict(self)
 
 
-def hourly_prices() -> pd.DataFrame:
-    return pd.concat({a: pd.read_parquet(f"{D}/{s}_spot_1h.parquet")["c"] for a, s in [("btc", "BTCUSDT"), ("eth", "ETHUSDT")]}, axis=1)
+def hourly_prices(assets=("btc", "eth")) -> pd.DataFrame:
+    return pd.concat({a: pd.read_parquet(f"{D}/{a.upper()}USDT_spot_1h.parquet")["c"] for a in assets}, axis=1)
 
 
 def oi_multiplier(index: pd.DatetimeIndex, strength: float) -> pd.Series:
@@ -62,9 +64,10 @@ def target_weights_bars(px1h: pd.DataFrame, cfg: IConfig):
     old_ann = S.ANN
     S.ANN = 365 * k
     try:
-        P = px1h.resample(f"{24 // k}h").last().dropna()
+        px1h = px1h[list(cfg.assets)]
+        P = px1h.resample(f"{24 // k}h").last().dropna(how="all")
         R = P.pct_change()
-        ek = dict(band=cfg.band, tier1_bps=cfg.tier1_bps, fin_rate=cfg.fin_rate / k)
+        ek = dict(band=cfg.band, tier1_bps=cfg.tier1_bps, other_bps=cfg.other_bps, fin_rate=cfg.fin_rate / k)
         if cfg.rv_vol:
             rv2 = (np.log(px1h).diff() ** 2).resample(f"{24 // k}h").sum().reindex(P.index)
             vol_fn = lambda PP, span=30: (rv2.ewm(span=span, min_periods=10).mean() ** 0.5) * np.sqrt(365 * k)
@@ -79,7 +82,7 @@ def target_weights_bars(px1h: pd.DataFrame, cfg: IConfig):
         for g in cfg.gates:
             f = (f0 * (P > P.rolling(g * k).mean())).fillna(0.0)
             for vs in cfg.vol_spans:
-                w = (f * cfg.asset_vol_tgt / vol_fn(P, vs * k)).div(2).fillna(0.0).clip(upper=1.0)
+                w = (f * cfg.asset_vol_tgt / vol_fn(P, vs * k)).div(P.notna().sum(axis=1).clip(lower=1), axis=0).fillna(0.0).clip(upper=1.0)
                 acc = w if acc is None else acc + w
                 cnt += 1
         W = acc / cnt
@@ -96,7 +99,7 @@ def target_weights_bars(px1h: pd.DataFrame, cfg: IConfig):
 
 def run(cfg: IConfig = IConfig(), px1h: pd.DataFrame | None = None):
     """Daily return series (net of costs) of TrendCore-I; also returns components."""
-    px1h = hourly_prices() if px1h is None else px1h
+    px1h = hourly_prices(cfg.assets) if px1h is None else px1h
     P, R, W, ek = target_weights_bars(px1h, cfg)
     r, det = run_backtest(W, R, lag=cfg.lag_bars, return_details=True, **ek)
     daily = lambda x: (1 + x).groupby(x.index.date).prod() - 1
@@ -106,7 +109,7 @@ def run(cfg: IConfig = IConfig(), px1h: pd.DataFrame | None = None):
     gross_d.index = pd.to_datetime(gross_d.index)
     out = {"trend": tr, "gross": gross_d}
     if cfg.carry:
-        car = pd.concat([carry_returns("BTCUSDT", margin=cfg.carry_margin), carry_returns("ETHUSDT", margin=cfg.carry_margin)], axis=1).mean(axis=1)
+        car = pd.concat([carry_returns(a.upper() + "USDT", margin=cfg.carry_margin) for a in cfg.assets], axis=1).mean(axis=1)
         car = car.reindex(tr.index).fillna(0.0)
         out["carry"] = car
         out["total"] = tr + (1 - gross_d.clip(upper=1.0)).reindex(tr.index).fillna(1.0) * car
