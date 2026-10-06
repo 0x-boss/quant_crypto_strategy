@@ -1,0 +1,9 @@
+FINAL 2018-03-01..2026-10-05: CAGR 32.5% Sharpe 1.36 Sortino 1.58 MaxDD -20.2% Vol 22.7% Calmar 1.61
+BTC B&H  same period: CAGR 27.9% Sharpe 0.71 MaxDD -76.6%  | avg exposure 0.28
+  2018-03+: CAGR  32.5% Sharpe 1.36 MaxDD  -20.2%
+  2020-03+: CAGR  35.1% Sharpe 1.39 MaxDD  -19.2%
+  2022+: CAGR  19.0% Sharpe 1.00 MaxDD  -19.2%
+  2023+: CAGR  25.9% Sharpe 1.17 MaxDD  -19.2%
+           2018  2019   2020  2021  2022   2023   2024  2025  2026
+TrendCore  -4.2  51.3  135.4  44.2  -3.7   38.6   36.6   7.1  17.3
+BTC       -64.1  94.3  302.0  59.8 -64.2  155.6  121.3  -6.3  -2.1

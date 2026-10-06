@@ -1,6 +1,11 @@
 # TrendCore - a volatility-targeted, regime-gated crypto trend strategy
 
 > ## OFFICIAL VERSION: SPOT-ONLY, LONG-ONLY, NO LEVERAGE (`quant.intraday.spot_only()`)
+> **Full history 2018-03 -> 2026-10, no idle yield: CAGR 32.5 %, Sharpe 1.36, Sortino 1.58, max DD -20.2 %** (BTC buy & hold same period: 27.9 %, 0.71, -76.6 %).
+> ![equity](results/final_equity.png)
+> ![sharpe](results/final_sharpe.png)
+> ![heatmap](results/final_monthly_heatmap.png)
+> Table below was measured from 2020-03.
 > Constraint: only spot BTC/ETH, never more than 100 % of capital invested, no shorts, no perps/futures, no borrowing, no carry sleeve.
 > (The figures in the "Round 3 headline" box below used perp carry and up to 1.5x leverage - they do **not** meet this constraint and are kept only for reference.)
 >
