@@ -69,3 +69,16 @@ the dead ends are visible, not just the winner.  ~350 backtests were run in tota
   that "worked" (SMA50 second gate + ETH-needs-BTC, 1.03) failed the neighbour check, so it was not adopted.
 * The only increments with an economic rationale: (1) idle-cash yield (real, data-grounded, +0.09 Sharpe), (2) an uncorrelated
   asset (tokenised gold; +0.43 Sharpe in-sample, but driven by gold's 2025 rally and thin liquidity - treat as ~+0.05-0.10 forward).
+
+## Round 3 - Binance intraday data (data.binance.vision; the live API is geo-blocked from the sandbox, HTTP 451)
+
+| # | Script | Idea | Outcome |
+|---|--------|------|---------|
+| 40 | `40_intraday_scan.py` | Hour-of-day, past-k-hour -> next-hour IC, 3-sigma hourly moves (BTC/ETH perp 1h, 2020-26) | Hour-of-day: nothing stable. Next-hour reversal IC -0.05..-0.06 is stable in both eras (|t| 7-11) **but tiny**; after 3-sigma hourly moves price *continues* (+4..+13bp). |
+| 41 | `41_hourly_reversion.py` | Tradable hourly reversal (8 variants x BTC/ETH) | **Gross Sharpe ~0 or negative, breakeven cost negative**, net -1..-17 at 2-8bp. **Rejected.** |
+| - | `quant/carry.py` | Delta-neutral spot/perp funding carry, BTC and ETH, real funding + basis P&L, fees | 2020-21: 21-30 %/yr; **2022-26: ~5-6 %/yr**, vol ~0.5 % (funding decayed: BTC 30 % in 2021 -> 4 %, 8 %, 12 %, 5 %, 2 % in 2022-26). Behaves like a better cash yield. Daily Sharpe (8-12) is not a real-world Sharpe (exchange/ADL/liquidation risk invisible to daily bars). |
+| 42 | `42_multicoin_carry.py` | Rotate carry into the top-k highest-funding of 12 coins | **Worse than always-on BTC/ETH in 2022-26** (+1..3 % vs ~6 %): funding mean-reverts, rotation costs. **Rejected.** |
+| 43 | `43_trend_plus_carry.py` | TrendCore extended to 2026-10-05 with Binance closes + carry on idle capital | Genuine forward window 2026-05-24..10-05 (never used in design): TrendCore +21.6 % vs BTC +11.7 %. 2022+ Sharpe 0.88 -> 0.96 with carry. corr(trend, carry) = -0.05. |
+| 44 | `44_flow_features.py` | Taker-buy imbalance, perp premium, funding level, perp/spot volume, hourly RV/skew/jump vs 1/3/7d returns | **No stable edge** (|IC| < 0.1, sign flips); ~100 tests so expect spurious hits. **Rejected.** |
+| 45 | `45_intraday_trend.py` | Same TrendCore on 12h/8h/6h/4h bars; hourly realised-vol sizing | 2022+ Sharpe 0.89 (24h) -> 0.92/1.04/0.99/0.97; hourly RV +0.04-0.05 in every window. **Adopted: 6h bars + hourly RV** (gentle plateau, not a spike). |
+| 46 | `46_oi_overlay.py` | Open-interest crowding overlay (futures OI z-score vs its own year) | Monotone dose-response, better in **both** eras at every strength (2023+: 1.31 -> 1.44 -> 1.50, DD -29.5 -> -22 -> -19 %). **Adopted at the pre-set midpoint 0.5**, not the best-looking value. |

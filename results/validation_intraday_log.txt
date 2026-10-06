@@ -1,0 +1,62 @@
+
+====================================================================================================
+A. Windows (nothing re-fitted)
+====================================================================================================
+2020-03..2026-10              : CAGR  52.9%  Sharpe 1.64  Sortino 2.23  MaxDD  -22.5%  Vol 28.2%
+2021+                         : CAGR  37.0%  Sharpe 1.34  Sortino 1.82  MaxDD  -22.5%  Vol 26.1%
+2022+                         : CAGR  29.0%  Sharpe 1.16  Sortino 1.58  MaxDD  -22.5%  Vol 24.6%
+2023+                         : CAGR  40.4%  Sharpe 1.37  Sortino 1.97  MaxDD  -22.5%  Vol 27.5%
+2024+                         : CAGR  33.6%  Sharpe 1.27  Sortino 1.79  MaxDD  -22.5%  Vol 25.2%
+NEW forward OOS 2026-05-24..  : CAGR  96.4%  Sharpe 2.52  Sortino 4.00  MaxDD   -6.5%  Vol 28.3%
+  2020: ret  168.2%  Sharpe  3.15  maxDD  -19.4%
+  2021: ret   82.4%  Sharpe  2.03  maxDD  -15.5%
+  2022: ret   -6.3%  Sharpe -1.41  maxDD   -8.7%
+  2023: ret   61.3%  Sharpe  1.60  maxDD  -19.9%
+  2024: ret   49.7%  Sharpe  1.58  maxDD  -22.5%
+  2025: ret   18.9%  Sharpe  0.80  maxDD  -14.1%
+  2026: ret   25.1%  Sharpe  1.56  maxDD   -6.5%
+trend only                    : full Sharpe 1.47 CAGR  45.5% | 2022+ Sharpe 1.05 CAGR  25.8%
+daily bars (k=1) + carry      : full Sharpe 1.64 CAGR  51.5% | 2022+ Sharpe 1.08 CAGR  26.1%
+close-to-close vol            : full Sharpe 1.63 CAGR  52.4% | 2022+ Sharpe 1.14 CAGR  28.8%
+
+====================================================================================================
+B. Stress
+====================================================================================================
+costs x2 (20bp)                 : full CAGR  49.9%  Sharpe 1.57  Sortino 2.14  MaxDD  -23.9%  Vol 28.2% | 2022+ Sharpe 1.07 CAGR  26.3%
+costs x4 (40bp)                 : full CAGR  44.4%  Sharpe 1.44  Sortino 1.95  MaxDD  -26.8%  Vol 28.3% | 2022+ Sharpe 0.90 CAGR  21.2%
++1 bar lag (6h)                 : full CAGR  48.6%  Sharpe 1.55  Sortino 2.04  MaxDD  -24.8%  Vol 28.0% | 2022+ Sharpe 1.04 CAGR  25.2%
++4 bars lag (24h)               : full CAGR  47.4%  Sharpe 1.51  Sortino 1.98  MaxDD  -21.9%  Vol 28.3% | 2022+ Sharpe 0.91 CAGR  21.3%
+financing 20%                   : full CAGR  52.7%  Sharpe 1.64  Sortino 2.23  MaxDD  -22.5%  Vol 28.2% | 2022+ Sharpe 1.15 CAGR  28.9%
+no leverage (cap 1.0)           : full CAGR  44.5%  Sharpe 1.70  Sortino 2.22  MaxDD  -17.4%  Vol 23.2% | 2022+ Sharpe 1.16 CAGR  22.7%
+x2 costs + 6h lag + 20% fin     : full CAGR  45.5%  Sharpe 1.48  Sortino 1.94  MaxDD  -26.3%  Vol 28.0% | 2022+ Sharpe 0.95 CAGR  22.3%
+carry margin 50% (conservative) : full CAGR  51.1%  Sharpe 1.60  Sortino 2.17  MaxDD  -22.9%  Vol 28.2% | 2022+ Sharpe 1.13 CAGR  28.3%
+
+====================================================================================================
+C. Plateau - one change at a time
+====================================================================================================
+k=2 (12h)             : full CAGR  50.3%  Sharpe 1.59  Sortino 2.10  MaxDD  -22.9%  Vol 28.2% | 2022+ Sharpe 1.10
+k=3 (8h)              : full CAGR  53.1%  Sharpe 1.64  Sortino 2.22  MaxDD  -21.2%  Vol 28.5% | 2022+ Sharpe 1.12
+k=6 (4h)              : full CAGR  51.3%  Sharpe 1.61  Sortino 2.19  MaxDD  -22.0%  Vol 28.2% | 2022+ Sharpe 1.09
+gates (200,)          : full CAGR  53.5%  Sharpe 1.66  Sortino 2.22  MaxDD  -22.6%  Vol 28.2% | 2022+ Sharpe 1.17
+gates (100,)          : full CAGR  49.4%  Sharpe 1.54  Sortino 2.07  MaxDD  -28.0%  Vol 28.8% | 2022+ Sharpe 1.05
+vol spans (30,)       : full CAGR  53.7%  Sharpe 1.66  Sortino 2.26  MaxDD  -22.7%  Vol 28.3% | 2022+ Sharpe 1.17
+target vol 0.25       : full CAGR  41.4%  Sharpe 1.87  Sortino 2.63  MaxDD  -18.1%  Vol 19.6% | 2022+ Sharpe 1.34
+target vol 0.30       : full CAGR  46.3%  Sharpe 1.79  Sortino 2.49  MaxDD  -20.6%  Vol 22.7% | 2022+ Sharpe 1.29
+target vol 0.40       : full CAGR  52.9%  Sharpe 1.64  Sortino 2.23  MaxDD  -22.5%  Vol 28.2% | 2022+ Sharpe 1.16
+max lev 1.0           : full CAGR  44.5%  Sharpe 1.70  Sortino 2.22  MaxDD  -17.4%  Vol 23.2% | 2022+ Sharpe 1.16
+max lev 2.0           : full CAGR  56.8%  Sharpe 1.64  Sortino 2.29  MaxDD  -26.8%  Vol 30.3% | 2022+ Sharpe 1.18
+band 0                : full CAGR  49.8%  Sharpe 1.57  Sortino 2.16  MaxDD  -23.2%  Vol 28.2% | 2022+ Sharpe 1.08
+-> full Sharpe over 12 neighbours: min 1.54 median 1.64 max 1.87 | 2022+ Sharpe: min 1.05 median 1.16 max 1.34
+
+====================================================================================================
+D. Placebo: circularly shift the target WEIGHTS against asset returns at bar level (timing destroyed, exposure profile kept)
+====================================================================================================
+true Sharpe 1.64 | placebo mean 0.71, p95 1.27, max 1.44, p-value 0.000 (120 shifts)
+
+====================================================================================================
+E. Block bootstrap Sharpe 90% CI
+====================================================================================================
+2020-03+: [0.95, 2.33]  P(>1)=0.94 P(>1.5)=0.62
+2022+: [0.37, 1.84]  P(>1)=0.61 P(>1.5)=0.21
+
+saved results/validation_intraday.json

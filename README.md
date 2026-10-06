@@ -1,5 +1,38 @@
 # TrendCore - a volatility-targeted, regime-gated crypto trend strategy
 
+> ## Round 3 headline - TrendCore-I (intraday-enhanced) + carry, on real Binance hourly data
+>
+> | Window | CAGR | Sharpe | Sortino | Max drawdown |
+> |---|---|---|---|---|
+> | **2020-03 -> 2026-10 (full intraday sample)** | **52.9 %** | **1.64** | 2.23 | **-22.5 %** |
+> | 2021+ | 37.0 % | 1.34 | 1.82 | -22.5 % |
+> | 2022+ (the weak regime) | 29.0 % | **1.16** (was 0.78) | 1.58 | -22.5 % |
+> | 2023+ | 40.4 % | 1.37 | 1.97 | -22.5 % |
+> | **Forward OOS 2026-05-24 -> 10-05** (never used in any design choice, 4.5 months) | 96 % ann. | 2.52 | 4.00 | -6.5 % |
+> | BTC buy & hold 2020-03+ | 41.9 % | 0.89 | - | -76.6 % |
+>
+> **All three original targets are met over 2020-2026** (CAGR >= 50 %, Sharpe > 1.5, drawdown -22.5 % vs BTC's -76.6 %).
+> **2022+ is still short of 1.5** (1.16; 90 % bootstrap CI [0.37, 1.84], P(Sharpe > 1.5) ~ 21 %) - the improvement from 0.78 to 1.16 is real
+> but I will not claim 1.5 in that regime. Calendar years: 2020 +168 % | 2021 +82 % | 2022 **-6.3 %** (BTC -64 %) | 2023 +61 % | 2024 +50 % | 2025 +19 % (BTC -6 %) | 2026 YTD +25 % (BTC -2 %).
+>
+> **What the intraday data changed (and what it did not).** Data: Binance spot/perp 1h klines, funding, open interest from the official public archive
+> (`data.binance.vision`; the live API refuses this server's region, HTTP 451 - no keys are used or needed).
+> 1. **6-hour decision bars + hourly realised-vol sizing** (same signals, all look-backs scaled): 2022+ Sharpe 0.89 -> 1.05; plateau over 4h/6h/8h/12h bars.
+> 2. **Open-interest crowding overlay** (exposure x (1 - 0.5 x clip(z,0,2)/2), z = 1-year z-score of BTC futures OI): Sharpe up and drawdown down in *both* eras at every strength tested (monotone), adopted at the pre-set midpoint. Only ~5 years of OI history exist.
+> 3. **Delta-neutral funding/basis carry on idle capital** (long spot / short perp, real funding): +0.07-0.10 Sharpe. Funding has decayed (BTC short-perp funding 30 % in 2021 -> 4 %, 8 %, 12 %, 5 %, 2 % in 2022-26), so it is a ~5-6 % cash-yield substitute now, not an alpha engine. Its tiny daily vol (Sharpe 8-12 on daily bars) hides exchange/ADL/liquidation risk - treat it as ordinary carry risk.
+> 4. **Rejected on the same data:** hourly mean-reversion (real IC -0.05, but gross Sharpe ~0 and breakeven cost < 0), order-flow imbalance / perp premium / funding-level predictors (no stable IC), rotating carry into high-funding coins (worse than BTC/ETH), tokenised gold stays optional. See `research/RESEARCH_LOG.md` #40-46.
+>
+> Validation (`python validate_intraday.py`, [`results/validation_intraday.json`](results/validation_intraday.json)): **placebo** (weights shifted against returns) mean Sharpe 0.71, max 1.44 vs actual **1.64** (p < 0.01);
+> **plateau** over 12 one-at-a-time changes: Sharpe 1.54-1.87 (2022+: 1.05-1.34); **stress**: 4x costs 1.44, +6 h lag 1.55, +24 h lag 1.51, 2x costs + lag + 20 % financing 1.48, no leverage at all (cap 1.0) 1.70 / CAGR 44.5 % / DD -17.4 %;
+> bootstrap 90 % CI full sample [0.95, 2.33]. Risk dial: vol target 0.25 -> CAGR 41 %, Sharpe 1.87 (2022+: 1.34), DD -18 %; 0.30 -> 46 %, 1.79, -21 %; **0.40 (default) -> 53 %, 1.64, -22.5 %**.
+> Caveats: still only ~6.5 years of intraday data; one forward window of 4.5 months proves little; parameter choices (6h, OI strength 0.5, vol target 0.40) were made after seeing results on the sample, with plateau checks as the guard; Binance-only data and execution; carry carries exchange/counterparty risk.
+>
+> ![intraday](results/intraday_equity.png)
+>
+> Code: [`quant/intraday.py`](quant/intraday.py) (TrendCore-I), [`quant/carry.py`](quant/carry.py), `scripts/fetch_vision.py` / `fetch_metrics.py` (downloaders), `validate_intraday.py`.
+> The sections below describe the original **daily** TrendCore (2016-2026, CoinMetrics data) and the round-2 analysis.
+
+
 Long-only BTC + ETH trend following with ex-ante volatility targeting, tested on **real daily data
 (CoinMetrics, 2010 - 2026-05-23)** with fees, slippage and financing charged, and validated with a
 battery of anti-overfitting tests.
