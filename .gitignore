@@ -6,3 +6,4 @@ data/intraday/[A-Z][A-Z]*USDT_*.parquet
 !data/intraday/BTCUSDT_*.parquet
 !data/intraday/ETHUSDT_*.parquet
 data/intraday/*_metrics_5m.parquet
+data/perp_daily/
