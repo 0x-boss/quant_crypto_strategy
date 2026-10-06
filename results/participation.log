@@ -1,0 +1,46 @@
+================ PART 1 (descriptive): what does a different risk budget buy?  [CAGR / Sharpe / maxDD]
+ASSET_VOL 0.30 / port vol tgt 0.40    full:  22.1% / 1.34 /  -16.3% | 2018-22:  26.1% / 1.47 /  -16.3% | 2023+:  17.1% / 1.15 /  -14.8% | avg exposure 0.19
+ASSET_VOL 0.45 / port vol tgt 0.40    full:  32.5% / 1.36 /  -20.2% | 2018-22:  37.9% / 1.49 /  -20.2% | 2023+:  25.9% / 1.17 /  -19.2% | avg exposure 0.28
+ASSET_VOL 0.60 / port vol tgt 0.40    full:  38.9% / 1.40 /  -22.8% | 2018-22:  42.7% / 1.49 /  -22.8% | 2023+:  34.1% / 1.28 /  -22.8% | avg exposure 0.33
+ASSET_VOL 0.80 / port vol tgt 0.40    full:  40.6% / 1.38 /  -24.5% | 2018-22:  43.5% / 1.44 /  -24.5% | 2023+:  37.0% / 1.29 /  -24.4% | avg exposure 0.35
+ASSET_VOL 1.00 / port vol tgt 0.40    full:  40.9% / 1.36 /  -26.5% | 2018-22:  43.0% / 1.39 /  -26.5% | 2023+:  38.3% / 1.31 /  -24.8% | avg exposure 0.36
+ASSET_VOL 1.50 / port vol tgt 0.40    full:  42.2% / 1.35 /  -28.6% | 2018-22:  43.8% / 1.35 /  -28.6% | 2023+:  40.3% / 1.34 /  -25.5% | avg exposure 0.38
+ASSET_VOL 0.30 / port vol tgt 0.60    full:  22.1% / 1.34 /  -16.3% | 2018-22:  26.1% / 1.47 /  -16.3% | 2023+:  17.1% / 1.15 /  -14.8% | avg exposure 0.19
+ASSET_VOL 0.45 / port vol tgt 0.60    full:  34.3% / 1.37 /  -20.9% | 2018-22:  41.6% / 1.54 /  -20.9% | 2023+:  25.5% / 1.14 /  -19.7% | avg exposure 0.29
+ASSET_VOL 0.60 / port vol tgt 0.60    full:  42.8% / 1.34 /  -28.7% | 2018-22:  50.1% / 1.46 /  -28.7% | 2023+:  33.9% / 1.17 /  -25.6% | avg exposure 0.37
+ASSET_VOL 0.80 / port vol tgt 0.60    full:  47.3% / 1.31 /  -33.5% | 2018-22:  53.5% / 1.38 /  -33.5% | 2023+:  39.7% / 1.21 /  -29.8% | avg exposure 0.42
+ASSET_VOL 1.00 / port vol tgt 0.60    full:  48.4% / 1.30 /  -34.2% | 2018-22:  54.8% / 1.37 /  -34.2% | 2023+:  40.6% / 1.20 /  -31.9% | avg exposure 0.45
+ASSET_VOL 1.50 / port vol tgt 0.60    full:  48.3% / 1.25 /  -37.8% | 2018-22:  52.9% / 1.28 /  -37.8% | 2023+:  42.5% / 1.21 /  -30.7% | avg exposure 0.47
+
+'free' dial points (CAGR > official 32.5%, Sharpe >= 1.30, maxDD >= -22%):
+ asset_vol  target_vol  cagr  sharpe  maxdd  avg_exposure
+      0.45         0.6 0.343   1.371 -0.209         0.286
+
+--- constant BTC core c + (1-c) x official
+core  0% BTC                          full:  32.5% / 1.36 /  -20.2% | 2018-22:  37.9% / 1.49 /  -20.2% | 2023+:  25.9% / 1.17 /  -19.2%
+core 10% BTC                          full:  33.6% / 1.29 /  -24.2% | 2018-22:  37.2% / 1.34 /  -24.2% | 2023+:  29.2% / 1.23 /  -19.2%
+core 20% BTC                          full:  34.4% / 1.21 /  -32.1% | 2018-22:  36.0% / 1.18 /  -32.1% | 2023+:  32.4% / 1.26 /  -23.4%
+core 30% BTC                          full:  34.8% / 1.11 /  -39.7% | 2018-22:  34.2% / 1.03 /  -39.7% | 2023+:  35.6% / 1.27 /  -27.4%
+
+--- idle-cash yield (optional lever, NOT in the headline numbers)
+idle yield 0.0% p.a.                  full:  32.5% / 1.36 /  -20.2% | 2018-22:  37.9% / 1.49 /  -20.2% | 2023+:  25.9% / 1.17 /  -19.2%
+idle yield 4.0% p.a.                  full:  36.4% / 1.48 /  -19.7% | 2018-22:  42.3% / 1.63 /  -19.7% | 2023+:  29.1% / 1.29 /  -17.8%
+idle yield 4.5% p.a.                  full:  36.9% / 1.50 /  -19.7% | 2018-22:  42.9% / 1.64 /  -19.7% | 2023+:  29.5% / 1.30 /  -17.6%
+
+BTC buy & hold same window: 27.9% / 0.71 / -76.6%
+
+================ PART 2 (2 trials): crowding overlays that also scale UP when positioning is light
+baseline (official)           A:  -4.1% / -0.29 /  -15.1% | B:  22.4% / 1.04 /  -19.2% | full:  14.3% / 0.78 /  -19.2% | fwd:  62.8% / 2.40 /   -5.2%
+F1 OI both ways strength 0.25 A:  -2.3% / -0.09 /  -16.5% | B:  24.6% / 1.02 /  -23.1% | full:  16.3% / 0.80 /  -23.1% | fwd:  63.7% / 2.33 /   -5.5%
+F1 OI both ways strength 0.5  A:  -4.1% / -0.29 /  -15.1% | B:  22.9% / 1.06 /  -19.2% | full:  14.6% / 0.80 /  -19.2% | fwd:  63.2% / 2.45 /   -5.1%
+F1 OI both ways strength 0.75 A:  -3.0% / -0.30 /  -11.7% | B:  21.0% / 1.07 /  -15.6% | full:  13.7% / 0.83 /  -15.6% | fwd:  61.9% / 2.52 /   -4.5%
+   acceptance: {'cagr_up': True, 'sharpe_both_eras': False, 'dd_ok': True, 'plateau': True, 'ACCEPT': False}
+F2 + funding both ways strength 0.25A:  -4.8% / -0.34 /  -16.1% | B:  22.2% / 1.09 /  -17.7% | full:  13.9% / 0.80 /  -17.7% | fwd:  52.1% / 2.44 /   -4.2%
+F2 + funding both ways strength 0.5A:  -4.7% / -0.30 /  -17.3% | B:  20.2% / 1.06 /  -18.3% | full:  12.6% / 0.76 /  -18.3% | fwd:  44.0% / 2.50 /   -3.5%
+F2 + funding both ways strength 0.75A:  -4.0% / -0.23 /  -17.9% | B:  19.4% / 1.04 /  -18.9% | full:  12.3% / 0.75 /  -18.9% | fwd:  32.7% / 2.46 /   -2.6%
+   acceptance: {'cagr_up': False, 'sharpe_both_eras': False, 'dd_ok': True, 'plateau': False, 'ACCEPT': False}
+F3 not run (requires both F1 and F2 accepted)
+
+context: F1 multiplier on 2021-09-01..2026-05-23: mean 0.82, share of days >1.05: 10%, <0.95: 43%
+         F2 multiplier: mean 1.06, share >1.05: 61%, <0.95: 28%;  corr(z_oi, z_funding) = 0.48
+saved results/participation*.{json,csv}

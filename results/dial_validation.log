@@ -1,0 +1,48 @@
+
+===== ASSET_VOL 0.45  (avg exposure 0.26, flat 43% of bars)
+  full 2018-03+  CAGR  32.5%  Sharpe 1.36  Sortino 1.58  maxDD  -20.2%
+  2020-03+       CAGR  35.1%  Sharpe 1.39  Sortino 1.71  maxDD  -19.2%
+  2022+          CAGR  19.0%  Sharpe 1.00  Sortino 1.20  maxDD  -19.2%
+  2023+          CAGR  25.9%  Sharpe 1.17  Sortino 1.56  maxDD  -19.2%
+  fwd 26-05-24+  CAGR  62.8%  Sharpe 2.40  Sortino 3.54  maxDD   -5.2%
+  costs 2x (20 bp): CAGR  31.1%  Sharpe 1.31  maxDD  -20.5%
+  costs 4x (40 bp): CAGR  28.4%  Sharpe 1.21  maxDD  -22.1%
+  +24h execution lag: CAGR  30.1%  Sharpe 1.27  maxDD  -26.5%
+  bootstrap 90% CI Sharpe: 2020-03+ [0.72, 2.09]   2022+ [0.20, 1.69]
+  worst month -11.8% (2020-09), worst 30d -19.7%, months < -5%: 7 of 104, one-way turnover/yr ~ 18.0x (before band)
+
+===== ASSET_VOL 0.60  (avg exposure 0.31, flat 41% of bars)
+  full 2018-03+  CAGR  38.9%  Sharpe 1.40  Sortino 1.69  maxDD  -22.8%
+  2020-03+       CAGR  40.6%  Sharpe 1.40  Sortino 1.76  maxDD  -22.8%
+  2022+          CAGR  24.1%  Sharpe 1.06  Sortino 1.34  maxDD  -22.8%
+  2023+          CAGR  34.1%  Sharpe 1.28  Sortino 1.76  maxDD  -22.8%
+  fwd 26-05-24+  CAGR  82.8%  Sharpe 2.50  Sortino 3.74  maxDD   -5.7%
+  costs 2x (20 bp): CAGR  36.9%  Sharpe 1.34  maxDD  -24.0%
+  costs 4x (40 bp): CAGR  33.0%  Sharpe 1.23  maxDD  -26.6%
+  +24h execution lag: CAGR  33.2%  Sharpe 1.23  maxDD  -25.7%
+  bootstrap 90% CI Sharpe: 2020-03+ [0.74, 2.08]   2022+ [0.23, 1.75]
+  worst month -11.9% (2020-09), worst 30d -21.4%, months < -5%: 7 of 104, one-way turnover/yr ~ 22.5x (before band)
+
+===== ASSET_VOL 0.80  (avg exposure 0.33, flat 40% of bars)
+  full 2018-03+  CAGR  40.6%  Sharpe 1.38  Sortino 1.70  maxDD  -24.5%
+  2020-03+       CAGR  43.3%  Sharpe 1.41  Sortino 1.81  maxDD  -24.4%
+  2022+          CAGR  25.7%  Sharpe 1.06  Sortino 1.38  maxDD  -24.4%
+  2023+          CAGR  37.0%  Sharpe 1.29  Sortino 1.83  maxDD  -24.4%
+  fwd 26-05-24+  CAGR  92.6%  Sharpe 2.53  Sortino 3.91  maxDD   -5.8%
+  costs 2x (20 bp): CAGR  38.2%  Sharpe 1.31  maxDD  -26.1%
+  costs 4x (40 bp): CAGR  33.7%  Sharpe 1.19  maxDD  -29.3%
+  +24h execution lag: CAGR  35.4%  Sharpe 1.24  maxDD  -28.8%
+  bootstrap 90% CI Sharpe: 2020-03+ [0.74, 2.08]   2022+ [0.23, 1.76]
+  worst month -11.9% (2020-09), worst 30d -21.7%, months < -5%: 9 of 104, one-way turnover/yr ~ 25.0x (before band)
+
+calendar-year returns %:
+       0.45   0.60   0.80
+2018   -4.2   -5.2   -7.0
+2019   51.3   68.4   65.8
+2020  135.4  148.2  157.7
+2021   44.2   52.4   58.9
+2022   -3.7   -7.4   -9.1
+2023   38.6   54.5   62.3
+2024   36.6   42.8   42.6
+2025    7.1   12.4   14.5
+2026   17.3   21.8   23.3

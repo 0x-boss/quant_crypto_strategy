@@ -21,8 +21,13 @@
 > Calendar years: 2020 +132 % | 2021 +44 % | 2022 -3.7 % | 2023 +39 % | 2024 +37 % | 2025 +7 % | 2026 YTD +17 %. Average exposure since 2022 is only 0.29 of capital (flat 36 % of the time).
 > Validation (`python validate_spot.py`): placebo mean Sharpe 0.52, max 1.27 vs 1.45 (p < 0.01); 13 neighbouring settings Sharpe 1.34-1.52 (2022+: 0.88-1.12);
 > costs x4 -> 1.29; +24 h execution lag -> 1.41; bootstrap 90 % CI [0.74, 2.15] (2022+: [0.22, 1.68]).
-> **Honest limits:** with no leverage the exposure cap binds, so there is no risk dial - CAGR cannot be raised without adding real alpha, and a 50 % CAGR is not reachable
+> **Honest limits:** without leverage the risk dial is limited (next paragraph): ~42 % CAGR at -29 % drawdown is where it saturates and Sharpe stays flat, so a 50 % CAGR is not reachable
 > in the post-2022 regime this way. Ceiling for this design family is roughly BTC-like returns at ~1/3 of BTC's drawdown.
+>
+> **Risk dial (same signals; only the per-asset risk budget `ASSET_VOL` changes; 2018-03 -> 2026-10, no idle yield; CAGR / Sharpe / max DD):**
+> 0.30 -> 22.1 % / 1.34 / -16.3 % | **0.45 (official) -> 32.5 % / 1.36 / -20.2 %** | 0.60 -> 38.9 % / 1.40 / -22.8 % (2022+: 24.1 % / 1.06; 2023+: 34.1 % / 1.28) | 0.80 -> 40.6 % / 1.38 / -24.5 % | 1.50 -> 42.2 % / 1.35 / -28.6 %.
+> Sharpe stays 1.25-1.45 over the whole grid, i.e. the dial buys CAGR with drawdown, not alpha (a constant BTC core is worse than the dial). 0.60 survives costs x4 (Sharpe 1.23) and a 24 h lag (1.23); 0.80 does not (DD about -29 %). In 2022 0.60 loses -7.4 % vs -3.7 %.
+> Set `ASSET_VOL` in `trendcore_spot.py` (default 0.45). Chart: `results/frontier_spot.png`; table `results/dial_grid.csv`; validation `results/dial_validation.log`.
 
 
 > ## (Reference only - NOT spot-only) Round 3 headline - TrendCore-I + perp carry, up to 1.5x leverage
@@ -212,6 +217,7 @@ drawdown overlay (cuts CAGR as much as DD), efficiency-ratio filter (unstable). 
 |---|---|---|
 | C | Signal on BTC, hold ETH / SOL / alt basket instead | Better Sharpe in 2020-22 only; survivor-corrected alt basket is worse than BTC (17.1 % / 0.77 vs 28.8 % / 1.19); SOL gains are hindsight |
 | D | Predict idle / losing months; park idle capital in spot gold (PAXG) | Idle months are predictable from exposure (31 of 36), losing months are not; gold adds Sharpe only through its 2024-25 rally and deepens DD by ~10 pts |
+| F | Participation: scale up when OI / funding show light positioning; constant BTC core | Crowding both ways: no effect (OI) or worse (funding). A BTC core is dominated by simply raising `ASSET_VOL` (see the risk dial above) |
 | E | SPY below its 200-day EMA -> hold gold (GLD) | Mechanism not supported (gold's edge flips sign across sub-periods; ETH/BTC are not reliably worse in those spells); the strategy is already ~flat then (9 % average exposure). Best variant 1.36 -> 1.42 Sharpe but max DD -20 % -> -27 % |
 
 ## Caveats for real trading

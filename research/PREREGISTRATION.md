@@ -95,3 +95,26 @@ Part B (2018-03..2026-10, Sharpe era1 / era2 / full, max DD): S0 1.49 / 1.17 / 1
 Acceptance (all conditions): S1 fails (full Sharpe down, era 2 -0.27), S2 fails (DD, era 1 Sharpe down), S3 fails (DD +6.8 pts worse), and Part A fails for all -> **0 of 3 accepted; no PAXG repeat**.
 Context: s=1 on 23 % of trading days; 35 runs since 2018-03 (27 lasting < 20 days, ~8 flips per year); the baseline had mean exposure 9 % in s=1 days vs 32 % in s=0 days (+14 % compounded in s=1 days vs +890 %).
 Stress (not trials): gold entered 1 / 3 days after the signal -> S3 full Sharpe 1.49 / 1.44; gold cost 25 bp -> 1.35.
+
+---
+## Round F (written BEFORE running): participation - how much more can the same spot-only strategy earn?   (user: "decent CAGR without the cost of drawdown or Sharpe")
+Motivation (from the ledger, not from new results): the strategy's weakness is under-participation, not losses (average exposure ~0.30; ~35 % upside capture; 2024: +37 % vs BTC +121 %).
+Part 1 - descriptive frontier (NOT a trial, no acceptance rule; it maps what a different risk budget buys).
+  1a exposure dial: per-asset risk target ASSET_VOL in {0.30, 0.45 (official), 0.60, 0.80, 1.00, 1.50} x portfolio vol target in {0.40 (official), 0.60}; gross <= 1 always.
+  1b constant BTC core c in {10, 20, 30 %} + (1-c) x official strategy, daily rebalanced.   1c idle-cash yield 4 % p.a. on the idle fraction (optional lever; headline numbers stay without it).
+  A dial point is called "free" only if CAGR > official AND Sharpe >= official - 0.06 AND max DD no worse than -22 % (2018-03..2026-10).
+Part 2 - two trials, the only mechanism-consistent extensions of the one overlay that worked (open-interest crowding; the official overlay only REDUCES exposure when crowding is high):
+  F1 OI crowding both ways: m = 1 - 0.5 * clip(z, -2, 2) / 2 (z = 365d z-score of log BTC futures OI, lagged one day, same construction as the official overlay) - i.e. also scale UP when positioning is light.
+  F2 funding crowding both ways, in addition to the official OI overlay: z = 365d z-score of the 30-day mean BTC perp funding rate (daily mean of the 8h rates, lagged one day), m = 1 - 0.5 * clip(z, -2, 2) / 2.
+  F3 = F1 x F2, run only if BOTH are accepted individually.
+  Gross <= 1 still enforced after the multiplier.  Eras: 2021-09-01..2022-12-31 (first date with 365 days of OI history) and 2023-01-01..2026-05-23; the forward window 2026-05-24..2026-10-05 is reported, not used.
+  Acceptance (every condition): full-window CAGR higher; Sharpe >= baseline in BOTH eras; max DD no worse than baseline + 2 pts; and plateau: strengths 0.25 and 0.75 keep Sharpe >= baseline - 0.02 in both eras.
+  Caveat stated in advance: OI/funding history is ~5 years, so there are only a handful of independent crowding episodes - low statistical power whatever the result.
+Not tested (reasons): stablecoin supply impulse (IC test #6 already negative), valuation signals (MVRV etc., #6), anything needing options / quarterly-futures history or ETF flows (data not available), halving-cycle timing (n = 3).
+
+### Round F result (recorded; `research/57_participation.py`, `58_dial_validation.py`, `59_dial_grid.py`; `results/participation*`, `dial_*`, `frontier_spot.png`)
+Part 1 (descriptive): a limited, Sharpe-neutral risk dial exists in the spot-only version (per-asset risk budget ASSET_VOL; the portfolio vol brake only works downward, which is why I had concluded "no dial" - that statement was too strong):
+ASSET_VOL 0.30 / 0.45 / 0.60 / 0.80 / 1.00 / 1.50 -> CAGR 22.1 / 32.5 / 38.9 / 40.6 / 40.9 / 42.2 %, Sharpe 1.34 / 1.36 / 1.40 / 1.38 / 1.36 / 1.35, max DD -16.3 / -20.2 / -22.8 / -24.5 / -26.5 / -28.6 % (2018-03..2026-10, brake 0.40). Saturation: average exposure <= 0.38.
+By the pre-registered "free" rule (CAGR up, Sharpe >= official - 0.06, DD >= -22 %) only the trivial point (0.45, brake 0.60) qualifies (34.3 % / 1.37 / -20.9 %); ASSET_VOL 0.60 misses the DD bound by 0.8 pt (-22.8 %), so it is offered as a risk-preference choice on the frontier, not as an accepted free improvement.
+A constant BTC core is dominated (10 %: 33.6 % / 1.29 / -24.2 %; 30 %: 34.8 % / 1.11 / -39.7 %). Idle yield 4 %: 36.4 % / 1.48 / -19.7 %.
+Part 2: F1 not accepted (era-A Sharpe -0.2939 vs -0.2934 baseline, i.e. no effect; era B 1.056 vs 1.039; CAGR +0.3 pt); F2 not accepted (CAGR down, plateau fails; forward window 62.8 % -> 44.0 %). F3 not run.
