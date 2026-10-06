@@ -57,3 +57,8 @@ Survivor-corrected check (daily bars, 900-symbol perp archive incl. delisted): C
 Eras: 2020-09..2022-12 and 2023-01..2026-10 (SOL spot exists from 2020-08).
 Acceptance: variant must (a) have Sharpe >= baseline Sharpe in BOTH eras, (b) higher full-period CAGR than baseline, (c) max drawdown no worse than -30 %.
 SOL results are reported with an explicit hindsight warning (known survivor); C7 is the decisive, survivor-corrected test.
+
+### Round C result (recorded)
+6h framework: all 7 variants fail acceptance (Sharpe era1/era2 vs baseline 1.38/1.30): C1 1.66/0.98, C2 1.56/1.02, C3 2.02/1.09, C4 1.76/1.16, C5 2.32/1.17, C6 1.99/1.26 (misses era 2 by 0.04; CAGR 45.0 % vs 33.1 %, DD -26.7 %).
+Survivor-corrected C7 (top-3 non-BTC by volume, weekly, delisted coins included; daily framework): CAGR 17.1 %, Sharpe 0.77, DD -31.2 % vs BTC baseline 28.8 % / 1.19 / -25.4 % - **worse in both eras**. Buy & hold of that basket: CAGR -10 %.
+=> REJECTED. The SOL/ETH+SOL gains are hindsight (SOL = known survivor); not adopted.
