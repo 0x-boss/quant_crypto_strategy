@@ -28,3 +28,17 @@ actual position (long pays positive funding, short receives it).
 
 **Combination rule**: accepted sleeves get equal risk budget with the trend book (inverse-vol, fixed 50/50 risk), no optimisation.
 Reported with the deflated Sharpe for 6 trials + the ~400 earlier trials.
+
+---
+## Round A result (recorded): none of the 6 candidates passed the acceptance rule
+MOM30 (Sh 0.35 / 1.38), MOM90 (-0.25 / 0.94), REV7 (-1.26 / -1.22), LOWVOL (1.38 / -0.15), FUND14 (-0.42 / 1.15), MULTI (1.21 / 0.35).
+All rejected. MOM30 came closest (full Sharpe 1.00, t 2.4, corr to trend +0.03) but fails era 1; the rule is not relaxed.
+
+## Round B (written BEFORE running): time-series trend on the survivor-corrected perp universe
+Motivation: the earlier daily-data tests used survivor-only coins; this universe contains delisted coins (LUNA, FTT, ...), so shorts now
+capture collapses. Same universe, weekly Sunday-close rebalance, 10 bp costs, actual funding.
+* B1 TSMOM-LS : score = mean(sign(r30), sign(r90), sign(r180)) in [-1, 1]; weight = score x (20 % target vol / own 30d vol) / N; long & short.
+* B2 TSMOM-LO : same with score clipped at 0 (long-only).
+Both scaled to 25 % ex-ante portfolio vol (trailing 30d, cap 2x). Acceptance: Sharpe > 0.5 in both eras, t > 2.
+If accepted and corr to TrendCore-I < 0.6: combined 50/50 by risk with TrendCore-I (fixed, no optimisation).
+Trials counted in the family so far: 6 + 2 = 8 (plus ~400 earlier trials on other designs).
