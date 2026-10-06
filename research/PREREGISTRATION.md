@@ -62,3 +62,14 @@ SOL results are reported with an explicit hindsight warning (known survivor); C7
 6h framework: all 7 variants fail acceptance (Sharpe era1/era2 vs baseline 1.38/1.30): C1 1.66/0.98, C2 1.56/1.02, C3 2.02/1.09, C4 1.76/1.16, C5 2.32/1.17, C6 1.99/1.26 (misses era 2 by 0.04; CAGR 45.0 % vs 33.1 %, DD -26.7 %).
 Survivor-corrected C7 (top-3 non-BTC by volume, weekly, delisted coins included; daily framework): CAGR 17.1 %, Sharpe 0.77, DD -31.2 % vs BTC baseline 28.8 % / 1.19 / -25.4 % - **worse in both eras**. Buy & hold of that basket: CAGR -10 %.
 => REJECTED. The SOL/ETH+SOL gains are hindsight (SOL = known survivor); not adopted.
+
+---
+## Round D (written BEFORE running): can idle months be predicted, and does gold on idle capital help?  (spot-only)
+Q1 (descriptive): relation between exposure at the start of a month and that month's result (final BTC+ETH strategy, 2018-03+).
+Q2 (3 variants): idle capital (1 - exposure) held in spot gold PAXG: G0 none (baseline) | G1 always PAXG | G2 PAXG only while PAXG > its own 200d SMA, else cash.
+Costs 25 bp one-way on PAXG weight changes, 5 % no-trade band; daily decisions at the 00:00-UTC close. Eras 2020-09..2022-12 and 2023-01..2026-10.
+Acceptance: higher CAGR and Sharpe >= baseline in BOTH eras and max drawdown no more than 3 pts worse. Gold's 2024-25 rally = hindsight risk, reported.
+
+### Round D result (recorded)
+Q1: idle months are predictable from exposure at month start (31 of 36 idle months flagged; 8 false alarms; idle-start months: mean +0.9 %, worst -0.8 %); underperformance is NOT: 15 loss months worse than -3 %, 9 began >50 % invested, 6 partly in, 0 idle. Strategy < BTC in 33 of 35 big BTC-up months (by design, ~37 % upside capture).
+Q2: gold on idle capital FAILS acceptance. G1 always-PAXG: Sharpe 1.24 / 1.53 (era1 / era2) vs baseline 1.56 / 1.17, DD -29.2 % vs -19.2 %. G2 trend-gated: 1.12 / 1.51, DD -32.5 %. Gain is entirely gold's 2024-25 rally (+30 %, +65 %); era1 worse; drawdown rises ~10 pts. Not adopted.
