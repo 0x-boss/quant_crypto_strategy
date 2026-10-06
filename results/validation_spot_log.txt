@@ -1,0 +1,57 @@
+
+===============================================================================================
+A. Windows
+===============================================================================================
+2020-03+                  : CAGR  36.1%  Sharpe 1.45  Sortino 1.78  MaxDD  -19.2%  Vol 23.2%
+2021+                     : CAGR  23.0%  Sharpe 1.09  Sortino 1.33  MaxDD  -19.2%  Vol 21.1%
+2022+                     : CAGR  19.0%  Sharpe 1.00  Sortino 1.20  MaxDD  -19.2%  Vol 19.3%
+2023+                     : CAGR  25.9%  Sharpe 1.17  Sortino 1.56  MaxDD  -19.2%  Vol 21.7%
+forward OOS 2026-05-24+   : CAGR  62.8%  Sharpe 2.40  Sortino 3.54  MaxDD   -5.2%  Vol 21.3%
+  2020:  132.3%  maxDD  -17.6%
+  2021:   44.2%  maxDD  -14.5%
+  2022:   -3.7%  maxDD   -4.7%
+  2023:   38.6%  maxDD  -16.0%
+  2024:   36.6%  maxDD  -19.2%
+  2025:    7.1%  maxDD  -12.8%
+  2026:   17.3%  maxDD   -5.2%
+with 4% idle-cash stablecoin yield: CAGR  39.8%  Sharpe 1.56  Sortino 1.91  MaxDD  -18.0%  Vol 23.2% | 2022+: CAGR  22.4%  Sharpe 1.14  Sortino 1.37  MaxDD  -18.0%  Vol 19.3%
+
+===============================================================================================
+B. Stress
+===============================================================================================
+costs x2              : full CAGR  34.5%  Sharpe 1.39  Sortino 1.71  MaxDD  -20.2%  Vol 23.2% | 2022+ Sharpe 0.93
+costs x4              : full CAGR  31.3%  Sharpe 1.29  Sortino 1.58  MaxDD  -22.1%  Vol 23.2% | 2022+ Sharpe 0.79
++6h lag               : full CAGR  34.1%  Sharpe 1.39  Sortino 1.65  MaxDD  -20.3%  Vol 23.1% | 2022+ Sharpe 0.92
++24h lag              : full CAGR  34.9%  Sharpe 1.41  Sortino 1.70  MaxDD  -19.0%  Vol 23.0% | 2022+ Sharpe 0.84
+x2 costs + 24h lag    : full CAGR  33.2%  Sharpe 1.36  Sortino 1.64  MaxDD  -20.7%  Vol 23.0% | 2022+ Sharpe 0.77
+
+===============================================================================================
+C. Plateau (one change at a time)
+===============================================================================================
+k=1 (daily bars)    : full CAGR  33.2%  Sharpe 1.38  Sortino 1.63  MaxDD  -18.2%  Vol 22.7% | 2022+ Sharpe 0.88
+k=2                 : full CAGR  34.0%  Sharpe 1.38  Sortino 1.66  MaxDD  -18.1%  Vol 23.1% | 2022+ Sharpe 0.94
+k=3                 : full CAGR  35.1%  Sharpe 1.42  Sortino 1.74  MaxDD  -18.8%  Vol 23.1% | 2022+ Sharpe 0.94
+k=6                 : full CAGR  35.5%  Sharpe 1.43  Sortino 1.77  MaxDD  -18.3%  Vol 23.1% | 2022+ Sharpe 0.96
+gates (200,)        : full CAGR  37.1%  Sharpe 1.48  Sortino 1.78  MaxDD  -17.8%  Vol 23.2% | 2022+ Sharpe 1.01
+gates (100,)        : full CAGR  34.4%  Sharpe 1.37  Sortino 1.70  MaxDD  -22.9%  Vol 23.5% | 2022+ Sharpe 0.91
+vol spans (30,)     : full CAGR  36.1%  Sharpe 1.44  Sortino 1.77  MaxDD  -19.2%  Vol 23.2% | 2022+ Sharpe 1.00
+target vol 0.25     : full CAGR  29.3%  Sharpe 1.52  Sortino 1.96  MaxDD  -16.5%  Vol 18.0% | 2022+ Sharpe 1.12
+target vol 0.60     : full CAGR  38.3%  Sharpe 1.47  Sortino 1.80  MaxDD  -19.7%  Vol 24.0% | 2022+ Sharpe 0.97
+OI strength 0       : full CAGR  38.3%  Sharpe 1.35  Sortino 1.62  MaxDD  -27.9%  Vol 26.6% | 2022+ Sharpe 0.93
+OI strength 1.0     : full CAGR  33.3%  Sharpe 1.49  Sortino 1.75  MaxDD  -17.6%  Vol 20.7% | 2022+ Sharpe 0.97
+band 0              : full CAGR  34.1%  Sharpe 1.38  Sortino 1.73  MaxDD  -19.9%  Vol 23.2% | 2022+ Sharpe 0.90
+BTC only            : full CAGR  33.9%  Sharpe 1.34  Sortino 1.69  MaxDD  -21.6%  Vol 23.9% | 2022+ Sharpe 1.12
+-> Sharpe over 13 neighbours: full min 1.34 med 1.42 max 1.52 | 2022+ min 0.88 med 0.96 max 1.12
+
+===============================================================================================
+D. Placebo: weights shifted against returns
+===============================================================================================
+true Sharpe 1.45 | placebo mean 0.52 p95 1.09 max 1.27 p=0.000
+
+===============================================================================================
+E. Bootstrap
+===============================================================================================
+2020-03+: Sharpe 90% CI [0.74, 2.15]  P(>1)=0.84
+2022+: Sharpe 90% CI [0.22, 1.68]  P(>1)=0.47
+
+saved

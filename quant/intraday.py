@@ -35,6 +35,7 @@ class IConfig:
     tier1_bps: float = 10.0
     other_bps: float = 25.0        # one-way cost for assets outside BTC/ETH (e.g. SOL)
     fin_rate: float = 0.10
+    cash_rate: float = 0.0          # optional yield on idle cash (e.g. spot stablecoin earn); 0 = none
     band: float = 0.05
     lag_bars: int = 0
     carry: bool = True
@@ -67,7 +68,7 @@ def target_weights_bars(px1h: pd.DataFrame, cfg: IConfig):
         px1h = px1h[list(cfg.assets)]
         P = px1h.resample(f"{24 // k}h").last().dropna(how="all")
         R = P.pct_change()
-        ek = dict(band=cfg.band, tier1_bps=cfg.tier1_bps, other_bps=cfg.other_bps, fin_rate=cfg.fin_rate / k)
+        ek = dict(band=cfg.band, tier1_bps=cfg.tier1_bps, other_bps=cfg.other_bps, fin_rate=cfg.fin_rate / k, cash_rate=cfg.cash_rate / k)
         if cfg.rv_vol:
             rv2 = (np.log(px1h).diff() ** 2).resample(f"{24 // k}h").sum().reindex(P.index)
             vol_fn = lambda PP, span=30: (rv2.ewm(span=span, min_periods=10).mean() ** 0.5) * np.sqrt(365 * k)
@@ -116,3 +117,11 @@ def run(cfg: IConfig = IConfig(), px1h: pd.DataFrame | None = None):
     else:
         out["total"] = tr
     return {k_: v.loc[cfg.start:] for k_, v in out.items()}
+
+
+def spot_only(**kw) -> IConfig:
+    """SPOT-ONLY preset: long-only BTC/ETH spot, gross exposure <= 100 % of capital (no leverage, no shorts, no perps, no carry,
+    no financing).  The open-interest overlay only reads a public data series - it never trades a derivative."""
+    base = dict(max_lev=1.0, max_gross=1.0, fin_rate=0.0, carry=False, oi_strength=0.5, target_vol=0.40)
+    base.update(kw)
+    return IConfig(**base)

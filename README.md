@@ -1,6 +1,26 @@
 # TrendCore - a volatility-targeted, regime-gated crypto trend strategy
 
-> ## Round 3 headline - TrendCore-I (intraday-enhanced) + carry, on real Binance hourly data
+> ## OFFICIAL VERSION: SPOT-ONLY, LONG-ONLY, NO LEVERAGE (`quant.intraday.spot_only()`)
+> Constraint: only spot BTC/ETH, never more than 100 % of capital invested, no shorts, no perps/futures, no borrowing, no carry sleeve.
+> (The figures in the "Round 3 headline" box below used perp carry and up to 1.5x leverage - they do **not** meet this constraint and are kept only for reference.)
+>
+> | Window | CAGR | Sharpe | Sortino | Max DD |
+> |---|---|---|---|---|
+> | 2020-03 -> 2026-10 | **36.1 %** | **1.45** | 1.78 | **-19.2 %** |
+> | 2022+ | 19.0 % | 1.00 | 1.20 | -19.2 % |
+> | 2023+ | 25.9 % | 1.17 | 1.56 | -19.2 % |
+> | Forward OOS 2026-05-24 -> 10-05 (4.5 months) | 62.8 % ann. | 2.40 | 3.54 | -5.2 % |
+> | + optional 4 % stablecoin-earn yield on idle cash (2020-03+ / 2022+) | 39.8 % / 22.4 % | 1.56 / 1.14 | 1.91 / 1.37 | -18.0 % |
+> | (reference) daily TrendCore, spot-only, 2016-2026 | 49.8 % | 1.66 | - | -27.8 % |
+>
+> Calendar years: 2020 +132 % | 2021 +44 % | 2022 -3.7 % | 2023 +39 % | 2024 +37 % | 2025 +7 % | 2026 YTD +17 %. Average exposure since 2022 is only 0.29 of capital (flat 36 % of the time).
+> Validation (`python validate_spot.py`): placebo mean Sharpe 0.52, max 1.27 vs 1.45 (p < 0.01); 13 neighbouring settings Sharpe 1.34-1.52 (2022+: 0.88-1.12);
+> costs x4 -> 1.29; +24 h execution lag -> 1.41; bootstrap 90 % CI [0.74, 2.15] (2022+: [0.22, 1.68]).
+> **Honest limits:** with no leverage the exposure cap binds, so there is no risk dial - CAGR cannot be raised without adding real alpha, and a 50 % CAGR is not reachable
+> in the post-2022 regime this way. Ceiling for this design family is roughly BTC-like returns at ~1/3 of BTC's drawdown.
+
+
+> ## (Reference only - NOT spot-only) Round 3 headline - TrendCore-I + perp carry, up to 1.5x leverage
 >
 > | Window | CAGR | Sharpe | Sortino | Max drawdown |
 > |---|---|---|---|---|
