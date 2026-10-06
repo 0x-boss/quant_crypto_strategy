@@ -27,7 +27,9 @@
 > bootstrap 90 % CI full sample [0.95, 2.33]. Risk dial: vol target 0.25 -> CAGR 41 %, Sharpe 1.87 (2022+: 1.34), DD -18 %; 0.30 -> 46 %, 1.79, -21 %; **0.40 (default) -> 53 %, 1.64, -22.5 %**.
 > Caveats: still only ~6.5 years of intraday data; one forward window of 4.5 months proves little; parameter choices (6h, OI strength 0.5, vol target 0.40) were made after seeing results on the sample, with plateau checks as the guard; Binance-only data and execution; carry carries exchange/counterparty risk.
 >
-> ![intraday](results/intraday_equity.png)
+> ![equity](results/chart_equity.png)
+> ![monthly](results/chart_monthly_heatmap.png)
+> ![annual](results/chart_annual.png)
 >
 > Code: [`quant/intraday.py`](quant/intraday.py) (TrendCore-I), [`quant/carry.py`](quant/carry.py), `scripts/fetch_vision.py` / `fetch_metrics.py` (downloaders), `validate_intraday.py`.
 > The sections below describe the original **daily** TrendCore (2016-2026, CoinMetrics data) and the round-2 analysis.
