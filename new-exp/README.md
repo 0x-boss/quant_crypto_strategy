@@ -22,6 +22,7 @@ So: **Sharpe ~1.0 with a ~2 % median month**, or **median 5 %+ in a bull regime 
 and nothing close to 1.5.
 
 ![equity](results/chart_equity.png)
+![heatmap](results/chart_monthly_heatmap.png)
 ![monthly](results/chart_monthly_dist.png)
 
 ## What was tested (all families, all net of 0.2 % RT)
@@ -106,7 +107,7 @@ python tests/test_engines.py; python tests/test_truncation.py
 python src/scan_daily.py 300; python src/scan_daily.py 1000; python src/scan_events.py 300; python src/intraday_explore.py
 python src/intraday_overnight.py; python src/run_slots.py 300; python src/ml_walkforward.py 500 5; python src/sleeves.py; python src/blend.py
 python src/scan_broad.py; python src/stress_broad.py; python src/composites.py; python src/letf_appendix.py; python src/token_basis.py
-python src/final_validation.py; python src/dsr.py; python src/intraday_gross.py; python src/charts.py
+python src/final_validation.py; python src/dsr.py; python src/intraday_gross.py; python src/charts.py; python src/chart_heatmap.py
 ```
 Pre-registration and its after-the-fact amendments: [`PREREGISTRATION.md`](PREREGISTRATION.md). Every configuration run: `results/trials.csv`.
 
