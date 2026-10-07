@@ -1,0 +1,20 @@
+{
+ "MOM_6_1_k10": {
+  "placebo_mean_all": 0.29083091025417884,
+  "placebo_max_all": 0.43742500341467805,
+  "actual_all": 0.7790688779354111,
+  "p_value_all": 0.0,
+  "placebo_mean_hold": 0.14207264551120338,
+  "actual_hold": 0.8251642488973011,
+  "p_value_hold": 0.0
+ },
+ "COMP_C2_k25_h21_top1000": {
+  "placebo_mean_all": 0.6299461118938671,
+  "placebo_max_all": 0.6771840979192815,
+  "actual_all": 0.7776232093502148,
+  "p_value_all": 0.0,
+  "placebo_mean_hold": 0.3833602463812762,
+  "actual_hold": 0.8294596295134904,
+  "p_value_hold": 0.0
+ }
+}

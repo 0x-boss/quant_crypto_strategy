@@ -1,0 +1,58 @@
+[MOM_res12_1_k25]
+   dev   Sh 0.75 | med/mo  1.62% | mean/mo  1.77% | CAGR   19.7% | DD  -46.2% | >5% mo  27% | pos mo  62% | n 2517
+   hold  Sh 0.87 | med/mo  3.84% | mean/mo  3.15% | CAGR   34.8% | DD  -41.7% | >5% mo  46% | pos mo  61% | n 1194
+   all   Sh 0.78 | med/mo  1.82% | mean/mo  2.21% | CAGR   24.4% | DD  -50.3% | >5% mo  33% | pos mo  62% | n 3711
+[MOM_6_1_k10]
+   dev   Sh 0.78 | med/mo  2.15% | mean/mo  2.24% | CAGR   24.6% | DD  -53.2% | >5% mo  33% | pos mo  62% | n 2517
+   hold  Sh 0.83 | med/mo  5.61% | mean/mo  3.49% | CAGR   36.2% | DD  -46.0% | >5% mo  51% | pos mo  58% | n 1194
+   all   Sh 0.78 | med/mo  2.31% | mean/mo  2.64% | CAGR   28.2% | DD  -53.2% | >5% mo  39% | pos mo  61% | n 3711
+[HIVOL_idio_k10_top1000]
+   dev   Sh 0.84 | med/mo  2.92% | mean/mo  3.60% | CAGR   35.2% | DD  -63.1% | >5% mo  39% | pos mo  61% | n 2517
+   hold  Sh 0.70 | med/mo  2.47% | mean/mo  2.97% | CAGR   28.3% | DD  -45.8% | >5% mo  44% | pos mo  56% | n 1194
+   all   Sh 0.78 | med/mo  2.91% | mean/mo  3.40% | CAGR   33.0% | DD  -63.1% | >5% mo  41% | pos mo  59% | n 3711
+[CLV_high_k10_h21]
+   dev   Sh 0.81 | med/mo  1.77% | mean/mo  1.14% | CAGR   13.2% | DD  -33.3% | >5% mo   8% | pos mo  64% | n 2517
+   hold  Sh 0.67 | med/mo  1.47% | mean/mo  1.05% | CAGR   12.2% | DD  -25.8% | >5% mo  23% | pos mo  65% | n 1194
+   all   Sh 0.76 | med/mo  1.67% | mean/mo  1.11% | CAGR   12.8% | DD  -33.3% | >5% mo  13% | pos mo  64% | n 3711
+[LOWBETA_k25]
+   dev   Sh 1.00 | med/mo  1.03% | mean/mo  1.16% | CAGR   13.9% | DD  -25.0% | >5% mo  12% | pos mo  64% | n 2517
+   hold  Sh 0.25 | med/mo  0.43% | mean/mo  0.24% | CAGR    2.6% | DD  -17.6% | >5% mo   9% | pos mo  60% | n 1194
+   all   Sh 0.76 | med/mo  0.91% | mean/mo  0.87% | CAGR   10.2% | DD  -31.1% | >5% mo  11% | pos mo  63% | n 3711
+[HIGH52_k25_h21]
+   dev   Sh 0.94 | med/mo  1.14% | mean/mo  1.18% | CAGR   14.2% | DD  -28.2% | >5% mo  11% | pos mo  68% | n 2517
+   hold  Sh 0.42 | med/mo  0.51% | mean/mo  0.55% | CAGR    6.0% | DD  -28.4% | >5% mo  19% | pos mo  56% | n 1194
+   all   Sh 0.76 | med/mo  0.97% | mean/mo  0.97% | CAGR   11.5% | DD  -28.4% | >5% mo  14% | pos mo  64% | n 3711
+[DONCHIAN_K10]
+   dev   Sh 0.70 | med/mo  0.64% | mean/mo  1.01% | CAGR   11.4% | DD  -30.4% | >5% mo  14% | pos mo  57% | n 2517
+   hold  Sh 0.81 | med/mo  1.06% | mean/mo  1.49% | CAGR   16.5% | DD  -31.9% | >5% mo  28% | pos mo  60% | n 1195
+   all   Sh 0.73 | med/mo  0.76% | mean/mo  1.16% | CAGR   13.0% | DD  -31.9% | >5% mo  19% | pos mo  58% | n 3712
+[LEADERDIP_K10_gated]
+   dev   Sh 0.83 | med/mo  0.61% | mean/mo  0.77% | CAGR    9.1% | DD  -15.3% | >5% mo   6% | pos mo  62% | n 2517
+   hold  Sh 0.63 | med/mo  0.22% | mean/mo  0.54% | CAGR    6.6% | DD  -13.7% | >5% mo   4% | pos mo  54% | n 1195
+   all   Sh 0.77 | med/mo  0.45% | mean/mo  0.70% | CAGR    8.3% | DD  -21.4% | >5% mo   5% | pos mo  59% | n 3712
+[LEADERS_TRAIL4_K10]
+   dev   Sh 0.53 | med/mo  1.90% | mean/mo  0.90% | CAGR    9.6% | DD  -29.5% | >5% mo  18% | pos mo  59% | n 2517
+   hold  Sh 0.44 | med/mo  2.28% | mean/mo  1.14% | CAGR    9.2% | DD  -38.0% | >5% mo  32% | pos mo  60% | n 1195
+   all   Sh 0.48 | med/mo  1.95% | mean/mo  0.98% | CAGR    9.4% | DD  -40.9% | >5% mo  23% | pos mo  59% | n 3712
+[EW_top300]
+   dev   Sh 0.93 | med/mo  1.88% | mean/mo  1.34% | CAGR   15.9% | DD  -36.6% | >5% mo  12% | pos mo  68% | n 2517
+   hold  Sh 0.58 | med/mo  1.21% | mean/mo  0.94% | CAGR   10.6% | DD  -29.0% | >5% mo  23% | pos mo  63% | n 1194
+   all   Sh 0.80 | med/mo  1.54% | mean/mo  1.21% | CAGR   14.1% | DD  -36.6% | >5% mo  16% | pos mo  67% | n 3711
+[SPY_bh]
+   dev   Sh 1.07 | med/mo  1.85% | mean/mo  1.35% | CAGR   16.3% | DD  -32.0% | >5% mo  12% | pos mo  73% | n 2517
+   hold  Sh 0.75 | med/mo  1.31% | mean/mo  1.04% | CAGR   12.3% | DD  -26.3% | >5% mo  18% | pos mo  67% | n 1194
+   all   Sh 0.95 | med/mo  1.68% | mean/mo  1.25% | CAGR   15.0% | DD  -32.0% | >5% mo  14% | pos mo  71% | n 3711
+
+DEV correlation of daily returns:
+                         MOM_res12_1_k25  MOM_6_1_k10  HIVOL_idio_k10_top1000  CLV_high_k10_h21  LOWBETA_k25  HIGH52_k25_h21  DONCHIAN_K10  LEADERDIP_K10_gated  LEADERS_TRAIL4_K10  EW_top300  SPY_bh
+MOM_res12_1_k25                    1.00         0.91                    0.63              0.80         0.60            0.76          0.35                 0.36                0.45       0.78    0.70
+MOM_6_1_k10                        0.91         1.00                    0.62              0.73         0.55            0.70          0.37                 0.36                0.47       0.71    0.62
+HIVOL_idio_k10_top1000             0.63         0.62                    1.00              0.65         0.38            0.46          0.23                 0.23                0.26       0.65    0.54
+CLV_high_k10_h21                   0.80         0.73                    0.65              1.00         0.69            0.87          0.35                 0.30                0.37       0.98    0.94
+LOWBETA_k25                        0.60         0.55                    0.38              0.69         1.00            0.73          0.28                 0.23                0.29       0.65    0.64
+HIGH52_k25_h21                     0.76         0.70                    0.46              0.87         0.73            1.00          0.40                 0.35                0.44       0.84    0.87
+DONCHIAN_K10                       0.35         0.37                    0.23              0.35         0.28            0.40          1.00                 0.31                0.77       0.32    0.32
+LEADERDIP_K10_gated                0.36         0.36                    0.23              0.30         0.23            0.35          0.31                 1.00                0.34       0.29    0.29
+LEADERS_TRAIL4_K10                 0.45         0.47                    0.26              0.37         0.29            0.44          0.77                 0.34                1.00       0.34    0.32
+EW_top300                          0.78         0.71                    0.65              0.98         0.65            0.84          0.32                 0.29                0.34       1.00    0.96
+SPY_bh                             0.70         0.62                    0.54              0.94         0.64            0.87          0.32                 0.29                0.32       0.96    1.00

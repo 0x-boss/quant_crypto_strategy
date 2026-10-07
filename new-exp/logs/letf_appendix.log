@@ -1,0 +1,28 @@
+[L1 TQQQ when QQQ>SMA200]
+   dev   Sh 0.91 | med/mo  4.18% | mean/mo  3.66% | CAGR   38.3% | DD  -60.7% | >5% mo  48% | pos mo  62% | n 2517
+   hold  Sh 0.76 | med/mo  0.00% | mean/mo  2.80% | CAGR   27.9% | DD  -53.1% | >5% mo  33% | pos mo  44% | n 1194
+   all   Sh 0.76 | med/mo  1.18% | mean/mo  2.88% | CAGR   27.8% | DD  -60.7% | >5% mo  40% | pos mo  52% | n 4113
+[L2 SOXL when QQQ>SMA200]
+   dev   Sh 0.78 | med/mo  4.49% | mean/mo  4.13% | CAGR   34.1% | DD  -79.0% | >5% mo  48% | pos mo  58% | n 2517
+   hold  Sh 0.72 | med/mo  0.00% | mean/mo  5.07% | CAGR   27.2% | DD  -78.1% | >5% mo  35% | pos mo  40% | n 1194
+   all   Sh 0.64 | med/mo  0.00% | mean/mo  3.62% | CAGR   21.7% | DD  -79.0% | >5% mo  40% | pos mo  49% | n 4113
+[L2b 50/50 TQQQ+SOXL when QQQ>SMA200]
+   dev   Sh 0.86 | med/mo  5.19% | mean/mo  3.89% | CAGR   38.4% | DD  -69.7% | >5% mo  50% | pos mo  62% | n 2517
+   hold  Sh 0.76 | med/mo  0.00% | mean/mo  3.96% | CAGR   32.4% | DD  -59.5% | >5% mo  32% | pos mo  44% | n 1194
+   all   Sh 0.71 | med/mo  0.81% | mean/mo  3.26% | CAGR   27.3% | DD  -69.7% | >5% mo  41% | pos mo  52% | n 4113
+[L3 top-1 63d momentum of 6 LETFs (own SMA100 filter)]
+   dev   Sh 0.65 | med/mo  2.07% | mean/mo  2.64% | CAGR   22.3% | DD  -67.7% | >5% mo  44% | pos mo  53% | n 2517
+   hold  Sh 0.52 | med/mo  0.00% | mean/mo  4.14% | CAGR   10.4% | DD  -66.5% | >5% mo  35% | pos mo  47% | n 1194
+   all   Sh 0.57 | med/mo  0.34% | mean/mo  2.91% | CAGR   17.1% | DD  -67.7% | >5% mo  41% | pos mo  51% | n 4113
+[L4 TQQQ in bull / 50% SQQQ in bear]
+   dev   Sh 0.66 | med/mo  3.72% | mean/mo  2.78% | CAGR   22.6% | DD  -78.1% | >5% mo  46% | pos mo  60% | n 2517
+   hold  Sh 0.63 | med/mo  0.41% | mean/mo  2.45% | CAGR   21.2% | DD  -55.8% | >5% mo  40% | pos mo  51% | n 1194
+   all   Sh 0.49 | med/mo  1.65% | mean/mo  1.95% | CAGR   12.3% | DD  -78.1% | >5% mo  42% | pos mo  54% | n 4113
+[ref TQQQ buy&hold]
+   dev   Sh 1.13 | med/mo  5.24% | mean/mo  5.12% | CAGR   60.4% | DD  -69.4% | >5% mo  52% | pos mo  67% | n 2517
+   hold  Sh 0.57 | med/mo  1.66% | mean/mo  2.84% | CAGR   16.5% | DD  -80.8% | >5% mo  44% | pos mo  54% | n 1194
+   all   Sh 0.90 | med/mo  4.51% | mean/mo  4.32% | CAGR   43.7% | DD  -81.6% | >5% mo  49% | pos mo  62% | n 4113
+[ref SPY buy&hold]
+   dev   Sh 1.07 | med/mo  1.85% | mean/mo  1.35% | CAGR   16.3% | DD  -32.0% | >5% mo  12% | pos mo  73% | n 2517
+   hold  Sh 0.75 | med/mo  1.31% | mean/mo  1.04% | CAGR   12.3% | DD  -26.3% | >5% mo  18% | pos mo  67% | n 1194
+   all   Sh 0.93 | med/mo  1.68% | mean/mo  1.24% | CAGR   14.9% | DD  -32.0% | >5% mo  14% | pos mo  70% | n 4113

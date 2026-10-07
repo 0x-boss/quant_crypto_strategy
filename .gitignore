@@ -15,3 +15,4 @@ new-exp/data/*
 !new-exp/data/research_cols.txt
 new-exp/results/*.parquet
 new-exp/logs/*.out
+new-exp/results/*.pkl

@@ -1,0 +1,9 @@
+  end = pd.Timestamp.utcnow().floor("5min")
+45831 premarket observations over 41 days, 17 tokens
+basis (token/underlying-1) bps:  {'count': 458310000.0, 'mean': 4.2, 'std': 7.6, 'min': -170.8, '5%': -7.6, '25%': -0.1, '50%': 4.1, '75%': 8.5, '95%': 16.9, 'max': 88.2}
+{'const': 10.28, 'basis': -0.753} t: {'const': 2.02, 'basis': -1.88}
+basis in (-10000000000000,-40] bps: n=     3  mean fwd token ret to 09:35 =    61.1 bps   mean fwd underlying =    -8.6 bps
+basis in (-40,-20] bps: n=   161  mean fwd token ret to 09:35 =    31.3 bps   mean fwd underlying =     9.0 bps
+basis in (-20,20] bps: n= 44525  mean fwd token ret to 09:35 =     7.3 bps   mean fwd underlying =     8.2 bps
+basis in (20,40] bps: n=  1128  mean fwd token ret to 09:35 =    -3.5 bps   mean fwd underlying =    13.1 bps
+basis in (40,10000000000000] bps: n=    14  mean fwd token ret to 09:35 =    -3.4 bps   mean fwd underlying =    40.6 bps

@@ -58,3 +58,16 @@ Costs of 0.2 % per round trip mean a strategy turning over capital 6x per month 
 per-trade net edge of ~0.8 % at 6 turns/month (or 2.5 % at 2 turns/month) is the arithmetic of the target. Edges of that
 size exist only in high-volatility names; the research therefore concentrates on liquid-but-volatile names and on
 capital-efficient (high-turnover but low-cost-ratio) designs.
+
+## 5. Amendments and deviations (disclosed after the fact)
+* Rounds run in this order: 1 daily ranks (A) -> 2 event study (B) -> 3 intraday 5-minute scans (C, plus overnight holds) -> 4 slot-engine swing
+  trades (B/E) -> D ML ranker (run before round 4, hyper-parameters never touched) -> 5 sleeves/blends/overlays -> 6 broad pool (top
+  1000-3000) -> 7 composites / sector-neutral. **Rounds 5-7 and the leveraged-ETF appendix were not in section 3**; they were added after
+  rounds 1-4 showed no config near the target, so the sleeves in round 5 were chosen by looking at round 1-4 tables (selection on results;
+  weights fitted on DEV only). Every config of every round is in `results/trials.csv` (840 rows) and counted in the deflated Sharpe.
+* The intraday history is the 1-minute Finnhub-sourced US-equity set on Hugging Face (`mito0o852/OHLCV-1m`, 2016-01 -> 2026-03, extended
+  hours included), aggregated to 5-minute bars. Binance stock-token history only exists from 2026-06 (see README), so it is used for
+  realism checks (spreads, depth, basis) and a ~4-month forward window, not for model selection.
+* Data cleaning removes one-day price spikes > 50 % that fully reverse the next day (data errors). This looks one day ahead, so the
+  truncation test excludes the final date. Survivorship (today's ticker list) is not fixable with this data; see README.
+* Binance API keys that were pasted into the chat were **not used** (public market-data endpoints suffice) and are not stored anywhere.

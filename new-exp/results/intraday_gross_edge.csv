@@ -1,0 +1,99 @@
+entry,signal,part,gross_bps,unconditional_bps
+09:35,momentum since open,dev,-2.5353165,0.26537
+09:35,momentum since open,hold,5.467452,0.66603833
+09:35,reversal since open,dev,-2.5112717,0.26537
+09:35,reversal since open,hold,-3.1705647,0.66603833
+09:35,gap up,dev,-4.9859786,0.26537
+09:35,gap up,hold,-6.382647,0.66603833
+09:35,gap down,dev,-0.29307592,0.26537
+09:35,gap down,hold,2.015508,0.66603833
+09:35,rel. volume,dev,-1.4319212,0.26537
+09:35,rel. volume,hold,-2.5208728,0.66603833
+09:35,ATR (volatility),dev,-3.9272738,0.26537
+09:35,ATR (volatility),hold,9.010262,0.66603833
+09:35,gap x rel.vol,dev,-4.135372,0.26537
+09:35,gap x rel.vol,hold,-3.519309,0.66603833
+10:00,momentum since open,dev,2.6349082,0.39923736
+10:00,momentum since open,hold,3.5962765,0.59849834
+10:00,reversal since open,dev,-3.60415,0.39923736
+10:00,reversal since open,hold,-5.2245927,0.59849834
+10:00,gap up,dev,-0.00811136,0.39923736
+10:00,gap up,hold,-6.745157,0.59849834
+10:00,gap down,dev,-0.20556368,0.39923736
+10:00,gap down,hold,2.0345652,0.59849834
+10:00,rel. volume,dev,-1.3747015,0.39923736
+10:00,rel. volume,hold,-0.91904783,0.59849834
+10:00,ATR (volatility),dev,-0.74091077,0.39923736
+10:00,ATR (volatility),hold,6.061273,0.59849834
+10:00,gap x rel.vol,dev,-0.30028844,0.39923736
+10:00,gap x rel.vol,hold,-6.1708536,0.59849834
+10:30,momentum since open,dev,3.8630326,0.33472893
+10:30,momentum since open,hold,1.5417243,1.3653213
+10:30,reversal since open,dev,-1.5114888,0.33472893
+10:30,reversal since open,hold,-0.30647776,1.3653213
+10:30,gap up,dev,-0.1581858,0.33472893
+10:30,gap up,hold,-4.9905148,1.3653213
+10:30,gap down,dev,0.17176346,0.33472893
+10:30,gap down,hold,7.3236685,1.3653213
+10:30,rel. volume,dev,-1.6240894,0.33472893
+10:30,rel. volume,hold,3.299896,1.3653213
+10:30,ATR (volatility),dev,0.96963567,0.33472893
+10:30,ATR (volatility),hold,6.958505,1.3653213
+10:30,gap x rel.vol,dev,-0.85020757,0.33472893
+10:30,gap x rel.vol,hold,-4.117083,1.3653213
+11:30,momentum since open,dev,2.8104174,0.7460289
+11:30,momentum since open,hold,3.57584,1.4106618
+11:30,reversal since open,dev,0.4931154,0.7460289
+11:30,reversal since open,hold,-0.7858771,1.4106618
+11:30,gap up,dev,0.9490145,0.7460289
+11:30,gap up,hold,-0.79724705,1.4106618
+11:30,gap down,dev,-0.4378607,0.7460289
+11:30,gap down,hold,5.57894,1.4106618
+11:30,rel. volume,dev,0.45348498,0.7460289
+11:30,rel. volume,hold,3.4434698,1.4106618
+11:30,ATR (volatility),dev,2.3096335,0.7460289
+11:30,ATR (volatility),hold,3.8697102,1.4106618
+11:30,gap x rel.vol,dev,1.073082,0.7460289
+11:30,gap x rel.vol,hold,-0.9236586,1.4106618
+13:30,momentum since open,dev,0.44643238,-0.40316695
+13:30,momentum since open,hold,3.7050893,1.7644179
+13:30,reversal since open,dev,0.79694116,-0.40316695
+13:30,reversal since open,hold,1.2640008,1.7644179
+13:30,gap up,dev,0.34294456,-0.40316695
+13:30,gap up,hold,0.18545605,1.7644179
+13:30,gap down,dev,-0.9677823,-0.40316695
+13:30,gap down,hold,3.5984895,1.7644179
+13:30,rel. volume,dev,0.67581785,-0.40316695
+13:30,rel. volume,hold,3.7695582,1.7644179
+13:30,ATR (volatility),dev,1.1761304,-0.40316695
+13:30,ATR (volatility),hold,5.252863,1.7644179
+13:30,gap x rel.vol,dev,-0.34931058,-0.40316695
+13:30,gap x rel.vol,hold,0.16958876,1.7644179
+14:30,momentum since open,dev,0.1373007,-0.07074579
+14:30,momentum since open,hold,0.1116441,0.8712888
+14:30,reversal since open,dev,4.592959,-0.07074579
+14:30,reversal since open,hold,-0.33634678,0.8712888
+14:30,gap up,dev,1.2267544,-0.07074579
+14:30,gap up,hold,-3.1255736,0.8712888
+14:30,gap down,dev,0.818108,-0.07074579
+14:30,gap down,hold,3.5214176,0.8712888
+14:30,rel. volume,dev,1.9736724,-0.07074579
+14:30,rel. volume,hold,1.9865017,0.8712888
+14:30,ATR (volatility),dev,2.683081,-0.07074579
+14:30,ATR (volatility),hold,0.8391357,0.8712888
+14:30,gap x rel.vol,dev,0.8975884,-0.07074579
+14:30,gap x rel.vol,hold,-2.8053477,0.8712888
+15:30,momentum since open,dev,-0.9948245,-0.7029202
+15:30,momentum since open,hold,-1.7221656,-0.4593445
+15:30,reversal since open,dev,2.397419,-0.7029202
+15:30,reversal since open,hold,-0.6878031,-0.4593445
+15:30,gap up,dev,1.1962613,-0.7029202
+15:30,gap up,hold,-2.1708357,-0.4593445
+15:30,gap down,dev,0.6406951,-0.7029202
+15:30,gap down,hold,1.4907792,-0.4593445
+15:30,rel. volume,dev,0.34097785,-0.7029202
+15:30,rel. volume,hold,-0.6771647,-0.4593445
+15:30,ATR (volatility),dev,2.1992357,-0.7029202
+15:30,ATR (volatility),hold,0.7236706,-0.4593445
+15:30,gap x rel.vol,dev,0.80621237,-0.7029202
+15:30,gap x rel.vol,hold,-1.757764,-0.4593445

@@ -52,7 +52,7 @@ def build_panels(force=False):
     print("panels built", w.shape)
 
 
-def load_panels(start="2008-01-01", cols="research"):
+def load_panels(start="2008-01-01", cols="research", dtype=np.float64):
     """Return dict of adjusted O,H,L,C and raw close / volume / dollar volume (DataFrames date x ticker).
     cols="research": only tickers that were *ever* inside the point-in-time top-1000 by dollar volume (a superset of every
     universe used; names never that liquid can never be selected, so this subsetting changes no result - it only saves RAM).
@@ -60,7 +60,9 @@ def load_panels(start="2008-01-01", cols="research"):
     d = os.path.join(DATA, "panels")
     if cols == "research":
         cols = research_cols()
-    g = lambda c: pd.read_parquet(os.path.join(d, f"raw_{c}.parquet"), columns=cols)
+    elif isinstance(cols, int):
+        cols = research_cols(cols)
+    g = lambda c: pd.read_parquet(os.path.join(d, f"raw_{c}.parquet"), columns=cols).loc[start:].astype(dtype)
     rc, ac = g("close"), g("adj_close")
     f = (ac / rc).where(rc > 0)
     O, H, L = g("open") * f, g("high") * f, g("low") * f
@@ -85,12 +87,12 @@ def load_panels(start="2008-01-01", cols="research"):
     return P
 
 
-def research_cols():
-    fn = os.path.join(DATA, "research_cols.txt")
+def research_cols(top_n=1000):
+    fn = os.path.join(DATA, "research_cols.txt" if top_n == 1000 else f"research_cols_{top_n}.txt")
     if os.path.exists(fn):
         return [x.strip() for x in open(fn) if x.strip()]
-    P = load_panels(start="2005-01-01", cols=None)
-    M = pit_universe(P, top_n=1000)
+    P = load_panels(start="2005-01-01", cols=None, dtype=np.float32)
+    M = pit_universe(P, top_n=top_n)
     E = pit_universe(P, top_n=150, kinds=("ETF",))
     cols = sorted(set(M.columns[M.any()]) | set(E.columns[E.any()]) | {"SPY", "QQQ", "IWM", "DIA", "TLT", "GLD"})
     open(fn, "w").write("\n".join(cols))
