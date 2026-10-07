@@ -1,0 +1,40 @@
+rows 1631798 features 38
+2012 train 137037 2s top feats: ['atr14_raw', 'vol60_raw', 'idio_vol60_raw', 'high52_r', 'mom_12_1_r']
+2013 train 182710 4s top feats: ['vol60_raw', 'atr14_raw', 'idio_vol60_raw', 'high52_r', 'mom_12_1_r']
+2014 train 227965 7s top feats: ['vol60_raw', 'atr14_raw', 'idio_vol60_raw', 'mom_12_1_r', 'high52_r']
+2015 train 273559 10s top feats: ['atr14_raw', 'vol60_raw', 'idio_vol60_raw', 'high52_r', 'mom_12_1_r']
+2016 train 320738 13s top feats: ['atr14_raw', 'vol60_raw', 'idio_vol60_raw', 'mom_12_1_r', 'high52_r']
+2017 train 366644 17s top feats: ['atr14_raw', 'vol60_raw', 'idio_vol60_raw', 'mom_12_1_r', 'high52_r']
+2018 train 411741 21s top feats: ['atr14_raw', 'vol60_raw', 'idio_vol60_raw', 'atr14_r', 'mom_12_1_r']
+2019 train 457253 26s top feats: ['atr14_raw', 'vol60_raw', 'atr14_r', 'mom_12_1_r', 'idio_vol60_raw']
+2020 train 501469 31s top feats: ['atr14_raw', 'vol60_raw', 'atr14_r', 'mom_12_1_r', 'idio_vol60_raw']
+2021 train 547948 36s top feats: ['atr14_raw', 'vol60_raw', 'vol20_raw', 'idio_vol60_raw', 'atr14_r']
+2022 train 594322 42s top feats: ['atr14_raw', 'vol20_raw', 'vol60_raw', 'idio_vol60_raw', 'atr14_r']
+2023 train 641288 48s top feats: ['atr14_raw', 'vol20_raw', 'vol60_raw', 'idio_vol60_raw', 'atr14_r']
+2024 train 686822 55s top feats: ['atr14_raw', 'vol20_raw', 'vol60_raw', 'idio_vol60_raw', 'atr14_r']
+2025 train 732459 62s top feats: ['atr14_raw', 'vol20_raw', 'vol60_raw', 'idio_vol60_raw', 'ret63_r']
+2026 train 778368 70s top feats: ['atr14_raw', 'vol60_raw', 'vol20_raw', 'idio_vol60_raw', 'beta60_raw']
+[GBM top500 label5d  k=10 h=1]
+   dev   Sh 0.23 | med/mo  1.02% | mean/mo  0.67% | CAGR    1.5% | DD  -76.8% | >5% mo  28% | pos mo  56% | n 2517
+   hold  Sh -0.19 | med/mo -3.24% | mean/mo -1.23% | CAGR  -20.0% | DD  -79.0% | >5% mo  37% | pos mo  39% | n 1194
+   all   Sh 0.06 | med/mo  0.33% | mean/mo  0.06% | CAGR   -6.0% | DD  -88.6% | >5% mo  31% | pos mo  50% | n 3711
+[GBM top500 label5d  k=10 h=5]
+   dev   Sh 0.37 | med/mo  1.12% | mean/mo  0.98% | CAGR    6.9% | DD  -60.3% | >5% mo  33% | pos mo  56% | n 2517
+   hold  Sh 0.44 | med/mo  0.29% | mean/mo  1.39% | CAGR   10.2% | DD  -60.0% | >5% mo  37% | pos mo  53% | n 1194
+   all   Sh 0.39 | med/mo  0.80% | mean/mo  1.12% | CAGR    7.9% | DD  -78.5% | >5% mo  34% | pos mo  55% | n 3711
+[GBM top500 label5d  k=10 h=10]
+   dev   Sh 0.42 | med/mo  1.66% | mean/mo  1.11% | CAGR    8.8% | DD  -59.4% | >5% mo  31% | pos mo  57% | n 2517
+   hold  Sh 0.44 | med/mo  1.25% | mean/mo  1.33% | CAGR   10.2% | DD  -59.9% | >5% mo  40% | pos mo  58% | n 1194
+   all   Sh 0.42 | med/mo  1.55% | mean/mo  1.18% | CAGR    9.3% | DD  -76.3% | >5% mo  34% | pos mo  58% | n 3711
+[GBM top500 label5d  k=25 h=1]
+   dev   Sh 0.28 | med/mo  1.27% | mean/mo  0.72% | CAGR    3.8% | DD  -67.3% | >5% mo  24% | pos mo  54% | n 2517
+   hold  Sh 0.15 | med/mo -0.78% | mean/mo  0.14% | CAGR   -3.3% | DD  -63.9% | >5% mo  30% | pos mo  46% | n 1194
+   all   Sh 0.22 | med/mo  0.45% | mean/mo  0.54% | CAGR    1.5% | DD  -77.4% | >5% mo  26% | pos mo  51% | n 3711
+[GBM top500 label5d  k=25 h=5]
+   dev   Sh 0.44 | med/mo  1.28% | mean/mo  1.10% | CAGR    9.4% | DD  -58.2% | >5% mo  28% | pos mo  60% | n 2517
+   hold  Sh 0.49 | med/mo  0.49% | mean/mo  1.44% | CAGR   12.8% | DD  -54.6% | >5% mo  37% | pos mo  53% | n 1194
+   all   Sh 0.46 | med/mo  1.24% | mean/mo  1.21% | CAGR   10.5% | DD  -72.1% | >5% mo  31% | pos mo  58% | n 3711
+[GBM top500 label5d  k=25 h=10]
+   dev   Sh 0.47 | med/mo  1.38% | mean/mo  1.13% | CAGR   10.1% | DD  -57.9% | >5% mo  31% | pos mo  61% | n 2517
+   hold  Sh 0.44 | med/mo  1.03% | mean/mo  1.21% | CAGR   10.1% | DD  -54.9% | >5% mo  37% | pos mo  58% | n 1194
+   all   Sh 0.45 | med/mo  1.28% | mean/mo  1.16% | CAGR   10.1% | DD  -71.5% | >5% mo  33% | pos mo  60% | n 3711

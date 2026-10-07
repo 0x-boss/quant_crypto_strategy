@@ -7,3 +7,11 @@ data/intraday/[A-Z][A-Z]*USDT_*.parquet
 !data/intraday/ETHUSDT_*.parquet
 data/intraday/*_metrics_5m.parquet
 data/perp_daily/
+
+# new-exp: raw/derived market data is large and re-downloadable (see new-exp/README.md)
+new-exp/data/*
+!new-exp/data/binance_stocks.json
+!new-exp/data/minute_tickers.txt
+!new-exp/data/research_cols.txt
+new-exp/results/*.parquet
+new-exp/logs/*.out

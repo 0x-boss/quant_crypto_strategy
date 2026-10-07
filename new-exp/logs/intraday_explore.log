@@ -1,0 +1,69 @@
+loaded (2575, 300, 78)
+  out[valid] = cum[valid] / ref[rows[valid], slot[valid]]
+  out[valid] = cum[valid] / ref[rows[valid], slot[valid]]
+0935 1s
+  out[valid] = cum[valid] / ref[rows[valid], slot[valid]]
+  out[valid] = cum[valid] / ref[rows[valid], slot[valid]]
+1000 3s
+  out[valid] = cum[valid] / ref[rows[valid], slot[valid]]
+  out[valid] = cum[valid] / ref[rows[valid], slot[valid]]
+1030 4s
+  out[valid] = cum[valid] / ref[rows[valid], slot[valid]]
+  out[valid] = cum[valid] / ref[rows[valid], slot[valid]]
+1130 5s
+  out[valid] = cum[valid] / ref[rows[valid], slot[valid]]
+  out[valid] = cum[valid] / ref[rows[valid], slot[valid]]
+1330 7s
+  out[valid] = cum[valid] / ref[rows[valid], slot[valid]]
+  out[valid] = cum[valid] / ref[rows[valid], slot[valid]]
+1430 9s
+  out[valid] = cum[valid] / ref[rows[valid], slot[valid]]
+  out[valid] = cum[valid] / ref[rows[valid], slot[valid]]
+1530 10s
+   entry             sig   exit  dev_sh  dev_mean  hold_sh  hold_mean gross_per_trade
+14  0935         vol_atr  close  -1.610    -0.051   -0.486     -0.027            None
+29  1000         vol_atr  close  -1.624    -0.043   -0.721     -0.030            None
+44  1030         vol_atr  close  -1.646    -0.040   -0.762     -0.028            None
+59  1130         vol_atr  close  -1.731    -0.037   -1.138     -0.034            None
+27  1000     gap_up_hold  close  -1.886    -0.030   -1.876     -0.044            None
+15  1000  ret_since_open  close  -1.944    -0.036   -1.302     -0.034            None
+42  1030     gap_up_hold  close  -2.017    -0.028   -1.918     -0.041            None
+30  1030  ret_since_open  close  -2.020    -0.033   -1.666     -0.039            None
+5   0935         rev_gap  close  -2.082    -0.042   -1.402     -0.038            None
+19  1000             gap  close  -2.232    -0.041   -2.313     -0.055            None
+0   0935  ret_since_open  close  -2.272    -0.047   -1.027     -0.031            None
+7   0935         rvol_up  close  -2.291    -0.036   -2.050     -0.040            None
+12  0935     gap_up_hold  close  -2.330    -0.043   -1.648     -0.044            None
+1   0935  rev_since_open  close  -2.333    -0.047   -1.622     -0.049            None
+20  1000         rev_gap  close  -2.345    -0.042   -1.617     -0.038            None
+46  1130  rev_since_open  close  -2.422    -0.040   -2.126     -0.043            None
+45  1130  ret_since_open  close  -2.452    -0.036   -1.823     -0.034            None
+57  1130     gap_up_hold  close  -2.453    -0.030   -2.137     -0.034            None
+4   0935             gap  close  -2.470    -0.051   -1.984     -0.055            None
+8   0935            rvol  close  -2.488    -0.044   -2.209     -0.046            None
+21  1000      gap_x_rvol  close  -2.494    -0.041   -2.505     -0.054            None
+35  1030         rev_gap  close  -2.507    -0.041   -1.246     -0.027            None
+9   0935   rvol_down_rev  close  -2.544    -0.042   -2.311     -0.046            None
+16  1000  rev_since_open  close  -2.548    -0.048   -2.077     -0.053            None
+31  1030  rev_since_open  close  -2.552    -0.044   -1.819     -0.043            None
+22  1000         rvol_up  close  -2.557    -0.035   -2.275     -0.039            None
+34  1030             gap  close  -2.562    -0.042   -2.426     -0.052            None
+74  1330         vol_atr  close  -2.667    -0.039   -1.447     -0.031            None
+58  1130       orb_break  close  -2.726    -0.011   -1.961     -0.008            None
+6   0935      gap_x_rvol  close  -2.740    -0.049   -1.975     -0.049            None
+   entry             sig   exit  dev_sh  dev_mean  hold_sh  hold_mean gross_per_trade
+14  0935         vol_atr  close  -1.610    -0.051   -0.486     -0.027            None
+29  1000         vol_atr  close  -1.624    -0.043   -0.721     -0.030            None
+44  1030         vol_atr  close  -1.646    -0.040   -0.762     -0.028            None
+0   0935  ret_since_open  close  -2.272    -0.047   -1.027     -0.031            None
+59  1130         vol_atr  close  -1.731    -0.037   -1.138     -0.034            None
+35  1030         rev_gap  close  -2.507    -0.041   -1.246     -0.027            None
+15  1000  ret_since_open  close  -1.944    -0.036   -1.302     -0.034            None
+5   0935         rev_gap  close  -2.082    -0.042   -1.402     -0.038            None
+74  1330         vol_atr  close  -2.667    -0.039   -1.447     -0.031            None
+20  1000         rev_gap  close  -2.345    -0.042   -1.617     -0.038            None
+1   0935  rev_since_open  close  -2.333    -0.047   -1.622     -0.049            None
+12  0935     gap_up_hold  close  -2.330    -0.043   -1.648     -0.044            None
+30  1030  ret_since_open  close  -2.020    -0.033   -1.666     -0.039            None
+50  1130         rev_gap  close  -3.087    -0.042   -1.694     -0.031            None
+31  1030  rev_since_open  close  -2.552    -0.044   -1.819     -0.043            None
