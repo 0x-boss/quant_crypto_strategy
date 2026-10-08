@@ -64,7 +64,7 @@ def apply(c, W, p):
         vp = pd.Series(1.0, index=W.index)
     vol_hi = (vp >= p["q"]) if p["src"] != "none" else pd.Series(True, index=W.index)
     dd_on = (dd63 <= -p["x"]) if p["x"] > 0 else pd.Series(True, index=W.index)
-    flag = (vol_hi & dd_on).astype(float)
+    flag = (vol_hi.reindex(W.index).fillna(False) & dd_on.reindex(W.index).fillna(False)).astype(float)
     flag = flag.rolling(p["lock"], min_periods=1).max() > 0
-    s = pd.Series(np.where(flag, p["cut"], 1.0), index=W.index).reindex(W.index).fillna(1.0)
+    s = pd.Series(np.where(flag.values, p["cut"], 1.0), index=W.index)
     return W.mul(s, axis=0)

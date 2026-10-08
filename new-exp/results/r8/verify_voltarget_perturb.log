@@ -1,0 +1,9 @@
+params: {'name': 'own20_exp80', 'kind': 'own20', 'q': 80, 'star': None, 'mode': 'expanding'}
+dates in index: ['2021-03-10', '2020-03-12', '2025-03-20', '2026-06-25', '2018-11-15', '2013-01-24', '2015-08-24', '2023-09-14']
+   perturbation after 2021-03-10: max |dW| on earlier rows = 0.00e+00
+   perturbation after 2020-03-12: max |dW| on earlier rows = 0.00e+00
+   perturbation after 2025-03-20: max |dW| on earlier rows = 0.00e+00
+   perturbation after 2026-06-25: max |dW| on earlier rows = 0.00e+00
+   perturbation after 2018-11-15: max |dW| on earlier rows = 0.00e+00
+   perturbation after 2013-01-24: max |dW| on earlier rows = 0.00e+00
+   perturbation after 2015-08-24: max |dW| on earlier rows = 0.00e+00

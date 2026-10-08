@@ -2,3 +2,169 @@
    dev  Sh  0.78 | med/mo  2.15% | mean/mo  2.24% | >5%mo  33% | maxDD  -53.2% | Calmar 0.46 | worst mo  -22.2% | vol   38%
    hold Sh  0.83 | med/mo  5.61% | mean/mo  3.49% | >5%mo  51% | maxDD  -46.0% | Calmar 0.79 | worst mo  -25.3% | vol   58%
    all  Sh  0.78 | med/mo  2.31% | mean/mo  2.64% | >5%mo  39% | maxDD  -53.2% | Calmar 0.53 | worst mo  -25.3% | vol   45%
+CONFIG FAILED own20_q70_dd5_c50 ValueError('Length of values (4720) does not match length of index (4721)')
+Traceback (most recent call last):
+  File "/home/user/quant_crypto_strategy/new-exp/src/r8_runfamily.py", line 42, in <module>
+    W = build(c, p)
+  File "/home/user/quant_crypto_strategy/new-exp/src/r8_runfamily.py", line 36, in build
+    return mod.apply(cc, R.base_weights(cc), p)
+           ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: Length of values (4720) does not match length of index (4721)
+  done own20_q70_dd5_c50                            4s
+CONFIG FAILED own20_q70_dd5_c25 ValueError('Length of values (4720) does not match length of index (4721)')
+Traceback (most recent call last):
+  File "/home/user/quant_crypto_strategy/new-exp/src/r8_runfamily.py", line 42, in <module>
+    W = build(c, p)
+  File "/home/user/quant_crypto_strategy/new-exp/src/r8_runfamily.py", line 36, in build
+    return mod.apply(cc, R.base_weights(cc), p)
+           ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: Length of values (4720) does not match length of index (4721)
+  done own20_q70_dd5_c25                            8s
+CONFIG FAILED own20_q70_dd10_c50 ValueError('Length of values (4720) does not match length of index (4721)')
+Traceback (most recent call last):
+  File "/home/user/quant_crypto_strategy/new-exp/src/r8_runfamily.py", line 42, in <module>
+    W = build(c, p)
+  File "/home/user/quant_crypto_strategy/new-exp/src/r8_runfamily.py", line 36, in build
+    return mod.apply(cc, R.base_weights(cc), p)
+           ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: Length of values (4720) does not match length of index (4721)
+  done own20_q70_dd10_c50                          11s
+CONFIG FAILED own20_q70_dd10_c25 ValueError('Length of values (4720) does not match length of index (4721)')
+Traceback (most recent call last):
+  File "/home/user/quant_crypto_strategy/new-exp/src/r8_runfamily.py", line 42, in <module>
+    W = build(c, p)
+  File "/home/user/quant_crypto_strategy/new-exp/src/r8_runfamily.py", line 36, in build
+    return mod.apply(cc, R.base_weights(cc), p)
+           ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: Length of values (4720) does not match length of index (4721)
+  done own20_q70_dd10_c25                          14s
+CONFIG FAILED own20_q80_dd5_c50 ValueError('Length of values (4720) does not match length of index (4721)')
+Traceback (most recent call last):
+  File "/home/user/quant_crypto_strategy/new-exp/src/r8_runfamily.py", line 42, in <module>
+    W = build(c, p)
+  File "/home/user/quant_crypto_strategy/new-exp/src/r8_runfamily.py", line 36, in build
+    return mod.apply(cc, R.base_weights(cc), p)
+           ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: Length of values (4720) does not match length of index (4721)
+  done own20_q80_dd5_c50                           16s
+CONFIG FAILED own20_q80_dd5_c25 ValueError('Length of values (4720) does not match length of index (4721)')
+Traceback (most recent call last):
+  File "/home/user/quant_crypto_strategy/new-exp/src/r8_runfamily.py", line 42, in <module>
+    W = build(c, p)
+  File "/home/user/quant_crypto_strategy/new-exp/src/r8_runfamily.py", line 36, in build
+    return mod.apply(cc, R.base_weights(cc), p)
+           ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: Length of values (4720) does not match length of index (4721)
+  done own20_q80_dd5_c25                           18s
+CONFIG FAILED own20_q80_dd10_c50 ValueError('Length of values (4720) does not match length of index (4721)')
+Traceback (most recent call last):
+  File "/home/user/quant_crypto_strategy/new-exp/src/r8_runfamily.py", line 42, in <module>
+    W = build(c, p)
+  File "/home/user/quant_crypto_strategy/new-exp/src/r8_runfamily.py", line 36, in build
+    return mod.apply(cc, R.base_weights(cc), p)
+           ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: Length of values (4720) does not match length of index (4721)
+  done own20_q80_dd10_c50                          22s
+CONFIG FAILED own20_q80_dd10_c25 ValueError('Length of values (4720) does not match length of index (4721)')
+Traceback (most recent call last):
+  File "/home/user/quant_crypto_strategy/new-exp/src/r8_runfamily.py", line 42, in <module>
+    W = build(c, p)
+  File "/home/user/quant_crypto_strategy/new-exp/src/r8_runfamily.py", line 36, in build
+    return mod.apply(cc, R.base_weights(cc), p)
+           ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: Length of values (4720) does not match length of index (4721)
+  done own20_q80_dd10_c25                          26s
+  done disp21_q70_dd5_c50                          30s
+  done disp21_q70_dd5_c25                          36s
+  done disp21_q70_dd10_c50                         40s
+  done disp21_q70_dd10_c25                         45s
+  done disp21_q80_dd5_c50                          50s
+  done disp21_q80_dd5_c25                          54s
+  done disp21_q80_dd10_c50                         59s
+  done disp21_q80_dd10_c25                         65s
+CONFIG FAILED own20_q70_dd5_c50_lock5 ValueError('Length of values (4720) does not match length of index (4721)')
+Traceback (most recent call last):
+  File "/home/user/quant_crypto_strategy/new-exp/src/r8_runfamily.py", line 42, in <module>
+    W = build(c, p)
+  File "/home/user/quant_crypto_strategy/new-exp/src/r8_runfamily.py", line 36, in build
+    return mod.apply(cc, R.base_weights(cc), p)
+           ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: Length of values (4720) does not match length of index (4721)
+  done own20_q70_dd5_c50_lock5                     69s
+CONFIG FAILED own20_q70_dd10_c50_lock5 ValueError('Length of values (4720) does not match length of index (4721)')
+Traceback (most recent call last):
+  File "/home/user/quant_crypto_strategy/new-exp/src/r8_runfamily.py", line 42, in <module>
+    W = build(c, p)
+  File "/home/user/quant_crypto_strategy/new-exp/src/r8_runfamily.py", line 36, in build
+    return mod.apply(cc, R.base_weights(cc), p)
+           ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: Length of values (4720) does not match length of index (4721)
+  done own20_q70_dd10_c50_lock5                    71s
+CONFIG FAILED own20_q80_dd5_c50_lock5 ValueError('Length of values (4720) does not match length of index (4721)')
+Traceback (most recent call last):
+  File "/home/user/quant_crypto_strategy/new-exp/src/r8_runfamily.py", line 42, in <module>
+    W = build(c, p)
+  File "/home/user/quant_crypto_strategy/new-exp/src/r8_runfamily.py", line 36, in build
+    return mod.apply(cc, R.base_weights(cc), p)
+           ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: Length of values (4720) does not match length of index (4721)
+  done own20_q80_dd5_c50_lock5                     74s
+CONFIG FAILED own20_q80_dd10_c50_lock5 ValueError('Length of values (4720) does not match length of index (4721)')
+Traceback (most recent call last):
+  File "/home/user/quant_crypto_strategy/new-exp/src/r8_runfamily.py", line 42, in <module>
+    W = build(c, p)
+  File "/home/user/quant_crypto_strategy/new-exp/src/r8_runfamily.py", line 36, in build
+    return mod.apply(cc, R.base_weights(cc), p)
+           ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: Length of values (4720) does not match length of index (4721)
+  done own20_q80_dd10_c50_lock5                    78s
+  done own20_q70_novolonly_c50                     83s
+  done own20_q80_novolonly_c50                     86s
+  done disp21_q70_novolonly_c50                    92s
+  done disp21_q80_novolonly_c50                    98s
+  done ddonly_dd5_q70_c50                         102s
+  done ddonly_dd10_q70_c50                        106s
+  done ddonly_dd5_q80_c50                         109s
+  done ddonly_dd10_q80_c50                        114s
+
+=== ranked by pre-registered DEV objective (HOLD shown for information, never used to select) ===
+                    name  score  dev_sharpe  dev_med_m  dev_maxdd  hold_sharpe  hold_med_m  hold_maxdd  all_sharpe  all_maxdd  avg_gross  turn
+ own20_q80_novolonly_c50  0.693       0.867      0.021     -0.347        0.886       0.045      -0.401       0.849     -0.484      0.870 0.110
+       own20_q70_dd5_c50   -inf         NaN        NaN        NaN          NaN         NaN         NaN         NaN        NaN        NaN   NaN
+      own20_q70_dd10_c50   -inf         NaN        NaN        NaN          NaN         NaN         NaN         NaN        NaN        NaN   NaN
+       own20_q70_dd5_c25   -inf         NaN        NaN        NaN          NaN         NaN         NaN         NaN        NaN        NaN   NaN
+       own20_q80_dd5_c50   -inf         NaN        NaN        NaN          NaN         NaN         NaN         NaN        NaN        NaN   NaN
+       own20_q80_dd5_c25   -inf         NaN        NaN        NaN          NaN         NaN         NaN         NaN        NaN        NaN   NaN
+      own20_q80_dd10_c50   -inf         NaN        NaN        NaN          NaN         NaN         NaN         NaN        NaN        NaN   NaN
+      own20_q80_dd10_c25   -inf         NaN        NaN        NaN          NaN         NaN         NaN         NaN        NaN        NaN   NaN
+      disp21_q70_dd5_c50   -inf       0.854      0.021     -0.511        0.727       0.036      -0.384       0.784     -0.511      0.899 0.136
+      disp21_q70_dd5_c25   -inf       0.861      0.017     -0.518        0.622       0.019      -0.384       0.746     -0.518      0.848 0.154
+     disp21_q70_dd10_c50   -inf       0.752      0.020     -0.550        0.760       0.037      -0.385       0.741     -0.550      0.936 0.126
+      own20_q70_dd10_c25   -inf         NaN        NaN        NaN          NaN         NaN         NaN         NaN        NaN        NaN   NaN
+     disp21_q70_dd10_c25   -inf       0.709      0.017     -0.573        0.686       0.025      -0.384       0.687     -0.573      0.904 0.137
+      disp21_q80_dd5_c50   -inf       0.780      0.019     -0.535        0.817       0.049      -0.399       0.781     -0.535      0.925 0.132
+     disp21_q80_dd10_c50   -inf       0.753      0.020     -0.535        0.795       0.049      -0.410       0.756     -0.535      0.951 0.123
+      disp21_q80_dd5_c25   -inf       0.755      0.016     -0.553        0.775       0.025      -0.402       0.750     -0.553      0.887 0.147
+ own20_q70_dd5_c50_lock5   -inf         NaN        NaN        NaN          NaN         NaN         NaN         NaN        NaN        NaN   NaN
+own20_q70_dd10_c50_lock5   -inf         NaN        NaN        NaN          NaN         NaN         NaN         NaN        NaN        NaN   NaN
+ own20_q80_dd5_c50_lock5   -inf         NaN        NaN        NaN          NaN         NaN         NaN         NaN        NaN        NaN   NaN
+     disp21_q80_dd10_c25   -inf       0.719      0.020     -0.553        0.747       0.025      -0.418       0.718     -0.553      0.926 0.132
+own20_q80_dd10_c50_lock5   -inf         NaN        NaN        NaN          NaN         NaN         NaN         NaN        NaN        NaN   NaN
+ own20_q70_novolonly_c50   -inf       0.747      0.021     -0.355        0.970       0.045      -0.320       0.821     -0.428      0.819 0.106
+disp21_q70_novolonly_c50   -inf       0.824      0.016     -0.494        0.814       0.037      -0.384       0.803     -0.494      0.822 0.140
+disp21_q80_novolonly_c50   -inf       0.722      0.017     -0.535        0.868       0.056      -0.384       0.769     -0.535      0.876 0.136
+      ddonly_dd5_q70_c50   -inf       0.710      0.011     -0.315        0.747       0.029      -0.345       0.713     -0.456      0.747 0.121
+     ddonly_dd10_q70_c50   -inf       0.707      0.015     -0.387        0.736       0.029      -0.380       0.707     -0.454      0.858 0.117
+      ddonly_dd5_q80_c50   -inf       0.710      0.011     -0.315        0.747       0.029      -0.345       0.713     -0.456      0.747 0.121
+     ddonly_dd10_q80_c50   -inf       0.707      0.015     -0.387        0.736       0.029      -0.380       0.707     -0.454      0.858 0.117
+
+Baseline: baseline                                     DEV Sh 0.78 med  2.1% DD -53.2% | HOLD Sh 0.83 med  5.6% DD -46.0% | ALL Sh 0.78 DD -53.2%
+
+perturbation guard for own20_q80_novolonly_c50
+   perturbation after 2014-03-14: max |dW| on earlier rows = 0.00e+00
+   perturbation after 2017-10-02: max |dW| on earlier rows = 0.00e+00
+   perturbation after 2020-06-17: max |dW| on earlier rows = 0.00e+00
+   perturbation after 2022-06-14: max |dW| on earlier rows = 0.00e+00
+   perturbation after 2025-08-12: max |dW| on earlier rows = 0.00e+00
+perturbation check: OK (worst 0.00e+00)
+summary -> /home/user/quant_crypto_strategy/new-exp/results/r8/conj_summary.json
