@@ -70,6 +70,13 @@ for _d in ("gld_tlt", "usmv"):
     CONFIGS.append(dict(name=f"ivol_{_d}", kind="ivol", cap=None, dest=_d))
 for _d in ("gld", "tlt", "usmv", "gld_tlt"):
     CONFIGS.append(dict(name=f"ivolcap30_{_d}", kind="ivol", cap=0.30, dest=_d))
+# ---- POST-HOC configs (added AFTER the 33 pre-registered ones were run and seen; plateau / mechanism diagnostics only, never used to select; flagged posthoc=True) ----
+CONFIGS += [
+    dict(name="ph_trigE_usmv_gld", kind="trig", mode="exp", star=None, dest="usmv_gld", posthoc=True),            # winner with the causal expanding sigma*
+    dict(name="ph_trigF65_usmv_gld", kind="trig", mode="fixed", star=0.3075, dest="usmv_gld", posthoc=True),      # sigma* = DEV 65th pct (voltarget STAR own20 q65)
+    dict(name="ph_trigF80_usmv_gld", kind="trig", mode="fixed", star=0.4042, dest="usmv_gld", posthoc=True),      # sigma* = DEV 80th pct (voltarget STAR own20 q80)
+    dict(name="ph_const17_usmv_gld", kind="mix", m=0.17, dest="usmv_gld", posthoc=True),                           # no timing: constant 17 % = 1 - avg DEV stock exposure (0.832) of the winner
+]
 
 
 def sleeve_vol20(c, W):

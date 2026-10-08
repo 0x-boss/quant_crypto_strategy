@@ -7,3 +7,18 @@ dates in index: ['2021-03-10', '2020-03-12', '2025-03-20', '2026-06-25', '2018-1
    perturbation after 2018-11-15: max |dW| on earlier rows = 0.00e+00
    perturbation after 2013-01-24: max |dW| on earlier rows = 0.00e+00
    perturbation after 2015-08-24: max |dW| on earlier rows = 0.00e+00
+   perturbation after 2023-09-14: max |dW| on earlier rows = 0.00e+00
+perturbation check: OK (worst 0.00e+00)
+RESULT module.apply perturbation: True 0.0 secs 89
+--- leaky_nolag
+   perturbation after 2018-11-15: max |dW| on earlier rows = 1.47e-02
+   perturbation after 2021-03-10: max |dW| on earlier rows = 2.23e-05
+   perturbation after 2025-03-20: max |dW| on earlier rows = 2.28e-03
+perturbation check: LOOK-AHEAD DETECTED (worst 1.47e-02)
+--- leaky_fullsample_q
+   perturbation after 2018-11-15: max |dW| on earlier rows = 3.59e-02
+   perturbation after 2021-03-10: max |dW| on earlier rows = 5.35e-02
+   perturbation after 2025-03-20: max |dW| on earlier rows = 7.18e-03
+perturbation check: LOOK-AHEAD DETECTED (worst 5.35e-02)
+truncation check at 2019-06-28: max |diff| = 0.00e+00 -> OK
+truncation check at 2023-03-15: max |diff| = 0.00e+00 -> OK

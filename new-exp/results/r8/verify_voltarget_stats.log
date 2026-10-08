@@ -1,0 +1,62 @@
+[base fee1]
+   dev  Sh  0.78 | med/mo  2.15% | mean/mo  2.24% | >5%mo  33% | maxDD  -53.2% | Calmar 0.46 | worst mo  -22.2% | vol   38%
+   hold Sh  0.83 | med/mo  5.61% | mean/mo  3.49% | >5%mo  51% | maxDD  -46.0% | Calmar 0.79 | worst mo  -25.3% | vol   58%
+   all  Sh  0.78 | med/mo  2.31% | mean/mo  2.64% | >5%mo  39% | maxDD  -53.2% | Calmar 0.53 | worst mo  -25.3% | vol   45%
+base done 10
+[cand fee1]
+   dev  Sh  0.88 | med/mo  2.07% | mean/mo  2.04% | >5%mo  31% | maxDD  -31.2% | Calmar 0.76 | worst mo  -20.7% | vol   29%
+   hold Sh  0.92 | med/mo  4.85% | mean/mo  3.16% | >5%mo  49% | maxDD  -35.8% | Calmar 1.00 | worst mo  -22.1% | vol   43%
+   all  Sh  0.88 | med/mo  2.22% | mean/mo  2.40% | >5%mo  37% | maxDD  -39.7% | Calmar 0.69 | worst mo  -22.1% | vol   34%
+cand done 16
+               dev_sh  hold_sh  dev_dd  hold_dd  dev_med  hold_med  dev_sh_ex2021  dev_sh_2012_19   turn  gross
+base_fee1       0.776    0.825  -0.532   -0.460    0.021     0.056          0.697           0.697  0.109  1.000
+base_fee2       0.704    0.775  -0.534   -0.462    0.019     0.053          0.597           0.597  0.109  1.000
+base_fee4       0.560    0.676  -0.538   -0.466    0.014     0.048          0.398           0.398  0.109  1.000
+base_lag1       0.768    0.848  -0.543   -0.456    0.020     0.055          0.711           0.711  0.109  1.000
+base_fee2lag1   0.696    0.798  -0.545   -0.458    0.018     0.052          0.611           0.611  0.109  1.000
+cand_fee1       0.880    0.921  -0.312   -0.358    0.021     0.048          0.754           0.754  0.103  0.896
+cand_fee2       0.791    0.860  -0.322   -0.361    0.018     0.047          0.650           0.650  0.103  0.896
+cand_fee4       0.614    0.737  -0.354   -0.369    0.014     0.046          0.443           0.443  0.103  0.896
+cand_lag1       0.865    0.960  -0.316   -0.361    0.019     0.057          0.764           0.764  0.103  0.896
+cand_fee2lag1   0.777    0.899  -0.326   -0.365    0.017     0.054          0.660           0.660  0.103  0.896
+
+DEV Sharpe improvement (cand - base):
+  fee1      base 0.776 cand 0.880 diff +0.104 | excl2020-21: base 0.697 cand 0.754 diff +0.058
+  fee2      base 0.704 cand 0.791 diff +0.088 | excl2020-21: base 0.597 cand 0.650 diff +0.054
+  fee4      base 0.560 cand 0.614 diff +0.054 | excl2020-21: base 0.398 cand 0.443 diff +0.045
+  lag1      base 0.768 cand 0.865 diff +0.097 | excl2020-21: base 0.711 cand 0.764 diff +0.053
+  fee2lag1  base 0.696 cand 0.777 diff +0.081 | excl2020-21: base 0.611 cand 0.660 diff +0.049
+       base   cand  base_ret  cand_ret
+2012  0.934  0.908     0.215     0.206
+2013  2.137  2.137     0.575     0.575
+2014  0.371  0.330     0.066     0.054
+2015 -0.061  0.019    -0.061    -0.035
+2016  0.809  0.811     0.174     0.174
+2017  1.116  1.131     0.271     0.275
+2018 -0.446 -0.390    -0.208    -0.155
+2019  1.660  1.671     0.485     0.482
+2020  1.575  1.716     1.045     0.773
+2021  0.736  0.851     0.310     0.301
+2022 -0.286 -0.296    -0.182    -0.169
+2023  0.986  1.114     0.355     0.398
+2024  1.049  0.966     0.493     0.395
+2025  0.726  1.066     0.298     0.473
+2026  1.637  1.751     1.017     0.778
+DEV block-bootstrap dSharpe (fee1) [2.5%, med, 97.5%, P>0]: [-0.086  0.1    0.297  0.851]
+DEV excl2020-21 block-bootstrap dSharpe (fee1): [-0.009  0.051  0.139  0.948]
+DEV block-bootstrap dSharpe (fee2) [2.5%, med, 97.5%, P>0]: [-0.1    0.084  0.278  0.813]
+DEV excl2020-21 block-bootstrap dSharpe (fee2): [-0.011  0.048  0.133  0.938]
+  window 2021-02-12..05-10: base  -50.8%  cand  -25.9%
+  window 2025-02-12..04-04: base  -41.0%  cand  -20.5%
+  window 2020-02-19..03-18: base  -44.1%  cand  -28.1%
+  window 2026-06-02..07-28: base  -37.2%  cand  -24.1%
+  window 2023-08-01..10-30: base  -37.7%  cand  -35.1%
+  window 2018-10-01..12-24: base  -35.1%  cand  -29.0%
+[cand_dropzero fee1]
+   dev  Sh  0.88 | med/mo  2.07% | mean/mo  2.07% | >5%mo  32% | maxDD  -31.2% | Calmar 0.77 | worst mo  -20.9% | vol   29%
+   hold Sh  0.91 | med/mo  4.92% | mean/mo  3.17% | >5%mo  49% | maxDD  -36.4% | Calmar 0.98 | worst mo  -22.3% | vol   44%
+   all  Sh  0.88 | med/mo  2.22% | mean/mo  2.42% | >5%mo  37% | maxDD  -40.2% | Calmar 0.69 | worst mo  -22.3% | vol   35%
+  cand_dropzero fee1: DEV 0.880 HOLD 0.913 DEVdd -0.312 excl2020-21 0.754
+  cand_dropzero fee2: DEV 0.793 HOLD 0.852 DEVdd -0.322 excl2020-21 0.651
+constant scale 0.920: DEV Sharpe 0.776 (cand 0.880, base 0.776)
+secs 24

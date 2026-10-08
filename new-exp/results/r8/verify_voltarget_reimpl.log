@@ -1,0 +1,9 @@
+baseline book max|diff| vs R.base_weights: 1.4155343563970746e-15
+baseline return max|diff| vs R.run: 8.881784197001252e-16
+[drop_zero_vol_in_quantile=False] max|dW| rows>=2012 (excl. final row): 2.040e-15 | all rows: 2.040e-15 | final-row module NaN count: 2596
+    return series max|diff| (mine vs R.run(module W)): 8.882e-16
+    sigma_hat==0 count (book empty, zero-vol included in the expanding sample): 235 | first date star defined: 2010-01-29 | first date s<1: 2010-05-10
+    mean s 2012-21: 0.920 | 2022-26: 0.847 | frac days s<1 DEV: 0.251 HOLD: 0.527
+[drop_zero_vol_in_quantile=True] max|dW| rows>=2012 (excl. final row): 7.761e-03 | all rows: 4.221e-02 | final-row module NaN count: 2596
+    return series max|diff| (mine vs R.run(module W)): 2.672e-02
+secs 19
