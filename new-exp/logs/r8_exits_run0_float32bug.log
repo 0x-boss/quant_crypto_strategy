@@ -1,0 +1,173 @@
+[BASELINE]
+   dev  Sh  0.78 | med/mo  2.15% | mean/mo  2.24% | >5%mo  33% | maxDD  -53.2% | Calmar 0.46 | worst mo  -22.2% | vol   38%
+   hold Sh  0.83 | med/mo  5.61% | mean/mo  3.49% | >5%mo  51% | maxDD  -46.0% | Calmar 0.79 | worst mo  -25.3% | vol   58%
+   all  Sh  0.78 | med/mo  2.31% | mean/mo  2.64% | >5%mo  39% | maxDD  -53.2% | Calmar 0.53 | worst mo  -25.3% | vol   45%
+CONFIG FAILED sanity_replica_fill AssertionError('gross exposure > 100 %')
+Traceback (most recent call last):
+  File "/home/user/quant_crypto_strategy/new-exp/src/r8_runfamily.py", line 45, in <module>
+    r = R.run(c, W)
+  File "/home/user/quant_crypto_strategy/new-exp/src/r8_common.py", line 56, in run
+    r = lib.weights_backtest(W, c["O"][cols].astype(np.float64), fee=fee, lag=lag)
+AssertionError: gross exposure > 100 %
+  done sanity_replica_fill                          2s
+  done cash_atr2_state                              5s
+  done cash_atr3_state                              8s
+  done cash_atr4_state                             10s
+  done cash_sma20_state                            12s
+  done cash_sma50_state                            14s
+  done cash_shock1.0_state                         16s
+  done cash_shock1.5_state                         18s
+  done cash_shock2.0_state                         20s
+CONFIG FAILED fill_atr2_state AssertionError('gross exposure > 100 %')
+Traceback (most recent call last):
+  File "/home/user/quant_crypto_strategy/new-exp/src/r8_runfamily.py", line 45, in <module>
+    r = R.run(c, W)
+  File "/home/user/quant_crypto_strategy/new-exp/src/r8_common.py", line 56, in run
+    r = lib.weights_backtest(W, c["O"][cols].astype(np.float64), fee=fee, lag=lag)
+AssertionError: gross exposure > 100 %
+  done fill_atr2_state                             23s
+CONFIG FAILED fill_atr3_state AssertionError('gross exposure > 100 %')
+Traceback (most recent call last):
+  File "/home/user/quant_crypto_strategy/new-exp/src/r8_runfamily.py", line 45, in <module>
+    r = R.run(c, W)
+  File "/home/user/quant_crypto_strategy/new-exp/src/r8_common.py", line 56, in run
+    r = lib.weights_backtest(W, c["O"][cols].astype(np.float64), fee=fee, lag=lag)
+AssertionError: gross exposure > 100 %
+  done fill_atr3_state                             26s
+CONFIG FAILED fill_atr4_state AssertionError('gross exposure > 100 %')
+Traceback (most recent call last):
+  File "/home/user/quant_crypto_strategy/new-exp/src/r8_runfamily.py", line 45, in <module>
+    r = R.run(c, W)
+  File "/home/user/quant_crypto_strategy/new-exp/src/r8_common.py", line 56, in run
+    r = lib.weights_backtest(W, c["O"][cols].astype(np.float64), fee=fee, lag=lag)
+AssertionError: gross exposure > 100 %
+  done fill_atr4_state                             29s
+CONFIG FAILED fill_sma20_state AssertionError('gross exposure > 100 %')
+Traceback (most recent call last):
+  File "/home/user/quant_crypto_strategy/new-exp/src/r8_runfamily.py", line 45, in <module>
+    r = R.run(c, W)
+  File "/home/user/quant_crypto_strategy/new-exp/src/r8_common.py", line 56, in run
+    r = lib.weights_backtest(W, c["O"][cols].astype(np.float64), fee=fee, lag=lag)
+AssertionError: gross exposure > 100 %
+  done fill_sma20_state                            31s
+CONFIG FAILED fill_sma50_state AssertionError('gross exposure > 100 %')
+Traceback (most recent call last):
+  File "/home/user/quant_crypto_strategy/new-exp/src/r8_runfamily.py", line 45, in <module>
+    r = R.run(c, W)
+  File "/home/user/quant_crypto_strategy/new-exp/src/r8_common.py", line 56, in run
+    r = lib.weights_backtest(W, c["O"][cols].astype(np.float64), fee=fee, lag=lag)
+AssertionError: gross exposure > 100 %
+  done fill_sma50_state                            34s
+CONFIG FAILED fill_shock1.0_state AssertionError('gross exposure > 100 %')
+Traceback (most recent call last):
+  File "/home/user/quant_crypto_strategy/new-exp/src/r8_runfamily.py", line 45, in <module>
+    r = R.run(c, W)
+  File "/home/user/quant_crypto_strategy/new-exp/src/r8_common.py", line 56, in run
+    r = lib.weights_backtest(W, c["O"][cols].astype(np.float64), fee=fee, lag=lag)
+AssertionError: gross exposure > 100 %
+  done fill_shock1.0_state                         36s
+CONFIG FAILED fill_shock1.5_state AssertionError('gross exposure > 100 %')
+Traceback (most recent call last):
+  File "/home/user/quant_crypto_strategy/new-exp/src/r8_runfamily.py", line 45, in <module>
+    r = R.run(c, W)
+  File "/home/user/quant_crypto_strategy/new-exp/src/r8_common.py", line 56, in run
+    r = lib.weights_backtest(W, c["O"][cols].astype(np.float64), fee=fee, lag=lag)
+AssertionError: gross exposure > 100 %
+  done fill_shock1.5_state                         38s
+CONFIG FAILED fill_shock2.0_state AssertionError('gross exposure > 100 %')
+Traceback (most recent call last):
+  File "/home/user/quant_crypto_strategy/new-exp/src/r8_runfamily.py", line 45, in <module>
+    r = R.run(c, W)
+  File "/home/user/quant_crypto_strategy/new-exp/src/r8_common.py", line 56, in run
+    r = lib.weights_backtest(W, c["O"][cols].astype(np.float64), fee=fee, lag=lag)
+AssertionError: gross exposure > 100 %
+  done fill_shock2.0_state                         41s
+  done cash_atr3_lock5                             44s
+  done cash_atr3_lock10                            46s
+  done cash_sma20_lock5                            49s
+  done cash_sma20_lock10                           51s
+  done cash_shock1.5_lock5                         53s
+  done cash_shock1.5_lock10                        55s
+CONFIG FAILED fill_atr3_lock5 AssertionError('gross exposure > 100 %')
+Traceback (most recent call last):
+  File "/home/user/quant_crypto_strategy/new-exp/src/r8_runfamily.py", line 45, in <module>
+    r = R.run(c, W)
+  File "/home/user/quant_crypto_strategy/new-exp/src/r8_common.py", line 56, in run
+    r = lib.weights_backtest(W, c["O"][cols].astype(np.float64), fee=fee, lag=lag)
+AssertionError: gross exposure > 100 %
+  done fill_atr3_lock5                             58s
+CONFIG FAILED fill_atr3_lock10 AssertionError('gross exposure > 100 %')
+Traceback (most recent call last):
+  File "/home/user/quant_crypto_strategy/new-exp/src/r8_runfamily.py", line 45, in <module>
+    r = R.run(c, W)
+  File "/home/user/quant_crypto_strategy/new-exp/src/r8_common.py", line 56, in run
+    r = lib.weights_backtest(W, c["O"][cols].astype(np.float64), fee=fee, lag=lag)
+AssertionError: gross exposure > 100 %
+  done fill_atr3_lock10                            61s
+CONFIG FAILED fill_sma20_lock5 AssertionError('gross exposure > 100 %')
+Traceback (most recent call last):
+  File "/home/user/quant_crypto_strategy/new-exp/src/r8_runfamily.py", line 45, in <module>
+    r = R.run(c, W)
+  File "/home/user/quant_crypto_strategy/new-exp/src/r8_common.py", line 56, in run
+    r = lib.weights_backtest(W, c["O"][cols].astype(np.float64), fee=fee, lag=lag)
+AssertionError: gross exposure > 100 %
+  done fill_sma20_lock5                            64s
+CONFIG FAILED fill_sma20_lock10 AssertionError('gross exposure > 100 %')
+Traceback (most recent call last):
+  File "/home/user/quant_crypto_strategy/new-exp/src/r8_runfamily.py", line 45, in <module>
+    r = R.run(c, W)
+  File "/home/user/quant_crypto_strategy/new-exp/src/r8_common.py", line 56, in run
+    r = lib.weights_backtest(W, c["O"][cols].astype(np.float64), fee=fee, lag=lag)
+AssertionError: gross exposure > 100 %
+  done fill_sma20_lock10                           66s
+CONFIG FAILED fill_shock1.5_lock5 AssertionError('gross exposure > 100 %')
+Traceback (most recent call last):
+  File "/home/user/quant_crypto_strategy/new-exp/src/r8_runfamily.py", line 45, in <module>
+    r = R.run(c, W)
+  File "/home/user/quant_crypto_strategy/new-exp/src/r8_common.py", line 56, in run
+    r = lib.weights_backtest(W, c["O"][cols].astype(np.float64), fee=fee, lag=lag)
+AssertionError: gross exposure > 100 %
+  done fill_shock1.5_lock5                         69s
+CONFIG FAILED fill_shock1.5_lock10 AssertionError('gross exposure > 100 %')
+Traceback (most recent call last):
+  File "/home/user/quant_crypto_strategy/new-exp/src/r8_runfamily.py", line 45, in <module>
+    r = R.run(c, W)
+  File "/home/user/quant_crypto_strategy/new-exp/src/r8_common.py", line 56, in run
+    r = lib.weights_backtest(W, c["O"][cols].astype(np.float64), fee=fee, lag=lag)
+AssertionError: gross exposure > 100 %
+  done fill_shock1.5_lock10                        72s
+
+=== ranked by pre-registered DEV objective (HOLD shown for information, never used to select) ===
+                name  score  dev_sharpe  dev_med_m  dev_maxdd  hold_sharpe  hold_med_m  hold_maxdd  all_sharpe  all_maxdd  avg_gross  turn
+ sanity_replica_fill   -inf         NaN        NaN        NaN          NaN         NaN         NaN         NaN        NaN        NaN   NaN
+     cash_atr2_state   -inf       0.500     -0.000     -0.389        0.497       0.013      -0.367       0.488     -0.389      0.665 0.162
+     cash_atr3_state   -inf       0.594      0.011     -0.479        0.677       0.052      -0.504       0.613     -0.504      0.859 0.147
+     cash_atr4_state   -inf       0.664      0.017     -0.539        0.755       0.057      -0.461       0.686     -0.539      0.962 0.126
+    cash_sma20_state   -inf       0.474     -0.004     -0.421        0.366       0.008      -0.308       0.420     -0.421      0.541 0.171
+    cash_sma50_state   -inf       0.521      0.007     -0.334        0.444      -0.009      -0.308       0.481     -0.369      0.645 0.133
+ cash_shock1.0_state   -inf       0.639      0.019     -0.545        0.814       0.047      -0.455       0.696     -0.545      0.961 0.140
+ cash_shock1.5_state   -inf       0.759      0.021     -0.532        0.835       0.055      -0.460       0.774     -0.532      0.996 0.113
+ cash_shock2.0_state   -inf       0.775      0.021     -0.532        0.825       0.056      -0.460       0.779     -0.532      1.000 0.109
+     fill_atr2_state   -inf         NaN        NaN        NaN          NaN         NaN         NaN         NaN        NaN        NaN   NaN
+     fill_atr3_state   -inf         NaN        NaN        NaN          NaN         NaN         NaN         NaN        NaN        NaN   NaN
+     fill_atr4_state   -inf         NaN        NaN        NaN          NaN         NaN         NaN         NaN        NaN        NaN   NaN
+    fill_sma20_state   -inf         NaN        NaN        NaN          NaN         NaN         NaN         NaN        NaN        NaN   NaN
+    fill_sma50_state   -inf         NaN        NaN        NaN          NaN         NaN         NaN         NaN        NaN        NaN   NaN
+ fill_shock1.0_state   -inf         NaN        NaN        NaN          NaN         NaN         NaN         NaN        NaN        NaN   NaN
+ fill_shock1.5_state   -inf         NaN        NaN        NaN          NaN         NaN         NaN         NaN        NaN        NaN   NaN
+ fill_shock2.0_state   -inf         NaN        NaN        NaN          NaN         NaN         NaN         NaN        NaN        NaN   NaN
+     cash_atr3_lock5   -inf       0.664      0.008     -0.425        0.708       0.026      -0.445       0.665     -0.445      0.771 0.115
+    cash_atr3_lock10   -inf       0.606      0.006     -0.391        0.693       0.032      -0.459       0.627     -0.459      0.708 0.102
+    cash_sma20_lock5   -inf       0.476     -0.002     -0.293        0.395      -0.003      -0.189       0.437     -0.293      0.373 0.095
+   cash_sma20_lock10   -inf       0.483     -0.000     -0.210        0.438      -0.000      -0.174       0.462     -0.214      0.272 0.068
+ cash_shock1.5_lock5   -inf       0.772      0.021     -0.532        0.829       0.059      -0.460       0.778     -0.532      0.987 0.111
+cash_shock1.5_lock10   -inf       0.780      0.020     -0.532        0.854       0.059      -0.460       0.792     -0.532      0.977 0.110
+     fill_atr3_lock5   -inf         NaN        NaN        NaN          NaN         NaN         NaN         NaN        NaN        NaN   NaN
+    fill_atr3_lock10   -inf         NaN        NaN        NaN          NaN         NaN         NaN         NaN        NaN        NaN   NaN
+    fill_sma20_lock5   -inf         NaN        NaN        NaN          NaN         NaN         NaN         NaN        NaN        NaN   NaN
+   fill_sma20_lock10   -inf         NaN        NaN        NaN          NaN         NaN         NaN         NaN        NaN        NaN   NaN
+ fill_shock1.5_lock5   -inf         NaN        NaN        NaN          NaN         NaN         NaN         NaN        NaN        NaN   NaN
+fill_shock1.5_lock10   -inf         NaN        NaN        NaN          NaN         NaN         NaN         NaN        NaN        NaN   NaN
+
+Baseline: baseline                                     DEV Sh 0.78 med  2.1% DD -53.2% | HOLD Sh 0.83 med  5.6% DD -46.0% | ALL Sh 0.78 DD -53.2%
+summary -> /home/user/quant_crypto_strategy/new-exp/results/r8/exits_summary.json

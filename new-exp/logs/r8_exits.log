@@ -1,0 +1,68 @@
+[BASELINE]
+   dev  Sh  0.78 | med/mo  2.15% | mean/mo  2.24% | >5%mo  33% | maxDD  -53.2% | Calmar 0.46 | worst mo  -22.2% | vol   38%
+   hold Sh  0.83 | med/mo  5.61% | mean/mo  3.49% | >5%mo  51% | maxDD  -46.0% | Calmar 0.79 | worst mo  -25.3% | vol   58%
+   all  Sh  0.78 | med/mo  2.31% | mean/mo  2.64% | >5%mo  39% | maxDD  -53.2% | Calmar 0.53 | worst mo  -25.3% | vol   45%
+  done sanity_replica_fill                          3s
+  done cash_atr2_state                              5s
+  done cash_atr3_state                              8s
+  done cash_atr4_state                             11s
+  done cash_sma20_state                            13s
+  done cash_sma50_state                            15s
+  done cash_shock1.0_state                         17s
+  done cash_shock1.5_state                         20s
+  done cash_shock2.0_state                         21s
+  done fill_atr2_state                             25s
+  done fill_atr3_state                             28s
+  done fill_atr4_state                             31s
+  done fill_sma20_state                            33s
+  done fill_sma50_state                            36s
+  done fill_shock1.0_state                         38s
+  done fill_shock1.5_state                         41s
+  done fill_shock2.0_state                         43s
+  done cash_atr3_lock5                             46s
+  done cash_atr3_lock10                            49s
+  done cash_sma20_lock5                            51s
+  done cash_sma20_lock10                           53s
+  done cash_shock1.5_lock5                         56s
+  done cash_shock1.5_lock10                        58s
+  done fill_atr3_lock5                             61s
+  done fill_atr3_lock10                            65s
+  done fill_sma20_lock5                            67s
+  done fill_sma20_lock10                           70s
+  done fill_shock1.5_lock5                         72s
+  done fill_shock1.5_lock10                        76s
+
+=== ranked by pre-registered DEV objective (HOLD shown for information, never used to select) ===
+                name  score  dev_sharpe  dev_med_m  dev_maxdd  hold_sharpe  hold_med_m  hold_maxdd  all_sharpe  all_maxdd  avg_gross  turn
+ sanity_replica_fill   -inf       0.776      0.021     -0.532        0.825       0.056      -0.460       0.779     -0.532      1.000 0.109
+     cash_atr2_state   -inf       0.500     -0.000     -0.389        0.497       0.013      -0.367       0.488     -0.389      0.665 0.162
+     cash_atr3_state   -inf       0.594      0.011     -0.479        0.677       0.052      -0.504       0.613     -0.504      0.859 0.147
+     cash_atr4_state   -inf       0.664      0.017     -0.539        0.755       0.057      -0.461       0.686     -0.539      0.962 0.126
+    cash_sma20_state   -inf       0.474     -0.004     -0.421        0.366       0.008      -0.308       0.420     -0.421      0.541 0.171
+    cash_sma50_state   -inf       0.521      0.007     -0.334        0.444      -0.009      -0.308       0.481     -0.369      0.645 0.133
+ cash_shock1.0_state   -inf       0.639      0.019     -0.545        0.814       0.047      -0.455       0.696     -0.545      0.961 0.140
+ cash_shock1.5_state   -inf       0.759      0.021     -0.532        0.835       0.055      -0.460       0.774     -0.532      0.996 0.113
+ cash_shock2.0_state   -inf       0.775      0.021     -0.532        0.825       0.056      -0.460       0.779     -0.532      1.000 0.109
+     fill_atr2_state   -inf       0.368      0.004     -0.512        0.362       0.025      -0.550       0.358     -0.598      1.000 0.358
+     fill_atr3_state   -inf       0.571      0.011     -0.508        0.683       0.057      -0.496       0.604     -0.508      1.000 0.216
+     fill_atr4_state   -inf       0.654      0.016     -0.547        0.784       0.052      -0.460       0.693     -0.547      1.000 0.147
+    fill_sma20_state   -inf       0.215     -0.003     -0.663        0.212       0.018      -0.541       0.210     -0.687      0.998 0.480
+    fill_sma50_state   -inf       0.455      0.013     -0.428        0.271       0.020      -0.530       0.374     -0.597      0.999 0.294
+ fill_shock1.0_state   -inf       0.656      0.019     -0.543        0.821       0.048      -0.463       0.709     -0.543      1.000 0.171
+ fill_shock1.5_state   -inf       0.758      0.020     -0.532        0.826       0.056      -0.460       0.769     -0.532      1.000 0.117
+ fill_shock2.0_state   -inf       0.776      0.021     -0.532        0.825       0.056      -0.460       0.779     -0.532      1.000 0.110
+     cash_atr3_lock5   -inf       0.664      0.008     -0.425        0.708       0.026      -0.445       0.665     -0.445      0.771 0.115
+    cash_atr3_lock10   -inf       0.606      0.006     -0.391        0.693       0.032      -0.459       0.627     -0.459      0.708 0.102
+    cash_sma20_lock5   -inf       0.476     -0.002     -0.293        0.395      -0.003      -0.189       0.437     -0.293      0.373 0.095
+   cash_sma20_lock10   -inf       0.483     -0.000     -0.210        0.438      -0.000      -0.174       0.462     -0.214      0.272 0.068
+ cash_shock1.5_lock5   -inf       0.772      0.021     -0.532        0.829       0.059      -0.460       0.778     -0.532      0.987 0.111
+cash_shock1.5_lock10   -inf       0.780      0.020     -0.532        0.854       0.059      -0.460       0.792     -0.532      0.977 0.110
+     fill_atr3_lock5   -inf       0.600      0.007     -0.481        0.660       0.049      -0.502       0.610     -0.502      1.000 0.195
+    fill_atr3_lock10   -inf       0.572      0.010     -0.474        0.653       0.046      -0.523       0.592     -0.523      1.000 0.191
+    fill_sma20_lock5   -inf       0.151      0.004     -0.652        0.145      -0.003      -0.534       0.145     -0.682      0.997 0.448
+   fill_sma20_lock10   -inf       0.157      0.001     -0.603        0.220       0.014      -0.482       0.179     -0.645      0.997 0.452
+ fill_shock1.5_lock5   -inf       0.761      0.019     -0.532        0.832       0.057      -0.460       0.773     -0.532      1.000 0.116
+fill_shock1.5_lock10   -inf       0.758      0.017     -0.532        0.832       0.057      -0.460       0.772     -0.532      1.000 0.116
+
+Baseline: baseline                                     DEV Sh 0.78 med  2.1% DD -53.2% | HOLD Sh 0.83 med  5.6% DD -46.0% | ALL Sh 0.78 DD -53.2%
+summary -> /home/user/quant_crypto_strategy/new-exp/results/r8/exits_summary.json

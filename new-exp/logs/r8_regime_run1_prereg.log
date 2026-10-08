@@ -1,0 +1,72 @@
+[BASELINE]
+   dev  Sh  0.78 | med/mo  2.15% | mean/mo  2.24% | >5%mo  33% | maxDD  -53.2% | Calmar 0.46 | worst mo  -22.2% | vol   38%
+   hold Sh  0.83 | med/mo  5.61% | mean/mo  3.49% | >5%mo  51% | maxDD  -46.0% | Calmar 0.79 | worst mo  -25.3% | vol   58%
+   all  Sh  0.78 | med/mo  2.31% | mean/mo  2.64% | >5%mo  39% | maxDD  -53.2% | Calmar 0.53 | worst mo  -25.3% | vol   45%
+  done wml21_step                                   5s
+  done wml21_half                                   8s
+  done wml63_step                                  10s
+  done wml63_half                                  12s
+  done wmlvol21_step                               14s
+  done wmlvol63_step                               16s
+  done hb50_step                                   19s
+  done hb20_step                                   21s
+  done ub50_step                                   25s
+  done ub20_step                                   28s
+  done disp_step                                   31s
+  done disp_half90                                 33s
+  done vix_a                                       35s
+  done vix_b                                       38s
+  done vts_a                                       40s
+  done vts_b                                       42s
+  done dm_half                                     45s
+  done dm_step                                     47s
+  done dm_bear                                     49s
+  done shock_step                                  52s
+  done shock_half                                  54s
+  done shockz_step                                 57s
+  done vote_fac3                                   59s
+  done vote_fac4                                   63s
+  done vote_all7                                   65s
+  done vote_mkt3                                   68s
+  done vote_fac3_half                              71s
+  done comp4_step                                  74s
+  done comp4_half                                  76s
+  done comp_mkt                                    78s
+  done comp_fac                                    81s
+
+=== ranked by pre-registered DEV objective (HOLD shown for information, never used to select) ===
+          name  score  dev_sharpe  dev_med_m  dev_maxdd  hold_sharpe  hold_med_m  hold_maxdd  all_sharpe  all_maxdd  avg_gross  turn
+    wml21_step   -inf       0.677      0.020     -0.535        0.729       0.045      -0.485       0.686     -0.535      0.914 0.114
+    wml21_half   -inf       0.737      0.021     -0.520        0.789       0.056      -0.448       0.745     -0.520      0.936 0.113
+    wml63_step   -inf       0.585      0.020     -0.495        0.699       0.019      -0.448       0.622     -0.592      0.887 0.105
+    wml63_half   -inf       0.631      0.021     -0.497        0.800       0.041      -0.384       0.689     -0.552      0.916 0.107
+ wmlvol21_step   -inf       0.527      0.015     -0.445        1.202       0.014      -0.384       0.778     -0.445      0.731 0.087
+ wmlvol63_step   -inf       0.484      0.006     -0.445        0.907       0.010      -0.384       0.647     -0.445      0.709 0.080
+     hb50_step   -inf       0.572      0.015     -0.419        0.636       0.025      -0.394       0.588     -0.507      0.842 0.114
+     hb20_step   -inf       0.630      0.013     -0.502        0.615       0.019      -0.432       0.610     -0.502      0.835 0.129
+     ub50_step   -inf       0.606      0.015     -0.577        0.534       0.000      -0.394       0.565     -0.577      0.833 0.107
+     ub20_step   -inf       0.608      0.009     -0.574        0.634       0.008      -0.461       0.605     -0.574      0.875 0.126
+     disp_step   -inf       0.728      0.016     -0.338        0.638       0.011      -0.355       0.688     -0.355      0.749 0.109
+   disp_half90   -inf       0.826      0.023     -0.462        0.868       0.045      -0.384       0.831     -0.462      0.886 0.107
+         vix_a   -inf       0.487      0.017     -0.544        0.571       0.025      -0.491       0.508     -0.544      0.894 0.106
+         vix_b   -inf       0.612      0.020     -0.532        0.660       0.025      -0.422       0.618     -0.532      0.937 0.107
+         vts_a   -inf       0.657      0.020     -0.532        0.538       0.025      -0.461       0.594     -0.532      0.931 0.118
+         vts_b   -inf       0.624      0.016     -0.566        0.733       0.040      -0.429       0.658     -0.566      0.862 0.111
+       dm_half   -inf       0.768      0.021     -0.532        0.825       0.056      -0.460       0.774     -0.532      0.999 0.110
+       dm_step   -inf       0.735      0.021     -0.532        0.825       0.056      -0.460       0.755     -0.532      0.997 0.110
+       dm_bear   -inf       0.776      0.021     -0.532        0.768       0.050      -0.460       0.756     -0.532      0.986 0.108
+    shock_step   -inf       0.708      0.020     -0.647        0.573       0.050      -0.541       0.640     -0.647      0.945 0.125
+    shock_half   -inf       0.827      0.020     -0.507        0.707       0.050      -0.453       0.762     -0.507      0.958 0.119
+   shockz_step   -inf       0.715      0.020     -0.587        0.811       0.056      -0.472       0.738     -0.587      0.971 0.118
+     vote_fac3   -inf       0.704      0.021     -0.567        0.638       0.041      -0.392       0.666     -0.567      0.943 0.121
+     vote_fac4   -inf       0.632      0.020     -0.406        0.532       0.017      -0.422       0.581     -0.422      0.871 0.122
+     vote_all7   -inf       0.585      0.019     -0.388        0.448       0.005      -0.360       0.514     -0.420      0.758 0.114
+     vote_mkt3   -inf       0.467      0.013     -0.384        0.407       0.009      -0.324       0.436     -0.384      0.717 0.110
+vote_fac3_half   -inf       0.741      0.021     -0.511        0.751       0.045      -0.384       0.732     -0.511      0.953 0.117
+    comp4_step   -inf       0.558      0.015     -0.441        0.902       0.026      -0.401       0.686     -0.441      0.803 0.111
+    comp4_half   -inf       0.654      0.019     -0.445        0.870       0.043      -0.374       0.730     -0.445      0.889 0.111
+      comp_mkt   -inf       0.536      0.017     -0.554        0.467       0.005      -0.429       0.500     -0.554      0.888 0.112
+      comp_fac   -inf       0.643      0.017     -0.445        0.816       0.031      -0.368       0.702     -0.445      0.851 0.115
+
+Baseline: baseline                                     DEV Sh 0.78 med  2.1% DD -53.2% | HOLD Sh 0.83 med  5.6% DD -46.0% | ALL Sh 0.78 DD -53.2%
+summary -> /home/user/quant_crypto_strategy/new-exp/results/r8/regime_summary.json
