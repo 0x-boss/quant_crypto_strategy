@@ -1,0 +1,77 @@
+[BASELINE]
+   dev  Sh  0.78 | med/mo  2.15% | mean/mo  2.24% | >5%mo  33% | maxDD  -53.2% | Calmar 0.46 | worst mo  -22.2% | vol   38%
+   hold Sh  0.83 | med/mo  5.61% | mean/mo  3.49% | >5%mo  51% | maxDD  -46.0% | Calmar 0.79 | worst mo  -25.3% | vol   58%
+   all  Sh  0.78 | med/mo  2.31% | mean/mo  2.64% | >5%mo  39% | maxDD  -53.2% | Calmar 0.53 | worst mo  -25.3% | vol   45%
+  done trigF_cash                                   4s
+  done trigF_bil                                    8s
+  done trigF_gld                                   12s
+  done trigF_tlt                                   16s
+  done trigF_usmv                                  20s
+  done trigF_splv                                  24s
+  done trigF_ief                                   29s
+  done trigF_gld_tlt                               33s
+  done trigF_usmv_gld                              38s
+  done trigE_cash                                  42s
+  done trigE_gld                                   46s
+  done trigE_tlt                                   50s
+  done trigE_usmv                                  57s
+  done trigE_gld_tlt                               62s
+  done mix80_bil                                   65s
+  done mix80_gld                                   68s
+  done mix80_tlt                                   72s
+  done mix80_usmv                                  75s
+  done mix80_splv                                  79s
+  done mix80_ief                                   83s
+  done mix80_gld_tlt                               85s
+  done mix90_gld                                   89s
+  done mix90_tlt                                   93s
+  done mix90_usmv                                  96s
+  done mix70_gld                                   98s
+  done mix70_tlt                                  102s
+  done mix70_usmv                                 105s
+  done ivol_gld_tlt                               110s
+  done ivol_usmv                                  114s
+  done ivolcap30_gld                              118s
+  done ivolcap30_tlt                              122s
+  done ivolcap30_usmv                             125s
+  done ivolcap30_gld_tlt                          129s
+
+=== ranked by pre-registered DEV objective (HOLD shown for information, never used to select) ===
+             name  score  dev_sharpe  dev_med_m  dev_maxdd  hold_sharpe  hold_med_m  hold_maxdd  all_sharpe  all_maxdd  avg_gross  turn
+   trigF_usmv_gld  0.728       0.886      0.021     -0.316        1.105       0.038      -0.255       0.962     -0.324      1.000 0.106
+       trigF_usmv  0.715       0.898      0.021     -0.366        0.997       0.025      -0.252       0.931     -0.366      1.000 0.106
+       trigF_splv  0.710       0.900      0.021     -0.381        0.986       0.030      -0.265       0.929     -0.381      1.000 0.106
+       trigE_usmv  0.709       0.891      0.021     -0.365        0.998       0.025      -0.261       0.926     -0.365      1.000 0.108
+       mix70_usmv  0.662       0.859      0.020     -0.395        0.840       0.039      -0.355       0.836     -0.395      1.000 0.080
+   ivolcap30_usmv  0.662       0.859      0.020     -0.395        0.840       0.039      -0.355       0.836     -0.395      1.000 0.080
+       trigF_cash   -inf       0.870      0.021     -0.323        0.935       0.029      -0.236       0.892     -0.323      0.750 0.090
+        trigF_tlt   -inf       0.895      0.020     -0.327        0.811       0.017      -0.288       0.863     -0.399      1.000 0.106
+        trigF_gld   -inf       0.857      0.018     -0.321        1.174       0.041      -0.264       0.969     -0.321      1.000 0.106
+    trigF_gld_tlt   -inf       0.883      0.020     -0.324        1.018       0.037      -0.260       0.929     -0.355      1.000 0.106
+       trigE_cash   -inf       0.868      0.021     -0.323        0.950       0.033      -0.259       0.893     -0.332      0.773 0.093
+        trigE_gld   -inf       0.859      0.018     -0.321        1.154       0.045      -0.268       0.964     -0.330      1.000 0.109
+        trigE_tlt   -inf       0.888      0.020     -0.327        0.859       0.022      -0.290       0.870     -0.397      1.000 0.109
+    trigE_gld_tlt   -inf       0.880      0.020     -0.324        1.023       0.037      -0.263       0.927     -0.359      1.000 0.109
+        mix80_bil   -inf       0.776      0.018     -0.442        0.839       0.046      -0.380       0.785     -0.442      1.000 0.090
+        trigF_ief   -inf       0.886      0.021     -0.322        0.917       0.034      -0.244       0.895     -0.347      1.000 0.106
+        trigF_bil   -inf       0.860      0.021     -0.324        0.973       0.031      -0.238       0.898     -0.324      1.000 0.106
+        mix80_tlt   -inf       0.819      0.020     -0.448        0.781       0.048      -0.374       0.784     -0.448      1.000 0.091
+        mix80_gld   -inf       0.779      0.017     -0.440        0.884       0.049      -0.376       0.804     -0.440      1.000 0.091
+       mix80_usmv   -inf       0.827      0.020     -0.435        0.835       0.046      -0.391       0.814     -0.435      1.000 0.090
+       mix80_splv   -inf       0.826      0.021     -0.432        0.832       0.045      -0.387       0.813     -0.432      1.000 0.090
+        mix90_gld   -inf       0.778      0.019     -0.487        0.852       0.051      -0.419       0.791     -0.487      1.000 0.100
+        mix90_tlt   -inf       0.795      0.021     -0.491        0.806       0.053      -0.418       0.782     -0.491      1.000 0.100
+        mix80_ief   -inf       0.797      0.018     -0.445        0.814       0.048      -0.374       0.786     -0.445      1.000 0.091
+    mix80_gld_tlt   -inf       0.800      0.019     -0.444        0.834       0.049      -0.375       0.795     -0.444      1.000 0.091
+        mix70_gld   -inf       0.777      0.015     -0.391        0.922       0.043      -0.330       0.819     -0.391      1.000 0.081
+       mix90_usmv   -inf       0.800      0.021     -0.485        0.830       0.052      -0.426       0.795     -0.485      1.000 0.100
+     ivol_gld_tlt   -inf       0.917      0.010     -0.169        0.903       0.021      -0.241       0.896     -0.281      1.000 0.048
+        mix70_tlt   -inf       0.846      0.018     -0.403        0.749       0.036      -0.327       0.785     -0.403      1.000 0.081
+        ivol_usmv   -inf       1.121      0.017     -0.333        0.896       0.019      -0.209       1.049     -0.333      1.000 0.044
+    ivolcap30_gld   -inf       0.777      0.015     -0.391        0.922       0.043      -0.330       0.819     -0.391      1.000 0.081
+    ivolcap30_tlt   -inf       0.846      0.018     -0.403        0.749       0.036      -0.327       0.785     -0.403      1.000 0.081
+ivolcap30_gld_tlt   -inf       0.815      0.018     -0.397        0.839       0.043      -0.329       0.805     -0.397      1.000 0.081
+
+Baseline: baseline                                     DEV Sh 0.78 med  2.1% DD -53.2% | HOLD Sh 0.83 med  5.6% DD -46.0% | ALL Sh 0.78 DD -53.2%
+
+perturbation guard for trigF_usmv_gld

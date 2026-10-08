@@ -1,0 +1,86 @@
+[BASELINE]
+   dev  Sh  0.78 | med/mo  2.15% | mean/mo  2.24% | >5%mo  33% | maxDD  -53.2% | Calmar 0.46 | worst mo  -22.2% | vol   38%
+   hold Sh  0.83 | med/mo  5.61% | mean/mo  3.49% | >5%mo  51% | maxDD  -46.0% | Calmar 0.79 | worst mo  -25.3% | vol   58%
+   all  Sh  0.78 | med/mo  2.31% | mean/mo  2.64% | >5%mo  39% | maxDD  -53.2% | Calmar 0.53 | worst mo  -25.3% | vol   45%
+  done base_mom61                                   5s
+  done riskadj                                      9s
+  done resmom                                      11s
+  done resmom_adj                                  15s
+  done blend_m61_m121                              20s
+  done blend_m61_res                               26s
+  done blend_radj_resadj                           32s
+  done m61_trend                                   35s
+  done m61_h52                                     38s
+  done m61_abscash                                 41s
+  done m61_fip30                                   48s
+  done blend_m61_fip                               54s
+  done m61_ext25                                   58s
+  done m61_ext40                                   63s
+  done riskadj_trend                               65s
+  done riskadj_h52                                 69s
+  done riskadj_ext25                               71s
+  done blend_radj_fip                              77s
+  done riskadj_trend_h52                           79s
+  done blend_m61_m121_trend                        85s
+  done blend_radj_resadj_trend                     90s
+  done riskadj_k8                                  94s
+  done riskadj_k15                                 96s
+  done riskadj_k20                                 99s
+  done riskadj_h3                                 102s
+  done riskadj_h10                                105s
+  done riskadj_k15_h10                            108s
+  done riskadj_k20_h10                            111s
+  done riskadj_trend_k15                          114s
+  done riskadj_trend_k20                          117s
+  done riskadj_trend_h10                          120s
+  done riskadj_trend_k15_h10                      124s
+  done m61_k15                                    127s
+  done m61_k20                                    129s
+
+=== ranked by pre-registered DEV objective (HOLD shown for information, never used to select) ===
+                   name  score  dev_sharpe  dev_med_m  dev_maxdd  hold_sharpe  hold_med_m  hold_maxdd  all_sharpe  all_maxdd  avg_gross  turn
+                m61_h52  0.691       0.877      0.019     -0.373        0.604       0.025      -0.461       0.756     -0.494      1.000 0.127
+             base_mom61   -inf       0.776      0.021     -0.532        0.825       0.056      -0.460       0.779     -0.532      1.000 0.109
+                riskadj   -inf       0.595      0.010     -0.447        0.585       0.013      -0.420       0.581     -0.491      1.000 0.140
+                 resmom   -inf       0.738      0.018     -0.469        0.879       0.042      -0.451       0.779     -0.530      1.000 0.079
+         blend_m61_m121   -inf       0.623      0.019     -0.538        0.891       0.036      -0.450       0.720     -0.601      1.000 0.099
+             resmom_adj   -inf       0.721      0.014     -0.463        1.077       0.029      -0.354       0.851     -0.463      1.000 0.110
+          blend_m61_res   -inf       0.676      0.018     -0.508        0.769       0.040      -0.454       0.699     -0.537      1.000 0.100
+      blend_radj_resadj   -inf       0.632      0.010     -0.466        0.755       0.022      -0.387       0.672     -0.518      1.000 0.124
+              m61_trend   -inf       0.639      0.018     -0.398        0.424       0.007      -0.459       0.544     -0.512      0.998 0.153
+            m61_abscash   -inf       0.776      0.021     -0.532        0.825       0.056      -0.460       0.779     -0.532      1.000 0.109
+              m61_fip30   -inf       0.662      0.012     -0.394        0.682       0.010      -0.460       0.659     -0.544      1.000 0.129
+          blend_m61_fip   -inf       0.670      0.014     -0.382        0.786       0.013      -0.394       0.707     -0.519      1.000 0.124
+              m61_ext25   -inf       0.729      0.021     -0.520        0.847       0.028      -0.414       0.762     -0.520      1.000 0.122
+              m61_ext40   -inf       0.726      0.021     -0.561        0.863       0.053      -0.419       0.767     -0.561      1.000 0.114
+          riskadj_trend   -inf       0.666      0.007     -0.396        0.230       0.012      -0.488       0.490     -0.554      0.998 0.166
+            riskadj_h52   -inf       0.766      0.012     -0.361        0.532       0.009      -0.356       0.670     -0.401      1.000 0.145
+          riskadj_ext25   -inf       0.596      0.011     -0.418        0.634       0.009      -0.375       0.601     -0.445      1.000 0.144
+         blend_radj_fip   -inf       0.680      0.014     -0.388        0.679       0.017      -0.360       0.673     -0.410      1.000 0.130
+      riskadj_trend_h52   -inf       0.736      0.009     -0.370        0.361       0.009      -0.437       0.585     -0.496      0.998 0.166
+   blend_m61_m121_trend   -inf       0.573      0.016     -0.421        0.515      -0.002      -0.462       0.540     -0.619      0.998 0.146
+blend_radj_resadj_trend   -inf       0.669      0.009     -0.352        0.555       0.013      -0.353       0.618     -0.451      0.998 0.156
+             riskadj_k8   -inf       0.510      0.009     -0.490        0.569       0.020      -0.412       0.525     -0.522      1.000 0.147
+            riskadj_k15   -inf       0.683      0.010     -0.369        0.496       0.019      -0.401       0.598     -0.471      1.000 0.129
+            riskadj_k20   -inf       0.771      0.011     -0.336        0.502       0.015      -0.381       0.653     -0.390      1.000 0.121
+             riskadj_h3   -inf       0.559      0.011     -0.450        0.499       0.009      -0.415       0.525     -0.530      1.000 0.181
+            riskadj_h10   -inf       0.620      0.009     -0.425        0.718       0.018      -0.420       0.649     -0.468      1.000 0.100
+        riskadj_k15_h10   -inf       0.719      0.010     -0.353        0.619       0.024      -0.397       0.668     -0.397      1.000 0.092
+        riskadj_k20_h10   -inf       0.794      0.013     -0.348        0.584       0.022      -0.378       0.699     -0.378      1.000 0.087
+      riskadj_trend_k15   -inf       0.767      0.007     -0.338        0.200       0.006      -0.449       0.542     -0.469      0.997 0.156
+      riskadj_trend_k20   -inf       0.835      0.009     -0.304        0.196       0.002      -0.400       0.586     -0.421      0.995 0.147
+      riskadj_trend_h10   -inf       0.764      0.008     -0.352        0.416       0.018      -0.417       0.619     -0.498      0.998 0.111
+  riskadj_trend_k15_h10   -inf       0.846      0.010     -0.335        0.358       0.009      -0.387       0.650     -0.420      0.997 0.104
+                m61_k15   -inf       0.761      0.020     -0.477        0.730       0.044      -0.444       0.731     -0.477      1.000 0.104
+                m61_k20   -inf       0.741      0.021     -0.438        0.716       0.035      -0.438       0.714     -0.464      1.000 0.100
+
+Baseline: baseline                                     DEV Sh 0.78 med  2.1% DD -53.2% | HOLD Sh 0.83 med  5.6% DD -46.0% | ALL Sh 0.78 DD -53.2%
+
+perturbation guard for m61_h52
+   perturbation after 2014-03-14: max |dW| on earlier rows = 0.00e+00
+   perturbation after 2017-10-02: max |dW| on earlier rows = 0.00e+00
+   perturbation after 2020-06-17: max |dW| on earlier rows = 0.00e+00
+   perturbation after 2022-06-14: max |dW| on earlier rows = 0.00e+00
+   perturbation after 2025-08-12: max |dW| on earlier rows = 0.00e+00
+perturbation check: OK (worst 0.00e+00)
+summary -> /home/user/quant_crypto_strategy/new-exp/results/r8/signal_summary.json
