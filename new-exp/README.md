@@ -25,6 +25,29 @@ and nothing close to 1.5.
 ![heatmap](results/chart_monthly_heatmap.png)
 ![monthly](results/chart_monthly_dist.png)
 
+## Round 8 follow-up - "keep the >5 % median, lighter drawdown, better Sharpe" (plan: `R8_PLAN.md`, `R8_STACK_PLAN.md`)
+
+**Answer: partly. The median is kept exactly, the drawdown is ~14 % lighter, the Sharpe is a little better - not the one-third drawdown cut plus a much better Sharpe that would be needed to call it solved.**
+
+| 6-1 momentum, top 10 | Sharpe DEV / HOLD | median month DEV / HOLD | max DD DEV / HOLD / ALL | HOLD CAGR | HOLD Calmar |
+|---|---|---|---|---|---|
+| baseline | 0.78 / 0.83 | 2.15 % / 5.61 % | -53.2 % / -46.0 % / -53.2 % | 36.2 % | 0.79 |
+| **chosen stack**: same book x own-vol scaling (20-day lagged own vol, level = rolling 504-day 80th percentile, never > 100 % invested) | **0.87 / 0.85** | 2.06 % / **5.61 %** | **-41.1 % / -39.4 % / -45.6 %** | 35.9 % | 0.91 |
+| max-protection cell: vol60 <= 100 % per-name cap + expanding-80th-pct own-vol scaling | 0.93 / 0.99 | 2.0 % / 2.0 % | -31.1 % / -31.8 % / -37.0 % | 36.5 % | - |
+
+* **Process.** 9 families (sizing, own-vol target, regime filters, drawdown breakers, signal/selection, per-name exits, defensive destinations, vol-AND-drawdown conjunction, factorial stack) = 279 logged
+  configs; the DEV-selected finalists were re-implemented independently by verifier agents (max weight difference <= 1.5e-14, perturbation guard passed, all rated "use with caution"); the stack
+  was a pre-registered 10-cell factorial. The DEV-only selection rule (needs the gain to survive 2x costs and the removal of the Feb-May 2021 episode) picked exactly one cell: the chosen stack above.
+* **Why it keeps the median.** In HOLD the same 29 of 57 months are >= 5 % with and without the overlay (paired median-difference CI [-1.4 %, +0.6 %]); CAGR retention 99 %.
+* **How solid is it.** Look-ahead guard (9 dates) and truncation test: 0 difference. 2x fees: DEV 0.79 vs 0.70, HOLD 0.80 vs 0.78; 4x fees edge only +0.06 / +0.01; lag 1 day: fine. DEV Sharpe without 2020-21: 0.74 vs 0.70.
+  Timing placebo (200 circular shifts of the exposure series): **significant in DEV (p = 0.02 Sharpe, 0.005 drawdown), not in HOLD (p = 0.49 Sharpe, 0.10 drawdown)**. Paired bootstrap of the Sharpe gain includes 0 in both periods.
+  Same overlay on four sibling books (k = 20, 12-1 momentum, top-1000, residual momentum): lighter drawdown in 4 of 4 books (DEV and HOLD), Sharpe change -0.03 to +0.05.
+* **The frontier is mechanical.** HOLD median ~ -5.7 % + 10.9 % x average gross exposure; drawdown relief ~ 8 pp per 10 pp of exposure removed. Of the 279 configs none has a HOLD median >= 5 % together with a HOLD drawdown
+  of -31 % or lighter ([chart](results/r8/chart_r8_frontier.png)). The "max protection" cell reaches -31.8 % and Sharpe 0.99 but its HOLD median is 2.0 %.
+* **Things that did not work:** SPY trend gates (the worst drawdown happened while SPY was up), inverse-vol weights, K > 10, sector caps, drawdown breakers (the gain is one episode), per-name stop exits (0 of 29),
+  52-week-high / trend / risk-adjusted selection (DEV gain, HOLD Sharpe 0.2-0.6), where the freed capital goes (USMV/GLD/T-bills add ~0.02 Sharpe; the HOLD gain from gold is regime luck).
+* Charts: [equity + drawdown](results/r8/chart_r8_equity_drawdown.png), [monthly heat maps](results/r8/chart_r8_heatmap.png), [frontier](results/r8/chart_r8_frontier.png). Code: `src/r8_*.py`; every config: `results/r8/trials_*.csv`.
+
 ## What was tested (all families, all net of 0.2 % RT)
 
 | Round | Family | Configs | Best result | Why it stops |

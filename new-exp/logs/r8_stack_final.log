@@ -1,0 +1,187 @@
+chosen cell: base+rollq80 ('base', 'rollq80', 'cash')
+[BASELINE]
+   dev  Sh  0.78 | med/mo  2.15% | mean/mo  2.24% | >5%mo  33% | maxDD  -53.2% | Calmar 0.46 | worst mo  -22.2% | vol   38%
+   hold Sh  0.83 | med/mo  5.61% | mean/mo  3.49% | >5%mo  51% | maxDD  -46.0% | Calmar 0.79 | worst mo  -25.3% | vol   58%
+   all  Sh  0.78 | med/mo  2.31% | mean/mo  2.64% | >5%mo  39% | maxDD  -53.2% | Calmar 0.53 | worst mo  -25.3% | vol   45%
+[STACK base+rollq80]
+   dev  Sh  0.87 | med/mo  2.06% | mean/mo  2.22% | >5%mo  32% | maxDD  -41.1% | Calmar 0.62 | worst mo  -20.3% | vol   32%
+   hold Sh  0.85 | med/mo  5.61% | mean/mo  3.38% | >5%mo  51% | maxDD  -39.4% | Calmar 0.91 | worst mo  -25.2% | vol   51%
+   all  Sh  0.84 | med/mo  2.07% | mean/mo  2.59% | >5%mo  38% | maxDD  -45.6% | Calmar 0.63 | worst mo  -25.2% | vol   39%
+   perturbation after 2013-05-21: max |dW| on earlier rows = 0.00e+00
+   perturbation after 2014-03-14: max |dW| on earlier rows = 0.00e+00
+   perturbation after 2016-01-20: max |dW| on earlier rows = 0.00e+00
+   perturbation after 2017-10-02: max |dW| on earlier rows = 0.00e+00
+   perturbation after 2019-12-18: max |dW| on earlier rows = 0.00e+00
+   perturbation after 2020-06-17: max |dW| on earlier rows = 0.00e+00
+   perturbation after 2022-06-14: max |dW| on earlier rows = 0.00e+00
+   perturbation after 2023-02-21: max |dW| on earlier rows = 0.00e+00
+   perturbation after 2025-08-12: max |dW| on earlier rows = 0.00e+00
+perturbation check: OK (worst 0.00e+00)
+truncation check at 2019-06-28: max |diff| = 0.00e+00 -> OK
+{
+ "hold_cagr_base": 0.36245517114733206,
+ "hold_cagr_stack": 0.35868973101450385,
+ "cagr_retention": 0.9896112942163057,
+ "calmar_hold": [
+  0.78733072120249,
+  0.9093587758683747
+ ],
+ "ulcer_hold": [
+  0.16128356458930543,
+  0.1547825240992442
+ ],
+ "hold_median": [
+  0.05612505472763463,
+  0.05612505472763463
+ ],
+ "hold_share_ge5": [
+  0.5087719298245614,
+  0.5087719298245614
+ ],
+ "months_ge5_hold": [
+  29,
+  29,
+  57
+ ],
+ "p_median_gt5": [
+  0.55475,
+  0.55475
+ ],
+ "paired_median_diff_ci": [
+  -0.014325759052368436,
+  0.0,
+  0.006197722757874002
+ ],
+ "paired_share_ge5_diff_ci": [
+  0.0,
+  0.0,
+  0.0
+ ],
+ "paired_sharpe_diff_hold_ci": [
+  -0.0832904165871577,
+  0.02464071977562865,
+  0.14702124495534177
+ ],
+ "paired_maxdd_diff_hold_ci": [
+  -0.011547394133864729,
+  0.03906623560778644,
+  0.1140195810463639
+ ],
+ "paired_sharpe_diff_dev_ci": [
+  -0.02829702713878922,
+  0.08742621163661018,
+  0.2117603456097487
+ ],
+ "paired_maxdd_diff_dev_ci": [
+  0.0042929014184035505,
+  0.08092994042675772,
+  0.17307826010762514
+ ],
+ "maxdd": {
+  "dev": [
+   -0.5315121072820626,
+   -0.4106766696111013
+  ],
+  "hold": [
+   -0.4603594923792055,
+   -0.3944424802762584
+  ],
+  "all": [
+   -0.5315121072820626,
+   -0.45628007810373594
+  ]
+ },
+ "sharpe": {
+  "dev": [
+   0.7755645299487035,
+   0.8680208541767237
+  ],
+  "hold": [
+   0.8251642518572364,
+   0.8535670219195146
+  ],
+  "all": [
+   0.7790688817632332,
+   0.8385299370569054
+  ]
+ }
+}
+{
+ "dev": {
+  "actual_sharpe": 0.8603262501253709,
+  "placebo_mean_sharpe": 0.7707138618118108,
+  "p_sharpe": 0.02,
+  "actual_maxdd": -0.41304077051423893,
+  "placebo_mean_maxdd": -0.5070917911119032,
+  "p_maxdd": 0.005
+ },
+ "hold": {
+  "actual_sharpe": 0.8238380242462232,
+  "placebo_mean_sharpe": 0.8261220219752926,
+  "p_sharpe": 0.485,
+  "actual_maxdd": -0.3944000643157075,
+  "placebo_mean_maxdd": -0.43767883439875005,
+  "p_maxdd": 0.095
+ },
+ "hold_median": {
+  "actual": 0.05612505472763463,
+  "placebo_mean": 0.04593088132179396,
+  "p_ge": 0.18
+ },
+ "avg_gross": 0.9417177906273209
+}
+{
+ "fee_x1": {
+  "dev": [
+   0.7755645299487035,
+   0.8680208541767237
+  ],
+  "hold": [
+   0.8251642518572364,
+   0.8535670219195146
+  ]
+ },
+ "fee_x2": {
+  "dev": [
+   0.703743771164748,
+   0.7856654169992948
+  ],
+  "hold": [
+   0.7753518512458337,
+   0.799047618748739
+  ]
+ },
+ "fee_x4": {
+  "dev": [
+   0.5600558858167455,
+   0.6208906702068758
+  ],
+  "hold": [
+   0.675696006685485,
+   0.6899653581096935
+  ]
+ },
+ "lag1": {
+  "dev": [
+   0.768096594243016,
+   0.8581249718037712
+  ],
+  "hold": [
+   0.8483654239464433,
+   0.8846300460162387
+  ]
+ },
+ "dev_ex2020_2021": [
+  0.6965685715198697,
+  0.7425613699971066
+ ],
+ "dev_ex2021_window": [
+  1.0507447223279487,
+  1.0724573234592256
+ ]
+}
+k20_mom61 {'dev': (np.float64(0.74), np.float64(0.79), np.float64(-0.44), np.float64(-0.35)), 'hold': (np.float64(0.72), np.float64(0.72), np.float64(-0.44), np.float64(-0.36))}
+mom12_1_k10 {'dev': (np.float64(0.64), np.float64(0.66), np.float64(-0.51), np.float64(-0.48)), 'hold': (np.float64(0.95), np.float64(0.96), np.float64(-0.43), np.float64(-0.4))}
+top1000_mom61 {'dev': (np.float64(0.7), np.float64(0.74), np.float64(-0.55), np.float64(-0.47)), 'hold': (np.float64(0.47), np.float64(0.48), np.float64(-0.51), np.float64(-0.44))}
+res_mom12_1_k10 {'dev': (np.float64(0.74), np.float64(0.71), np.float64(-0.47), np.float64(-0.42)), 'hold': (np.float64(0.88), np.float64(0.9), np.float64(-0.45), np.float64(-0.41))}
+written results/r8/stack_final.json

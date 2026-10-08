@@ -1,0 +1,29 @@
+[BASELINE]
+   dev  Sh  0.78 | med/mo  2.15% | mean/mo  2.24% | >5%mo  33% | maxDD  -53.2% | Calmar 0.46 | worst mo  -22.2% | vol   38%
+   hold Sh  0.83 | med/mo  5.61% | mean/mo  3.49% | >5%mo  51% | maxDD  -46.0% | Calmar 0.79 | worst mo  -25.3% | vol   58%
+   all  Sh  0.78 | med/mo  2.31% | mean/mo  2.64% | >5%mo  39% | maxDD  -53.2% | Calmar 0.53 | worst mo  -25.3% | vol   45%
+  base+none              obj    -inf elig False
+  vcap+none              obj    -inf elig False
+  base+exp80             obj   0.724 elig False
+  base+exp80+BIL         obj   0.719 elig False
+  base+rollq80           obj   0.663 elig True
+  base+rollq80+BIL       obj   0.657 elig False
+  vcap+exp80             obj   0.771 elig False
+  vcap+exp80+BIL         obj   0.765 elig False
+  vcap+rollq80           obj   0.762 elig False
+  vcap+rollq80+BIL       obj   0.756 elig False
+
+BASELINE DEV Sh 0.776 (2x 0.704, ex-window 1.051) DD -0.532 | HOLD Sh 0.825 med 0.0561 DD -0.460
+            cell  n_comp   obj  eligible  dev_sh  dev_med  dev_dd  dev_sh_2x  dev_sh_exwin  avg_gross  hold_sh  hold_med  hold_dd  hold_cagr  all_dd
+       base+none       0  -inf     False   0.776    0.021  -0.532      0.704         1.051      1.000    0.825     0.056   -0.460      0.362  -0.532
+       vcap+none       1  -inf     False   0.867    0.023  -0.428      0.782         0.985      1.000    0.976     0.041   -0.443      0.419  -0.443
+      base+exp80       1 0.724     False   0.880    0.021  -0.312      0.791         1.017      0.896    0.921     0.048   -0.358      0.357  -0.397
+  base+exp80+BIL       2 0.719     False   0.875    0.020  -0.313      0.780         1.012      1.000    0.926     0.050   -0.357      0.359  -0.398
+    base+rollq80       1 0.663      True   0.868    0.021  -0.411      0.786         1.072      0.942    0.854     0.056   -0.394      0.359  -0.456
+base+rollq80+BIL       2 0.657     False   0.862    0.020  -0.412      0.774         1.067      1.000    0.855     0.056   -0.395      0.360  -0.456
+      vcap+exp80       2 0.771     False   0.926    0.020  -0.311      0.831         1.020      0.918    0.994     0.020   -0.318      0.365  -0.370
+  vcap+exp80+BIL       3 0.765     False   0.921    0.020  -0.312      0.819         1.015      1.000    0.996     0.020   -0.318      0.366  -0.372
+    vcap+rollq80       2 0.762     False   0.920    0.022  -0.316      0.828         1.039      0.953    0.966     0.030   -0.352      0.388  -0.421
+vcap+rollq80+BIL       3 0.756     False   0.914    0.021  -0.317      0.816         1.034      1.000    0.967     0.030   -0.351      0.388  -0.421
+
+CHOSEN (DEV only): base+rollq80 | eligible cells: ['base+rollq80']

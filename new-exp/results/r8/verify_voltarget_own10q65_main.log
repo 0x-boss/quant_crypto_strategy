@@ -1,0 +1,95 @@
+params: {'name': 'own10_q65', 'kind': 'own10', 'q': 65, 'star': 0.3012, 'mode': 'fixed'}
+baseline book: max|mine - R.base_weights| = 0.0
+feature mom_6_1 recompute: max abs diff (2012+) = 3.048310964004486e-05  99.99pct 3.1933224580525403e-07
+unscaled book returns: max|mine - R.run| = 6.661338147750939e-16
+module rows that are all-NaN: ['2026-10-07']
+MAX |W_mine - W_module| all dates >= 2012 (excl. NaN final row): 1.2906342661267445e-15
+MAX |W_mine - W_module| all rows (final NaN row incl.): 0.09608905507058774
+DEV q65 of own10 sigma_hat (mine): 0.3012019639695633   table 0.3012
+HOLD q65: 0.529389079188042  HOLD median: 0.4288550772079993  DEV median: 0.25282621339069566
+[base fee1]
+   dev  Sh  0.78 | med/mo  2.15% | mean/mo  2.24% | >5%mo  33% | maxDD  -53.2% | Calmar 0.46 | worst mo  -22.2% | vol   38%
+   hold Sh  0.83 | med/mo  5.61% | mean/mo  3.49% | >5%mo  51% | maxDD  -46.0% | Calmar 0.79 | worst mo  -25.3% | vol   58%
+   all  Sh  0.78 | med/mo  2.31% | mean/mo  2.64% | >5%mo  39% | maxDD  -53.2% | Calmar 0.53 | worst mo  -25.3% | vol   45%
+   base fee1: DEV Sh 0.7756 HOLD Sh 0.8252 DEV ex2020-21 Sh 0.6966 | DEV DD -0.532 HOLD DD -0.460
+   base fee2: DEV Sh 0.7037 HOLD Sh 0.7754 DEV ex2020-21 Sh 0.5969 | DEV DD -0.534 HOLD DD -0.462
+   base fee4: DEV Sh 0.5601 HOLD Sh 0.6757 DEV ex2020-21 Sh 0.3977 | DEV DD -0.538 HOLD DD -0.466
+   base lag1: DEV Sh 0.7681 HOLD Sh 0.8484 DEV ex2020-21 Sh 0.7110 | DEV DD -0.543 HOLD DD -0.456
+[cand fee1]
+   dev  Sh  0.91 | med/mo  1.95% | mean/mo  1.97% | >5%mo  31% | maxDD  -32.7% | Calmar 0.70 | worst mo  -17.6% | vol   27%
+   hold Sh  0.80 | med/mo  2.98% | mean/mo  2.08% | >5%mo  42% | maxDD  -30.1% | Calmar 0.76 | worst mo  -20.2% | vol   32%
+   all  Sh  0.86 | med/mo  2.07% | mean/mo  2.01% | >5%mo  34% | maxDD  -34.4% | Calmar 0.67 | worst mo  -20.2% | vol   29%
+   cand fee1: DEV Sh 0.9083 HOLD Sh 0.7953 DEV ex2020-21 Sh 0.7341 | DEV DD -0.327 HOLD DD -0.301
+   cand fee2: DEV Sh 0.8086 HOLD Sh 0.7146 DEV ex2020-21 Sh 0.6228 | DEV DD -0.345 HOLD DD -0.305
+   cand fee4: DEV Sh 0.6093 HOLD Sh 0.5530 DEV ex2020-21 Sh 0.4001 | DEV DD -0.381 HOLD DD -0.313
+   cand lag1: DEV Sh 0.9255 HOLD Sh 0.8379 DEV ex2020-21 Sh 0.7682 | DEV DD -0.308 HOLD DD -0.315
+   independent backtest of independent weights vs R.run(module) [fee1]: max|dr| = 6.66e-16  DEV Sh mine 0.9083
+   independent backtest of independent weights vs R.run(module) [fee2]: max|dr| = 6.66e-16  DEV Sh mine 0.8086
+   independent backtest of independent weights vs R.run(module) [fee4]: max|dr| = 6.66e-16  DEV Sh mine 0.6093
+   independent backtest of independent weights vs R.run(module) [lag1]: max|dr| = 6.66e-16  DEV Sh mine 0.9255
+/home/user/quant_crypto_strategy/new-exp/results/r8/verify_voltarget_own10q65_main.py:135: RuntimeWarning: invalid value encountered in scalar divide
+  yr = pd.DataFrame({k: res[(k, "fee1")].groupby(res[(k, "fee1")].index.year).apply(lambda x: x.mean() / x.std() * np.sqrt(252)) for k in ("base", "cand")})
+/home/user/quant_crypto_strategy/new-exp/results/r8/verify_voltarget_own10q65_main.py:135: RuntimeWarning: invalid value encountered in scalar divide
+  yr = pd.DataFrame({k: res[(k, "fee1")].groupby(res[(k, "fee1")].index.year).apply(lambda x: x.mean() / x.std() * np.sqrt(252)) for k in ("base", "cand")})
+
+per-year Sharpe:
+       base  cand
+date            
+2008   NaN   NaN
+2009  0.35 -0.13
+2010  1.22  1.18
+2011 -0.70 -1.12
+2012  0.93  0.92
+2013  2.14  2.17
+2014  0.37  0.25
+2015 -0.06 -0.04
+2016  0.81  0.86
+2017  1.12  1.17
+2018 -0.45 -0.51
+2019  1.66  1.65
+2020  1.57  1.78
+2021  0.74  1.12
+2022 -0.29 -0.50
+2023  0.99  1.14
+2024  1.05  0.96
+2025  0.73  0.85
+2026  1.64  1.73
+per-year return:
+        base   cand
+date              
+2008  0.000  0.000
+2009  0.061 -0.088
+2010  0.442  0.348
+2011 -0.257 -0.294
+2012  0.215  0.199
+2013  0.575  0.577
+2014  0.066  0.032
+2015 -0.061 -0.047
+2016  0.174  0.185
+2017  0.271  0.275
+2018 -0.208 -0.181
+2019  0.485  0.454
+2020  1.045  0.724
+2021  0.310  0.376
+2022 -0.182 -0.188
+2023  0.355  0.346
+2024  0.493  0.306
+2025  0.298  0.259
+2026  1.017  0.471
+paired block-bootstrap DEV Sharpe diff (cand-base): mean 0.125 5-95% [-0.079,0.328] P(>0)=0.843
+[causal expanding-q65 own10]
+   dev  Sh  0.90 | med/mo  1.95% | mean/mo  1.91% | >5%mo  31% | maxDD  -32.6% | Calmar 0.68 | worst mo  -17.2% | vol   26%
+   hold Sh  0.82 | med/mo  3.16% | mean/mo  2.29% | >5%mo  44% | maxDD  -31.1% | Calmar 0.81 | worst mo  -20.4% | vol   35%
+   all  Sh  0.86 | med/mo  2.07% | mean/mo  2.03% | >5%mo  35% | maxDD  -34.6% | Calmar 0.67 | worst mo  -20.4% | vol   29%
+   causal expanding q65: DEV Sh 0.9008 HOLD Sh 0.8203 DEV ex2020-21 0.7288 DEV DD -0.326
+   star from 2012-16 -> eval 2017-21: star=0.2505 cand Sh 1.002 vs base 0.832
+   star from 2017-21 -> eval 2012-16: star=0.4060 cand Sh 0.770 vs base 0.765
+   plateau q50: star 0.2528 DEV Sh 0.883 ex2020-21 0.716 fee2 0.776 HOLD 0.757
+   plateau q55: star 0.2682 DEV Sh 0.894 ex2020-21 0.725 fee2 0.789 HOLD 0.769
+   plateau q60: star 0.2854 DEV Sh 0.904 ex2020-21 0.732 fee2 0.803 HOLD 0.781
+   plateau q65: star 0.3012 DEV Sh 0.908 ex2020-21 0.734 fee2 0.809 HOLD 0.795
+   plateau q70: star 0.3240 DEV Sh 0.906 ex2020-21 0.730 fee2 0.809 HOLD 0.808
+   plateau q75: star 0.3562 DEV Sh 0.895 ex2020-21 0.722 fee2 0.802 HOLD 0.817
+   plateau q80: star 0.4048 DEV Sh 0.884 ex2020-21 0.715 fee2 0.795 HOLD 0.817
+   plateau q90: star 0.5687 DEV Sh 0.860 ex2020-21 0.699 fee2 0.779 HOLD 0.770
+secs 38
