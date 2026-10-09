@@ -1,0 +1,105 @@
+main strategy 2018-03..2026-10: 32.5% / 1.36 / -20.2%  | E1 Sharpe 1.49 | E2 Sharpe 1.17
+
+================ I0 information scan: excess forward return after displacement (bp, t) vs 20 bp round-trip cost
+BTC dips, regime all:
+  z over   1h | h= 1:     +7bp ( +4.0) n=1471 | h= 6:     +5bp ( +1.2) n=1144 | h=24:     -0bp ( -0.0) n= 790 | h=72:     -3bp ( -0.1) n= 481
+  z over   6h | h= 1:     +5bp ( +1.9) n= 526 | h= 6:     +7bp ( +1.1) n= 526 | h=24:    -27bp ( -1.7) n= 402 | h=72:     -1bp ( -0.0) n= 300
+  z over  24h | h= 1:     +4bp ( +0.9) n= 168 | h= 6:     -1bp ( -0.1) n= 168 | h=24:     +2bp ( +0.1) n= 168 | h=72:    +11bp ( +0.2) n= 141
+  z over  72h | h= 1:    +19bp ( +2.3) n=  64 | h= 6:    +16bp ( +0.8) n=  64 | h=24:    +11bp ( +0.3) n=  64 | h=72:    -27bp ( -0.4) n=  64
+  z over 168h | h= 1:     -7bp ( -0.6) n=  27 | h= 6:    -82bp ( -2.7) n=  27 | h=24:   -170bp ( -2.8) n=  27 | h=72:   -250bp ( -2.4) n=  27
+BTC rips, regime all:
+  z over   1h | h= 1:     +3bp ( +1.9) n=1477 | h= 6:     +2bp ( +0.5) n=1159 | h=24:    +10bp ( +0.9) n= 789 | h=72:     +3bp ( +0.1) n= 480
+  z over   6h | h= 1:     -4bp ( -1.4) n= 518 | h= 6:    +17bp ( +2.5) n= 518 | h=24:    +25bp ( +1.6) n= 407 | h=72:    +14bp ( +0.5) n= 304
+  z over  24h | h= 1:    +13bp ( +2.8) n= 194 | h= 6:    +20bp ( +1.8) n= 194 | h=24:    +17bp ( +0.8) n= 194 | h=72:     +7bp ( +0.2) n= 160
+  z over  72h | h= 1:     -5bp ( -0.6) n=  68 | h= 6:    +21bp ( +1.1) n=  68 | h=24:    +60bp ( +1.6) n=  68 | h=72:   +196bp ( +3.0) n=  68
+  z over 168h | h= 1:    +12bp ( +1.1) n=  34 | h= 6:    +58bp ( +2.2) n=  34 | h=24:   +114bp ( +2.1) n=  34 | h=72:   +247bp ( +2.7) n=  34
+ETH dips, regime all:
+  z over   1h | h= 1:     +6bp ( +2.6) n=1541 | h= 6:     -3bp ( -0.6) n=1177 | h=24:     -9bp ( -0.6) n= 797 | h=72:     +3bp ( +0.1) n= 477
+  z over   6h | h= 1:     +8bp ( +2.3) n= 529 | h= 6:     +2bp ( +0.2) n= 529 | h=24:    -13bp ( -0.6) n= 403 | h=72:    -16bp ( -0.4) n= 296
+  z over  24h | h= 1:     +8bp ( +1.3) n= 174 | h= 6:     +8bp ( +0.5) n= 174 | h=24:    +13bp ( +0.4) n= 174 | h=72:    -53bp ( -0.9) n= 139
+  z over  72h | h= 1:     -3bp ( -0.3) n=  64 | h= 6:    -41bp ( -1.6) n=  64 | h=24:     -7bp ( -0.1) n=  64 | h=72:   -219bp ( -2.5) n=  64
+  z over 168h | h= 1:    -47bp ( -3.1) n=  32 | h= 6:    -24bp ( -0.7) n=  32 | h=24:     -3bp ( -0.0) n=  32 | h=72:    +40bp ( +0.3) n=  32
+ETH rips, regime all:
+  z over   1h | h= 1:     +7bp ( +3.2) n=1434 | h= 6:     +9bp ( +1.6) n=1144 | h=24:    +29bp ( +2.0) n= 787 | h=72:    +24bp ( +0.7) n= 474
+  z over   6h | h= 1:     +4bp ( +1.0) n= 532 | h= 6:     +8bp ( +0.9) n= 532 | h=24:    +18bp ( +0.9) n= 425 | h=72:     -1bp ( -0.0) n= 312
+  z over  24h | h= 1:     -0bp ( -0.1) n= 197 | h= 6:    +22bp ( +1.5) n= 197 | h=24:    +56bp ( +1.9) n= 197 | h=72:    +34bp ( +0.6) n= 162
+  z over  72h | h= 1:    -19bp ( -2.0) n=  80 | h= 6:    -15bp ( -0.7) n=  80 | h=24:    +61bp ( +1.3) n=  80 | h=72:   +122bp ( +1.5) n=  80
+  z over 168h | h= 1:    +42bp ( +3.2) n=  42 | h= 6:    +71bp ( +2.3) n=  42 | h=24:    +69bp ( +1.1) n=  42 | h=72:   +221bp ( +2.0) n=  42
+BTC dips, regime range:
+  z over   1h | h= 1:     -0bp ( -0.1) n= 834 | h= 6:     -1bp ( -0.2) n= 661 | h=24:     -2bp ( -0.2) n= 475 | h=72:    +10bp ( +0.4) n= 310
+  z over   6h | h= 1:     -2bp ( -0.7) n= 310 | h= 6:    -15bp ( -1.9) n= 310 | h=24:    -18bp ( -1.0) n= 252 | h=72:    -47bp ( -1.3) n= 193
+  z over  24h | h= 1:     +6bp ( +1.1) n= 105 | h= 6:     +3bp ( +0.2) n= 105 | h=24:    +20bp ( +0.7) n= 105 | h=72:    -17bp ( -0.3) n=  95
+  z over  72h | h= 1:    +16bp ( +1.8) n=  40 | h= 6:    +45bp ( +2.0) n=  40 | h=24:     +5bp ( +0.1) n=  40 | h=72:    -20bp ( -0.2) n=  40
+  z over 168h | h= 1:    n/a         | h= 6:    n/a         | h=24:    n/a         | h=72:    n/a        
+ETH dips, regime range:
+  z over   1h | h= 1:     +3bp ( +1.3) n= 868 | h= 6:     -1bp ( -0.2) n= 682 | h=24:    +11bp ( +0.6) n= 489 | h=72:     +1bp ( +0.0) n= 312
+  z over   6h | h= 1:     -7bp ( -1.5) n= 295 | h= 6:    -23bp ( -2.1) n= 295 | h=24:    -10bp ( -0.4) n= 238 | h=72:    -95bp ( -1.8) n= 182
+  z over  24h | h= 1:     +7bp ( +0.9) n= 100 | h= 6:    -42bp ( -2.2) n= 100 | h=24:    -37bp ( -0.9) n= 100 | h=72:   -223bp ( -3.0) n=  87
+  z over  72h | h= 1:    +15bp ( +1.3) n=  45 | h= 6:     -3bp ( -0.1) n=  45 | h=24:    +18bp ( +0.3) n=  45 | h=72:   -102bp ( -1.0) n=  45
+  z over 168h | h= 1:    -27bp ( -1.6) n=  22 | h= 6:    -59bp ( -1.5) n=  22 | h=24:     +0bp ( +0.0) n=  22 | h=72:    +92bp ( +0.6) n=  22
+
+cells with |t| >= 3 (of 240 cells; ~0.6 expected by chance if independent):
+  BTC dip all   z over   1h, hold  1h:    +6.9 bp  t  +4.0  n=1471  
+  BTC dip OFF   z over  24h, hold  1h:   +23.3 bp  t  +3.1  n=90  <- beats 20bp cost
+  BTC rip all   z over  72h, hold 72h:  +196.0 bp  t  +3.0  n=68  
+  BTC rip range z over   6h, hold  6h:   +25.9 bp  t  +3.2  n=293  
+  ETH dip all   z over 168h, hold  1h:   -46.6 bp  t  -3.1  n=32  
+  ETH dip OFF   z over 168h, hold  1h:   -86.3 bp  t  -4.8  n=21  
+  ETH rip all   z over   1h, hold  1h:    +7.1 bp  t  +3.2  n=1434  
+  ETH rip all   z over 168h, hold  1h:   +41.7 bp  t  +3.2  n=42  
+  ETH rip range z over   1h, hold  1h:   +10.7 bp  t  +4.0  n=816  
+
+================ BTC  (net of 10 bp per side)
+M1 daily dip, range regime     trades   64 (avg   8.7 bars) | net/trade   2.87% win  62% t  2.00 | vs random entry: control  2.98% p=0.501
+                               eras: pre 2012-17 n= 21   4.98% | E1 2018-22 n= 21   0.75% | E2 2023-26 n= 16   3.13% | cost sweep (per side 0/5/10/20bp) mean: 3.07% / 2.97% / 2.87% / 2.67%
+                               combined with main:  34.9% / 1.38 /  -23.9%  (E1 Sharpe 1.44, E2 1.28)  vs main 32.5% / 1.36 / -20.2%
+M2 daily dip, no regime        trades  101 (avg   8.8 bars) | net/trade   1.46% win  59% t  1.12 | vs random entry: control  3.04% p=0.818
+                               eras: pre 2012-17 n= 33   3.55% | E1 2018-22 n= 32  -0.35% | E2 2023-26 n= 26   1.53% | cost sweep (per side 0/5/10/20bp) mean: 1.66% / 1.56% / 1.46% / 1.26%
+                               combined with main:  33.1% / 1.29 /  -24.7%  (E1 Sharpe 1.34, E2 1.22)  vs main 32.5% / 1.36 / -20.2%
+M4 low-volume dip (3d)         trades   19 (avg   3.7 bars) | net/trade  -2.47% win  42% t -1.22 | vs random entry: control  0.99% p=0.954
+                               eras: pre 2012-17 n=  0 | E1 2018-22 n= 11  -3.99% | E2 2023-26 n=  8  -0.37% | cost sweep (per side 0/5/10/20bp) mean: -2.27% / -2.37% / -2.47% / -2.67%
+                               combined with main:  31.4% / 1.29 /  -28.3%  (E1 Sharpe 1.39, E2 1.15)  vs main 32.5% / 1.36 / -20.2%
+(control) high-volume dip      trades   43 (avg   3.5 bars) | net/trade   0.57% win  60% t  0.47 | vs random entry: control  1.00% p=0.618
+                               eras: pre 2012-17 n=  2   2.03% | E1 2018-22 n= 26   0.11% | E2 2023-26 n= 15   1.17% | cost sweep (per side 0/5/10/20bp) mean: 0.77% / 0.67% / 0.57% / 0.37%
+                               combined with main:  32.9% / 1.32 /  -20.2%  (E1 Sharpe 1.42, E2 1.20)  vs main 32.5% / 1.36 / -20.2%
+M3 6h dip, range regime        trades  172 (avg  12.6 bars) | net/trade  -0.29% win  62% t -0.58 | vs random entry: control  0.26% p=0.887
+                               eras: pre 2012-17 n=  4   4.30% | E1 2018-22 n= 92  -0.74% | E2 2023-26 n= 76   0.00% | cost sweep (per side 0/5/10/20bp) mean: -0.09% / -0.19% / -0.29% / -0.49%
+                               combined with main:  29.1% / 1.14 /  -33.0%  (E1 Sharpe 1.17, E2 1.10)  vs main 32.5% / 1.36 / -20.2%
+M5 grid, range regime          trades 2511 | net/trade  -0.21% win  41% t -2.68
+                               eras: pre 2012-17 n=209  -0.06% | E1 2018-22 n=2011  -0.32% | E2 2023-26 n=263   0.40% | cost sweep (per side 0/5/10/20bp) mean: -0.01% / -0.11% / -0.21% / -0.41%
+                               combined with main:  28.6% / 1.14 /  -30.3%  (E1 Sharpe 1.11, E2 1.19)  vs main 32.5% / 1.36 / -20.2%
+                               grid sleeve alone (25% budget, zeros included): -4.0% CAGR, Sharpe -0.53, maxDD -41.3%; take-profit exits 16% of round trips; average inventory 0.050 of capital
+
+================ ETH  (net of 10 bp per side)
+M1 daily dip, range regime     trades   46 (avg   9.2 bars) | net/trade   1.59% win  65% t  0.81 | vs random entry: control  3.09% p=0.707
+                               eras: pre 2012-17 n=  5  13.82% | E1 2018-22 n= 25  -0.32% | E2 2023-26 n= 16   0.75% | cost sweep (per side 0/5/10/20bp) mean: 1.79% / 1.69% / 1.59% / 1.39%
+                               combined with main:  32.1% / 1.24 /  -23.7%  (E1 Sharpe 1.32, E2 1.14)  vs main 32.5% / 1.36 / -20.2%
+M2 daily dip, no regime        trades   70 (avg   9.2 bars) | net/trade   0.63% win  59% t  0.40 | vs random entry: control  2.99% p=0.872
+                               eras: pre 2012-17 n= 10   8.84% | E1 2018-22 n= 35  -1.28% | E2 2023-26 n= 25   0.01% | cost sweep (per side 0/5/10/20bp) mean: 0.83% / 0.73% / 0.63% / 0.43%
+                               combined with main:  30.2% / 1.16 /  -25.0%  (E1 Sharpe 1.21, E2 1.09)  vs main 32.5% / 1.36 / -20.2%
+M4 low-volume dip (3d)         trades   22 (avg   3.4 bars) | net/trade   0.73% win  64% t  0.51 | vs random entry: control  0.96% p=0.524
+                               eras: pre 2012-17 n=  0 | E1 2018-22 n= 17   0.36% | E2 2023-26 n=  5   2.01% | cost sweep (per side 0/5/10/20bp) mean: 0.93% / 0.83% / 0.73% / 0.53%
+                               combined with main:  33.2% / 1.35 /  -22.0%  (E1 Sharpe 1.47, E2 1.19)  vs main 32.5% / 1.36 / -20.2%
+(control) high-volume dip      trades   41 (avg   3.7 bars) | net/trade  -2.70% win  49% t -1.43 | vs random entry: control  1.03% p=0.988
+                               eras: pre 2012-17 n=  0 | E1 2018-22 n= 24  -5.12% | E2 2023-26 n= 17   0.71% | cost sweep (per side 0/5/10/20bp) mean: -2.50% / -2.60% / -2.70% / -2.90%
+                               combined with main:  28.3% / 1.12 /  -31.7%  (E1 Sharpe 1.10, E2 1.16)  vs main 32.5% / 1.36 / -20.2%
+M3 6h dip, range regime        trades  162 (avg  13.1 bars) | net/trade  -0.69% win  59% t -1.11 | vs random entry: control  0.32% p=0.945
+                               eras: pre 2012-17 n=  4   1.75% | E1 2018-22 n= 86  -1.07% | E2 2023-26 n= 72  -0.37% | cost sweep (per side 0/5/10/20bp) mean: -0.49% / -0.59% / -0.69% / -0.89%
+                               combined with main:  27.6% / 1.06 /  -33.6%  (E1 Sharpe 1.10, E2 1.00)  vs main 32.5% / 1.36 / -20.2%
+M5 grid, range regime          trades 5473 | net/trade  -0.21% win  41% t -4.56
+                               eras: pre 2012-17 n=295   0.56% | E1 2018-22 n=4485  -0.27% | E2 2023-26 n=693  -0.18% | cost sweep (per side 0/5/10/20bp) mean: -0.01% / -0.11% / -0.21% / -0.41%
+                               combined with main:  18.2% / 0.76 /  -43.7%  (E1 Sharpe 0.63, E2 0.97)  vs main 32.5% / 1.36 / -20.2%
+                               grid sleeve alone (25% budget, zeros included): -9.4% CAGR, Sharpe -0.89, maxDD -62.5%; take-profit exits 9% of round trips; average inventory 0.057 of capital
+
+--- pre-registered acceptance (BTC decides; ETH is replication)
+btc M1 daily dip, range regime       {'mean_pos_t2': False, 'beats_random': False, 'eras_pos': True, 'sharpe_ok': False, 'dd_ok': False, 'ACCEPT': False}
+btc M2 daily dip, no regime          {'mean_pos_t2': False, 'beats_random': False, 'eras_pos': False, 'sharpe_ok': False, 'dd_ok': False, 'ACCEPT': False}
+btc M4 low-volume dip (3d)           {'mean_pos_t2': False, 'beats_random': False, 'eras_pos': False, 'sharpe_ok': False, 'dd_ok': False, 'ACCEPT': False}
+btc M3 6h dip, range regime          {'mean_pos_t2': False, 'beats_random': False, 'eras_pos': False, 'sharpe_ok': False, 'dd_ok': False, 'ACCEPT': False}
+btc M5 grid, range regime            {'mean_pos_t2': False, 'beats_random': False, 'eras_pos': False, 'sharpe_ok': False, 'dd_ok': False, 'ACCEPT': False}
+eth M1 daily dip, range regime       {'mean_pos_t2': False, 'beats_random': False, 'eras_pos': False, 'sharpe_ok': False, 'dd_ok': False, 'ACCEPT': False}
+eth M2 daily dip, no regime          {'mean_pos_t2': False, 'beats_random': False, 'eras_pos': False, 'sharpe_ok': False, 'dd_ok': False, 'ACCEPT': False}
+eth M4 low-volume dip (3d)           {'mean_pos_t2': False, 'beats_random': False, 'eras_pos': True, 'sharpe_ok': False, 'dd_ok': True, 'ACCEPT': False}
+eth M3 6h dip, range regime          {'mean_pos_t2': False, 'beats_random': False, 'eras_pos': False, 'sharpe_ok': False, 'dd_ok': False, 'ACCEPT': False}
+eth M5 grid, range regime            {'mean_pos_t2': False, 'beats_random': False, 'eras_pos': False, 'sharpe_ok': False, 'dd_ok': False, 'ACCEPT': False}
+saved results/mean_reversion.json
