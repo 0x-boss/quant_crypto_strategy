@@ -1,0 +1,25 @@
+================ TRACK A (spot-only): alt rotation while BTC is OFF   [net of 25 bp per side; sleeve weight 25 % of capital]
+BTC buy & hold while OFF (2020-09+): 43% of days, cumulative -43%, daily-mean annualised -3%
+main strategy 31.7% / 1.33 / -19.2%  | E1 Sharpe 1.56 | E2 Sharpe 1.17
+EW basket (descriptive)  active days  889 | active-day mean (ann., at 100%) E1    -128% (t -1.36) E2      -4% (t -0.06) pooled t -1.16 | sleeve cum (25% wt) E1  -35.9% E2   -3.8% | combined  21.4% / 0.84 /  -45.0% (E1 0.63, E2 1.03)
+MOM30                    active days  882 | active-day mean (ann., at 100%) E1    -121% (t -1.20) E2     +34% (t  0.35) pooled t -0.64 | sleeve cum (25% wt) E1  -34.4% E2   +5.6% | combined  23.8% / 0.88 /  -43.7% (E1 0.66, E2 1.06)
+REV7                     active days  889 | active-day mean (ann., at 100%) E1    -150% (t -1.42) E2     -53% (t -0.61) pooled t -1.50 | sleeve cum (25% wt) E1  -40.9% E2  -17.7% | combined  16.8% / 0.68 /  -49.4% (E1 0.52, E2 0.82)
+LOWVOL                   active days  889 | active-day mean (ann., at 100%) E1     -69% (t -0.79) E2     -21% (t -0.39) pooled t -0.88 | sleeve cum (25% wt) E1  -22.4% E2   -7.7% | combined  24.5% / 0.95 /  -35.5% (E1 0.90, E2 1.01)
+
+================ TRACK B (NOT spot-only; collateralised perp short, long+short gross <= 1): H2 trend-down short sleeve on BTC+ETH
+main strategy (2020-01+): 35.4% / 1.39 / -20.2%  | E1 Sharpe 1.63 | E2 Sharpe 1.17
+short sleeve standalone (1x): E1 -3.2%  E2 -17.0%  | avg short gross 0.218, days with a short > 5%: 51%
+   decomposition (sum of per-bar fractions): price -4.5%  funding +4.7%  costs -8.3%  [E1 price +4.2% / E2 -8.8%]
+   sleeve by calendar year %: {2020: -12.8, 2021: -6.8, 2022: 19.2, 2023: -18.8, 2024: -12.1, 2025: 5.4, 2026: 10.5}
+   correlation of sleeve with main strategy (daily): -0.07
+   combined with main, sleeve x0.5:  34.6% / 1.30 /  -20.9%  (E1 Sharpe 1.53, E2 1.09)  sleeve positive in both eras: False
+   combined with main, sleeve x1.0:  31.5% / 1.05 /  -29.0%  (E1 Sharpe 1.32, E2 0.79)  sleeve positive in both eras: False
+   combined with main, sleeve x2.0:  28.0% / 0.80 /  -36.4%  (E1 Sharpe 0.98, E2 0.63)  sleeve positive in both eras: False
+   short sleeve P&L while BTC OFF: -4.3%   while ON: -16.0%
+
+--- pre-registered acceptance
+H1 MOM30                     {'t_gt2': False, 'both_eras_pos': False, 'sharpe_ok': False, 'dd_ok': False, 'ACCEPT': False}
+H1 REV7                      {'t_gt2': False, 'both_eras_pos': False, 'sharpe_ok': False, 'dd_ok': False, 'ACCEPT': False}
+H1 LOWVOL                    {'t_gt2': False, 'both_eras_pos': False, 'sharpe_ok': False, 'dd_ok': False, 'ACCEPT': False}
+H2 short sleeve (1x)         {'sleeve_pos_both': False, 'cagr_up': False, 'sharpe_ok': False, 'dd_ok': False, 'ACCEPT': False}
+saved results/flat_bear_crypto.json

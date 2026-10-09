@@ -220,6 +220,7 @@ drawdown overlay (cuts CAGR as much as DD), efficiency-ratio filter (unstable). 
 | E | SPY below its 200-day EMA -> hold gold (GLD) | Mechanism not supported (gold's edge flips sign across sub-periods; ETH/BTC are not reliably worse in those spells); the strategy is already ~flat then (9 % average exposure). Best variant 1.36 -> 1.42 Sharpe but max DD -20 % -> -27 % |
 | F | Participation: scale up when OI / funding show light positioning; constant BTC core | Crowding both ways: no effect (OI) or worse (funding). A BTC core is dominated by simply raising `ASSET_VOL` (see the risk dial above) |
 | G | Something to earn in flat / falling markets: dip-buy (mean reversion) in FLAT and DOWN regimes, and a value sleeve (hold while MVRV < 1) | Dip-buy: no edge (BTC -2.0 % / +1.2 % per trade, t -1.2 / 0.6) and it deepens drawdown. Value sleeve on BTC: small and positive (+2.2 pts CAGR, same DD) but only 14 episodes and it misses the pre-set 75 %-positive rule; on ETH it catches knives. The strategy already earns ~0 and loses ~0 in those regimes |
+| H | Crypto-only earners for flat / bearish regimes: long-only alt rotation while BTC is below its trend line (spot) and a trend-down short sleeve on BTC+ETH perps (needs derivatives) | Both lose: alt rotation -36 % .. -50 % of a 25 % sleeve in 2020-22 and ~0 after; short sleeve -3 % / -17 % in the two eras (gross P&L ~0, costs eat the rest), +19 % only in 2022. BTC itself fell 43 % while the strategy was idle: staying out is the best long-only answer |
 
 ## Caveats for real trading
 

@@ -1,0 +1,166 @@
+{
+ "H1": {
+  "EW basket (descriptive)": {
+   "row": {
+    "E1": {
+     "days": 455,
+     "mean_ann": -1.2806518639501905,
+     "t": -1.3632438066011403,
+     "cum": -0.3594933309026953
+    },
+    "E2": {
+     "days": 434,
+     "mean_ann": -0.04355667392455372,
+     "t": -0.06426504562617377,
+     "cum": -0.038056721390146264
+    }
+   },
+   "pooled_t": -1.1593566647776874,
+   "combined": {
+    "cagr": 0.2141661520124576,
+    "sharpe": 0.8397118753436872,
+    "maxdd": -0.450088074900994
+   }
+  },
+  "MOM30": {
+   "row": {
+    "E1": {
+     "days": 448,
+     "mean_ann": -1.2070672322380167,
+     "t": -1.1987838370122192,
+     "cum": -0.3442943377495973
+    },
+    "E2": {
+     "days": 434,
+     "mean_ann": 0.33626968959547276,
+     "t": 0.3520390677322838,
+     "cum": 0.05564126192758723
+    }
+   },
+   "pooled_t": -0.6443625924900107,
+   "combined": {
+    "cagr": 0.23768613542236738,
+    "sharpe": 0.8789176256517381,
+    "maxdd": -0.4373575334339188
+   }
+  },
+  "REV7": {
+   "row": {
+    "E1": {
+     "days": 455,
+     "mean_ann": -1.5003141524281105,
+     "t": -1.4196407578636472,
+     "cum": -0.4086884185629014
+    },
+    "E2": {
+     "days": 434,
+     "mean_ann": -0.5275666449893908,
+     "t": -0.6146126654737958,
+     "cum": -0.1770854124146849
+    }
+   },
+   "pooled_t": -1.499073287827282,
+   "combined": {
+    "cagr": 0.16799808029555607,
+    "sharpe": 0.6796871393469083,
+    "maxdd": -0.4940148662126522
+   }
+  },
+  "LOWVOL": {
+   "row": {
+    "E1": {
+     "days": 455,
+     "mean_ann": -0.686089283542141,
+     "t": -0.7913580121444026,
+     "cum": -0.2240484771264687
+    },
+    "E2": {
+     "days": 434,
+     "mean_ann": -0.2091320800664682,
+     "t": -0.39202501899081976,
+     "cum": -0.07721432174458986
+    }
+   },
+   "pooled_t": -0.8813035874529902,
+   "combined": {
+    "cagr": 0.2445507427535436,
+    "sharpe": 0.950707034445713,
+    "maxdd": -0.3549540887635617
+   }
+  }
+ },
+ "H2": {
+  "x0.5": {
+   "cagr": 0.3461207184081876,
+   "sharpe": 1.300177041404259,
+   "maxdd": -0.2086442713890574,
+   "e1": 1.5341018689219215,
+   "e2": 1.0858461381832578,
+   "acc": {
+    "sleeve_pos_both": false,
+    "cagr_up": false,
+    "sharpe_ok": false,
+    "dd_ok": true,
+    "ACCEPT": false
+   }
+  },
+  "x1.0": {
+   "cagr": 0.31515083967774804,
+   "sharpe": 1.0480853280955658,
+   "maxdd": -0.29034636887844645,
+   "e1": 1.3236986581992605,
+   "e2": 0.7947061498707244,
+   "acc": {
+    "sleeve_pos_both": false,
+    "cagr_up": false,
+    "sharpe_ok": false,
+    "dd_ok": false,
+    "ACCEPT": false
+   }
+  },
+  "x2.0": {
+   "cagr": 0.279549568071946,
+   "sharpe": 0.8003555636837685,
+   "maxdd": -0.3640391889540473,
+   "e1": 0.9777559117890255,
+   "e2": 0.6297065458277109,
+   "acc": {
+    "sleeve_pos_both": false,
+    "cagr_up": false,
+    "sharpe_ok": false,
+    "dd_ok": false,
+    "ACCEPT": false
+   }
+  }
+ },
+ "acceptance": {
+  "H1 MOM30": {
+   "t_gt2": false,
+   "both_eras_pos": false,
+   "sharpe_ok": false,
+   "dd_ok": false,
+   "ACCEPT": false
+  },
+  "H1 REV7": {
+   "t_gt2": false,
+   "both_eras_pos": false,
+   "sharpe_ok": false,
+   "dd_ok": false,
+   "ACCEPT": false
+  },
+  "H1 LOWVOL": {
+   "t_gt2": false,
+   "both_eras_pos": false,
+   "sharpe_ok": false,
+   "dd_ok": false,
+   "ACCEPT": false
+  },
+  "H2 short sleeve (1x)": {
+   "sleeve_pos_both": false,
+   "cagr_up": false,
+   "sharpe_ok": false,
+   "dd_ok": false,
+   "ACCEPT": false
+  }
+ }
+}
