@@ -1,0 +1,35 @@
+
+================ BTC K2 (all regimes): 85 events, net 1.82%/event (t 3.00); 69% of events happen while the daily close is ABOVE its SMA150
+  control: regime-matched (ON/OFF) random entries     mean  0.22%  -> events beat it with p = 0.005  (excess +1.61 pts)
+  control: same-calendar-year random entries          mean  0.37%  -> events beat it with p = 0.004  (excess +1.45 pts)
+  control: same year AND regime                       mean  0.39%  -> events beat it with p = 0.013  (excess +1.43 pts)
+  entry delayed  1 h: net  1.76%/event  (win 62%)
+  entry delayed  3 h: net  1.82%/event  (win 65%)
+  entry delayed  6 h: net  1.70%/event  (win 65%)
+  entry delayed 24 h: net  1.62%/event  (win 62%)
+  at 20 bp per side: 1.62%/event
+  median 1.10%, best 22.5%, worst -11.6%; top-5 events = 47% of total return; events without the best 5: mean 1.02%
+  by year (n / mean % / sum %): 2018: 5/-2.5/-13 | 2019: 11/1.6/18 | 2020: 13/3.0/39 | 2021: 8/1.9/15 | 2022: 5/-1.1/-6 | 2023: 14/4.3/60 | 2024: 14/1.9/26 | 2025: 9/0.7/6 | 2026: 6/1.4/9
+  leave-one-year-out mean %: 2018: 2.09, 2019: 1.86, 2020: 1.61, 2021: 1.82, 2022: 2.01, 2023: 1.33, 2024: 1.82, 2025: 1.96, 2026: 1.85
+  main-strategy exposure at the event entry (start of that day): mean 0.42; events with main exposure > 0.5: 51%
+  sleeve max weight  25%: alone   4.5% / Sharpe 1.14 / DD -3.3%  | combined  37.3% / 1.43 / -22.1% (E1 1.49, E2 1.34) vs main 32.5% / 1.36 / -20.2%
+  sleeve max weight  50%: alone   8.9% / Sharpe 1.14 / DD -6.6%  | combined  39.7% / 1.44 / -23.8% (E1 1.46, E2 1.42) vs main 32.5% / 1.36 / -20.2%
+  sleeve max weight 100%: alone  18.0% / Sharpe 1.14 / DD -13.2%  | combined  39.6% / 1.41 / -24.7% (E1 1.42, E2 1.39) vs main 32.5% / 1.36 / -20.2%
+  correlation of sleeve daily P&L with main strategy: +0.39
+
+================ ETH K2 (all regimes): 97 events, net 1.36%/event (t 1.68); 67% of events happen while the daily close is ABOVE its SMA150
+  control: regime-matched (ON/OFF) random entries     mean  0.34%  -> events beat it with p = 0.087  (excess +1.02 pts)
+  control: same-calendar-year random entries          mean  0.47%  -> events beat it with p = 0.122  (excess +0.89 pts)
+  control: same year AND regime                       mean  0.49%  -> events beat it with p = 0.112  (excess +0.87 pts)
+  entry delayed  1 h: net  1.40%/event  (win 60%)
+  entry delayed  3 h: net  1.48%/event  (win 61%)
+  entry delayed  6 h: net  1.38%/event  (win 57%)
+  entry delayed 24 h: net  1.40%/event  (win 58%)
+  at 20 bp per side: 1.16%/event
+  median 2.29%, best 29.6%, worst -16.3%; top-5 events = 76% of total return; events without the best 5: mean 0.34%
+  by year (n / mean % / sum %): 2018: 7/-1.6/-11 | 2019: 10/0.7/7 | 2020: 16/2.3/37 | 2021: 17/-0.1/-1 | 2022: 7/2.4/17 | 2023: 12/1.4/17 | 2024: 12/3.2/38 | 2025: 11/1.1/12 | 2026: 5/3.4/17
+  leave-one-year-out mean %: 2018: 1.59, 2019: 1.44, 2020: 1.17, 2021: 1.67, 2022: 1.28, 2023: 1.36, 2024: 1.11, 2025: 1.40, 2026: 1.25
+
+================ pre-sample replication with same-year random-entry controls (daily, hold 3 days)
+BTC 2012-2017: 63 events, net 2.63%/event vs same-year random entries 2.20%  -> p = 0.348, excess +0.43 pts
+ETH 2016-2017: 26 events, net 9.04%/event vs same-year random entries 3.54%  -> p = 0.030, excess +5.50 pts
