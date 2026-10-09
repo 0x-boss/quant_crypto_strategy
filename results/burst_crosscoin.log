@@ -1,0 +1,16 @@
+coin  events  net/event      t   excess vs same-year random      p
+BTC       63      2.19%   3.47                       +1.69 pts  0.006
+ETH       71      1.42%   1.45                       +0.88 pts  0.134
+ADA       63      2.85%   1.58                       +2.56 pts  0.010
+AVAX      60      4.52%   1.68                       +3.66 pts  0.014
+BNB       67      1.65%   1.14                       +1.13 pts  0.120
+DOGE      68      7.47%   1.61                       +6.87 pts  0.016
+DOT       58      1.65%   1.15                       +1.91 pts  0.046
+LINK      55      0.70%   0.73                       +0.70 pts  0.282
+LTC       52      1.53%   1.52                       +1.47 pts  0.070
+SOL       70      1.52%   0.98                       +0.30 pts  0.396
+TRX       74      0.34%   0.28                       +0.17 pts  0.384
+XRP       62      4.19%   1.60                       +3.98 pts  0.000
+
+10 other coins: positive excess in 10 of 10; event-weighted mean excess +2.27 pts; simple mean +2.27 pts; total events 629
+verdict (pre-set reading): SUPPORTS
