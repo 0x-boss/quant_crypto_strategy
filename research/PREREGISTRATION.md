@@ -118,3 +118,24 @@ ASSET_VOL 0.30 / 0.45 / 0.60 / 0.80 / 1.00 / 1.50 -> CAGR 22.1 / 32.5 / 38.9 / 4
 By the pre-registered "free" rule (CAGR up, Sharpe >= official - 0.06, DD >= -22 %) only the trivial point (0.45, brake 0.60) qualifies (34.3 % / 1.37 / -20.9 %); ASSET_VOL 0.60 misses the DD bound by 0.8 pt (-22.8 %), so it is offered as a risk-preference choice on the frontier, not as an accepted free improvement.
 A constant BTC core is dominated (10 %: 33.6 % / 1.29 / -24.2 %; 30 %: 34.8 % / 1.11 / -39.7 %). Idle yield 4 %: 36.4 % / 1.48 / -19.7 %.
 Part 2: F1 not accepted (era-A Sharpe -0.2939 vs -0.2934 baseline, i.e. no effect; era B 1.056 vs 1.039; CAGR +0.3 pt); F2 not accepted (CAGR down, plateau fails; forward window 62.8 % -> 44.0 %). F3 not run.
+
+---
+## Round G (written BEFORE running): what to pair with trend when the market is flat or falling?   (spot-only, long-only, gross <= 1; user question)
+Diagnostic D1 (not a trial): by BTC regime (OFF = close < SMA150; FLAT = OFF and |90d return| < 20 %; DOWN = OFF and 90d return <= -20 %; ON = otherwise) report share of days, BTC buy&hold return / Sharpe, and what the official strategy earned / how invested it was.
+A sleeve may only use capital the main strategy is not using (sleeve weight <= 1 - main exposure).  Daily decisions at the 00:00-UTC close (CoinMetrics PriceUSD / CapMVRVCur stamped t = end of day t), position held over day t+1; costs 10 bp per side; fixed budget 25 % of capital per asset; BTC primary, ETH replication.
+Regimes use only prices (per asset): OFF = close < SMA150 (centre of the main gate set); FLAT = OFF and |90d return| < 20 %; DOWN = OFF and 90d return <= -20 %.
+Candidates (3 primary trials + 3 ETH replications; nothing else will be run on this):
+ G1a dip-buy in FLAT : z = (P - SMA20) / STD20 (price levels, Bollinger-style); enter when z < -2 in FLAT; exit when z >= 0, after 10 days, or when FLAT ends.
+ G1b dip-buy in DOWN : same rule inside DOWN.
+ G2  value (MVRV)     : hold while CapMVRVCur < 1.0 (price below realised price; canonical threshold, not tuned), any regime.
+Eras: pre-sample 2012-01-01..2017-12-31 (BTC; ETH from 2016), 2018-01-01..2022-12-31, 2023-01-01..2026-05-23 (CoinMetrics ends there).  Combination with the official spot strategy (ASSET_VOL 0.45, 2018-03+) uses the sleeve only with idle capital.
+Acceptance (all): (1) pooled trade (G1) / episode (G2) mean net return > 0, G1 with t > 2, G2 with >= 75 % of episodes positive; (2) mean net trade / episode return positive in every era that has trades (G1: >= 5 trades; G2: >= 1 episode);
+ (3) combined with the main strategy, Sharpe >= main's in both main eras (tolerance -0.02) and max DD no more than 2 pts worse.  Pre-sample cost sensitivity at 30 bp is reported.
+Power caveat stated in advance: G2 has only ~4 BTC clusters (2011-12, 2015, 2018-19, 2022-23) and ETH ~6, so any pass is suggestive, not proof.
+Already in the ledger and not repeated: short-horizon reversal and crash rebound (#7, #9, #29, #41: no tradable edge), gated shorts (#34: +47 % 2018 / +6 % 2022 but lower Sharpe overall), long/short and perp trend (#3, #49), cross-sectional factors (#48), funding carry (#42/#43, needs perps), gold/SPY (#55, #56).
+
+### Round G result (recorded; `research/61_flat_down.py`, `results/flat_down.{log,json}`)
+D1 (2018-03..2026-05-23, regime lagged one day): ON 52.5 % of days (BTC Sharpe 1.49; strategy exposure 0.51), FLAT 24.5 % (BTC -61 % cumulative; strategy -7 %, exposure 0.04), DOWN 22.7 % (BTC -14 %; strategy +5 %, exposure 0.01).
+G1a BTC 29 trades mean -1.98 % net (t -1.17), G1b 34 trades +1.16 % (t 0.64), both fail; ETH replications negative; combined with the main strategy: Sharpe 1.31 -> 1.19 / 1.29, max DD -20.2 % -> -28.0 / -26.3 %.
+G2 BTC: 14 episodes (>= 5 days), mean +3.16 % net while held, 10 of 14 positive (71 % < the 75 % rule), t 1.71; eras: pre-sample +2.4 % (8 episodes), 2018-22 +4.2 % (6), 2023-26 none; combined 33.5 % / 1.34 / -20.0 % vs main 31.3 % / 1.31 / -20.2 % (era Sharpes 1.50 / 1.10 vs 1.49 / 1.04) - passes every condition except the 75 % rule.
+G2 ETH: 19 episodes, mean +0.64 % (t 0.24), long losing episodes in 2018-19 (-35 %, -15 %), combined DD -33.6 %.  **0 of 6 accepted.**  A first draft of D1 labelled regimes with the same-day close (leak); it was fixed before any conclusion was drawn.

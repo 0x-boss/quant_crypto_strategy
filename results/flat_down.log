@@ -1,0 +1,99 @@
+================ D1: what happens when the strategy is not making money? (BTC regimes; strategy = official spot)
+
+BTC 2012-2026.05
+                          regime  days  share   btc_cum  btc_ann  btc_sharpe
+            ON  (close > SMA150)  3275  0.623 21512.500    1.434       1.802
+FLAT (below SMA150, |90d| < 20%)  1003  0.191    -0.298    0.057       0.095
+DOWN (below SMA150, 90d <= -20%)   959  0.182    -0.014    0.311       0.391
+
+2018-03..2026.05 (strategy window)
+                          regime  days  share  btc_cum  btc_ann  btc_sharpe  strategy_cum  strategy_ann  avg_exposure  pct_days_invested
+            ON  (close > SMA150)  1578  0.525   19.900    0.877       1.485         8.590         0.570         0.505              0.996
+FLAT (below SMA150, |90d| < 20%)   736  0.245   -0.612   -0.284      -0.483        -0.072        -0.034         0.041              0.284
+DOWN (below SMA150, 90d <= -20%)   683  0.227   -0.137    0.195       0.264         0.047         0.025         0.009              0.075
+
+================ G1a / G1b / G2 (trade-level evidence; net of 10 bp per side)
+
+--- BTC
+G1a dip-buy FLAT     trades/episodes  29 | mean net  -1.98% | positive   45% | t -1.17 | pre-sample at 30bp mean   0.83%
+      pre 2012-17  n=  8 mean   1.23% pos   50%
+      2018-22      n= 12 mean  -5.86% pos   42%
+      2023-26      n=  9 mean   0.35% pos   44%
+G1b dip-buy DOWN     trades/episodes  34 | mean net   1.16% | positive   62% | t  0.64 | pre-sample at 30bp mean   3.20%
+      pre 2012-17  n=  9 mean   3.60% pos   78%
+      2018-22      n= 20 mean   0.36% pos   50%
+      2023-26      n=  5 mean  -0.03% pos   80%
+G2 value MVRV<1      trades/episodes  14 | mean net   3.16% | positive   71% | t  1.71 | pre-sample at 30bp mean   1.97%
+      pre 2012-17  n=  8 mean   2.37% pos   75%
+      2018-22      n=  6 mean   4.22% pos   67%
+      2023-26      n=  0
+
+--- ETH
+G1a dip-buy FLAT     trades/episodes  24 | mean net  -1.31% | positive   42% | t -0.60 | pre-sample at 30bp mean   7.86%
+      pre 2012-17  n=  4 mean   8.26% pos   50%
+      2018-22      n= 11 mean  -3.25% pos   45%
+      2023-26      n=  9 mean  -3.19% pos   33%
+G1b dip-buy DOWN     trades/episodes  29 | mean net  -1.64% | positive   55% | t -0.67 | pre-sample at 30bp mean   4.44%
+      pre 2012-17  n=  2 mean   4.84% pos   50%
+      2018-22      n= 20 mean  -1.30% pos   60%
+      2023-26      n=  7 mean  -4.45% pos   43%
+G2 value MVRV<1      trades/episodes  19 | mean net   0.64% | positive   68% | t  0.24 | pre-sample at 30bp mean   8.18%
+      pre 2012-17  n=  1 mean   8.58% pos  100%
+      2018-22      n= 11 mean  -0.84% pos   64%
+      2023-26      n=  7 mean   1.84% pos   71%
+
+--- G2 episodes (>= 5 days with MVRV < 1), net trade return while held
+BTC
+   2012-02-15     9 days  net    12.2%   (BTC/ETH 365d forward from entry  530.7%)
+   2012-02-26     9 days  net     4.2%   (BTC/ETH 365d forward from entry  516.1%)
+   2012-03-08     6 days  net     6.7%   (BTC/ETH 365d forward from entry  789.6%)
+   2012-03-20    11 days  net     3.7%   (BTC/ETH 365d forward from entry 1218.4%)
+   2014-11-01     5 days  net     0.3%   (BTC/ETH 365d forward from entry    1.7%)
+   2015-01-02   191 days  net    -6.8%   (BTC/ETH 365d forward from entry   37.5%)
+   2015-07-16     9 days  net     1.0%   (BTC/ETH 365d forward from entry  139.4%)
+   2015-08-01    84 days  net    -2.3%   (BTC/ETH 365d forward from entry  121.8%)
+   2018-11-20   134 days  net     2.1%   (BTC/ETH 365d forward from entry   87.1%)
+   2020-03-15     5 days  net    20.4%   (BTC/ETH 365d forward from entry  947.3%)
+   2022-06-14    35 days  net    -0.2%   (BTC/ETH 365d forward from entry   13.7%)
+   2022-08-20    22 days  net     3.7%   (BTC/ETH 365d forward from entry   23.8%)
+   2022-09-14    52 days  net     4.7%   (BTC/ETH 365d forward from entry   31.2%)
+   2022-11-07    68 days  net    -5.3%   (BTC/ETH 365d forward from entry   72.2%)
+ETH
+   2016-11-28    37 days  net     8.6%   (BTC/ETH 365d forward from entry 5289.8%)
+   2018-03-28    16 days  net     9.3%   (BTC/ETH 365d forward from entry  -69.2%)
+   2018-08-07   283 days  net   -35.2%   (BTC/ETH 365d forward from entry  -40.3%)
+   2019-06-04    11 days  net     5.3%   (BTC/ETH 365d forward from entry    1.9%)
+   2019-07-14   211 days  net   -15.2%   (BTC/ETH 365d forward from entry    3.9%)
+   2020-02-27     9 days  net     8.1%   (BTC/ETH 365d forward from entry  537.1%)
+   2020-03-09    83 days  net    19.9%   (BTC/ETH 365d forward from entry  830.3%)
+   2022-06-02     5 days  net     1.4%   (BTC/ETH 365d forward from entry    3.9%)
+   2022-06-08    51 days  net    -5.1%   (BTC/ETH 365d forward from entry    2.9%)
+   2022-07-31     6 days  net     1.7%   (BTC/ETH 365d forward from entry   10.3%)
+   2022-08-20    22 days  net     9.9%   (BTC/ETH 365d forward from entry    6.8%)
+   2022-09-13   124 days  net    -9.5%   (BTC/ETH 365d forward from entry    2.1%)
+   2023-02-10     6 days  net     8.0%   (BTC/ETH 365d forward from entry   65.1%)
+   2023-03-04     9 days  net     0.9%   (BTC/ETH 365d forward from entry  122.4%)
+   2025-03-10    10 days  net     1.8%   (BTC/ETH 365d forward from entry    8.3%)
+   2025-03-27    43 days  net     9.2%   (BTC/ETH 365d forward from entry   -0.7%)
+   2026-02-01    44 days  net    -4.0%
+   2026-03-19    20 days  net     2.0%
+   2026-05-16     8 days  net    -5.0%
+
+================ Combination with the official spot strategy (2018-03..2026-05-23; sleeve weight = min(25%, 1 - start-of-day main exposure))
+main only                          full  31.3% / 1.31 /  -20.2% | era1 1.49 | era2 1.04
+BTC + G1a dip-buy FLAT             full  28.5% / 1.19 /  -28.0% | era1 1.28 | era2 1.04 | days active  3.6% | max combined gross 1.05
+BTC + G1b dip-buy DOWN             full  31.6% / 1.29 /  -26.3% | era1 1.45 | era2 1.03 | days active  6.3% | max combined gross 1.05
+BTC + G2 value MVRV<1              full  33.5% / 1.34 /  -20.0% | era1 1.50 | era2 1.10 | days active 10.6% | max combined gross 1.05
+ETH + G1a dip-buy FLAT             full  28.7% / 1.21 /  -26.8% | era1 1.39 | era2 0.92 | days active  3.4% | max combined gross 1.05
+ETH + G1b dip-buy DOWN             full  28.9% / 1.19 /  -23.2% | era1 1.36 | era2 0.92 | days active  6.6% | max combined gross 1.05
+ETH + G2 value MVRV<1              full  38.8% / 1.29 /  -33.6% | era1 1.34 | era2 1.23 | days active 33.5% | max combined gross 1.05
+
+--- pre-registered acceptance
+btc:G1a dip-buy FLAT             {'mean_pos': False, 'pos_share_ok': False, 'eras_pos': False, 'sharpe_eras': False, 'dd_ok': False, 'ACCEPT': False}
+btc:G1b dip-buy DOWN             {'mean_pos': True, 'pos_share_ok': False, 'eras_pos': False, 'sharpe_eras': False, 'dd_ok': False, 'ACCEPT': False}
+btc:G2 value MVRV<1              {'mean_pos': True, 'pos_share_ok': False, 'eras_pos': True, 'sharpe_eras': True, 'dd_ok': True, 'ACCEPT': False}
+eth:G1a dip-buy FLAT             {'mean_pos': False, 'pos_share_ok': False, 'eras_pos': False, 'sharpe_eras': False, 'dd_ok': False, 'ACCEPT': False}
+eth:G1b dip-buy DOWN             {'mean_pos': False, 'pos_share_ok': False, 'eras_pos': False, 'sharpe_eras': False, 'dd_ok': False, 'ACCEPT': False}
+eth:G2 value MVRV<1              {'mean_pos': True, 'pos_share_ok': False, 'eras_pos': False, 'sharpe_eras': False, 'dd_ok': False, 'ACCEPT': False}
+
+saved results/flat_down.json

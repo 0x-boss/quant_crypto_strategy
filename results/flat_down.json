@@ -1,0 +1,321 @@
+{
+ "D1_BTC": [
+  {
+   "regime": "ON  (close > SMA150)",
+   "days": 3275,
+   "share": 0.623,
+   "btc_cum": 21512.4998,
+   "btc_ann": 1.4339,
+   "btc_sharpe": 1.8021
+  },
+  {
+   "regime": "FLAT (below SMA150, |90d| < 20%)",
+   "days": 1003,
+   "share": 0.1908,
+   "btc_cum": -0.2982,
+   "btc_ann": 0.0566,
+   "btc_sharpe": 0.0953
+  },
+  {
+   "regime": "DOWN (below SMA150, 90d <= -20%)",
+   "days": 959,
+   "share": 0.1824,
+   "btc_cum": -0.0143,
+   "btc_ann": 0.3108,
+   "btc_sharpe": 0.391
+  }
+ ],
+ "D1_201": [
+  {
+   "regime": "ON  (close > SMA150)",
+   "days": 1578,
+   "share": 0.525,
+   "btc_cum": 19.9004,
+   "btc_ann": 0.8765,
+   "btc_sharpe": 1.485,
+   "strategy_cum": 8.5902,
+   "strategy_ann": 0.5704,
+   "avg_exposure": 0.5048,
+   "pct_days_invested": 0.9956
+  },
+  {
+   "regime": "FLAT (below SMA150, |90d| < 20%)",
+   "days": 736,
+   "share": 0.2448,
+   "btc_cum": -0.6122,
+   "btc_ann": -0.2838,
+   "btc_sharpe": -0.4826,
+   "strategy_cum": -0.0718,
+   "strategy_ann": -0.0343,
+   "avg_exposure": 0.041,
+   "pct_days_invested": 0.284
+  },
+  {
+   "regime": "DOWN (below SMA150, 90d <= -20%)",
+   "days": 683,
+   "share": 0.2272,
+   "btc_cum": -0.137,
+   "btc_ann": 0.1954,
+   "btc_sharpe": 0.2636,
+   "strategy_cum": 0.0474,
+   "strategy_ann": 0.0255,
+   "avg_exposure": 0.0094,
+   "pct_days_invested": 0.0747
+  }
+ ],
+ "btc": {
+  "G1a dip-buy FLAT": {
+   "n": 29,
+   "episodes": 29,
+   "mean": -0.019751204513428742,
+   "pos_share": 0.4482758620689655,
+   "t": -1.1719900026588554,
+   "eras": {
+    "pre 2012-17": {
+     "n": 8,
+     "mean": 0.012346705457934634,
+     "pos": 0.5
+    },
+    "2018-22": {
+     "n": 12,
+     "mean": -0.05861200154072452,
+     "pos": 0.4166666666666667
+    },
+    "2023-26": {
+     "n": 9,
+     "mean": 0.003531715992864849,
+     "pos": 0.4444444444444444
+    }
+   },
+   "pre_30bp_mean": 0.008346705457934636
+  },
+  "G1b dip-buy DOWN": {
+   "n": 34,
+   "episodes": 34,
+   "mean": 0.011593607732681158,
+   "pos_share": 0.6176470588235294,
+   "t": 0.6380793346291718,
+   "eras": {
+    "pre 2012-17": {
+     "n": 9,
+     "mean": 0.03601201625916897,
+     "pos": 0.7777777777777778
+    },
+    "2018-22": {
+     "n": 20,
+     "mean": 0.0035864505131675386,
+     "pos": 0.5
+    },
+    "2023-26": {
+     "n": 5,
+     "mean": -0.000330898736942431,
+     "pos": 0.8
+    }
+   },
+   "pre_30bp_mean": 0.03201201625916897
+  },
+  "G2 value MVRV<1": {
+   "n": 25,
+   "episodes": 14,
+   "mean": 0.0315937011534298,
+   "pos_share": 0.7142857142857143,
+   "t": 1.7087917425468153,
+   "eras": {
+    "pre 2012-17": {
+     "n": 8,
+     "mean": 0.023675565309289326,
+     "pos": 0.75
+    },
+    "2018-22": {
+     "n": 6,
+     "mean": 0.042151215612283764,
+     "pos": 0.6666666666666666
+    },
+    "2023-26": {
+     "n": 0,
+     "mean": NaN,
+     "pos": NaN
+    }
+   },
+   "pre_30bp_mean": 0.019675565309289322
+  }
+ },
+ "eth": {
+  "G1a dip-buy FLAT": {
+   "n": 24,
+   "episodes": 24,
+   "mean": -0.013116744685039058,
+   "pos_share": 0.4166666666666667,
+   "t": -0.5982639559933669,
+   "eras": {
+    "pre 2012-17": {
+     "n": 4,
+     "mean": 0.08256081134264898,
+     "pos": 0.5
+    },
+    "2018-22": {
+     "n": 11,
+     "mean": -0.0325030184960886,
+     "pos": 0.45454545454545453
+    },
+    "2023-26": {
+     "n": 9,
+     "mean": -0.03194576826161763,
+     "pos": 0.3333333333333333
+    }
+   },
+   "pre_30bp_mean": 0.07856081134264897
+  },
+  "G1b dip-buy DOWN": {
+   "n": 29,
+   "episodes": 29,
+   "mean": -0.016383398670986225,
+   "pos_share": 0.5517241379310345,
+   "t": -0.6686480586325592,
+   "eras": {
+    "pre 2012-17": {
+     "n": 2,
+     "mean": 0.04843316014900112,
+     "pos": 0.5
+    },
+    "2018-22": {
+     "n": 20,
+     "mean": -0.013028262714831313,
+     "pos": 0.6
+    },
+    "2023-26": {
+     "n": 7,
+     "mean": -0.04448851820856808,
+     "pos": 0.42857142857142855
+    }
+   },
+   "pre_30bp_mean": 0.044433160149001116
+  },
+  "G2 value MVRV<1": {
+   "n": 44,
+   "episodes": 19,
+   "mean": 0.00641170840846446,
+   "pos_share": 0.6842105263157895,
+   "t": 0.23568697361061777,
+   "eras": {
+    "pre 2012-17": {
+     "n": 1,
+     "mean": 0.08581435806694171,
+     "pos": 1.0
+    },
+    "2018-22": {
+     "n": 11,
+     "mean": -0.008441669072736883,
+     "pos": 0.6363636363636364
+    },
+    "2023-26": {
+     "n": 7,
+     "mean": 0.018409494499141248,
+     "pos": 0.7142857142857143
+    }
+   },
+   "pre_30bp_mean": 0.0818143580669417
+  }
+ },
+ "combo": {
+  "btc:G1a dip-buy FLAT": {
+   "cagr": 0.2847314600455362,
+   "sharpe": 1.1850073158311738,
+   "maxdd": -0.279798955096645,
+   "sharpe_e1": 1.2783614629055184,
+   "sharpe_e2": 1.0408911942432508
+  },
+  "btc:G1b dip-buy DOWN": {
+   "cagr": 0.3164548987131859,
+   "sharpe": 1.2879858324471292,
+   "maxdd": -0.2632212058304467,
+   "sharpe_e1": 1.4507007205021136,
+   "sharpe_e2": 1.0328562818426006
+  },
+  "btc:G2 value MVRV<1": {
+   "cagr": 0.33492120063442643,
+   "sharpe": 1.3412434755636078,
+   "maxdd": -0.19995823906406196,
+   "sharpe_e1": 1.4956590166156085,
+   "sharpe_e2": 1.0974652541296503
+  },
+  "eth:G1a dip-buy FLAT": {
+   "cagr": 0.2871645208342033,
+   "sharpe": 1.2065317734307799,
+   "maxdd": -0.26776755833156285,
+   "sharpe_e1": 1.3949424327461606,
+   "sharpe_e2": 0.919287177297776
+  },
+  "eth:G1b dip-buy DOWN": {
+   "cagr": 0.28945261870621297,
+   "sharpe": 1.1854618707673024,
+   "maxdd": -0.23151314625541053,
+   "sharpe_e1": 1.3595555074726655,
+   "sharpe_e2": 0.9151304221890646
+  },
+  "eth:G2 value MVRV<1": {
+   "cagr": 0.38800853036479377,
+   "sharpe": 1.2916841273651316,
+   "maxdd": -0.33612337899791067,
+   "sharpe_e1": 1.340349628518198,
+   "sharpe_e2": 1.2338843570557427
+  }
+ },
+ "acceptance": {
+  "btc:G1a dip-buy FLAT": {
+   "mean_pos": false,
+   "pos_share_ok": false,
+   "eras_pos": false,
+   "sharpe_eras": false,
+   "dd_ok": false,
+   "ACCEPT": false
+  },
+  "btc:G1b dip-buy DOWN": {
+   "mean_pos": true,
+   "pos_share_ok": false,
+   "eras_pos": false,
+   "sharpe_eras": false,
+   "dd_ok": false,
+   "ACCEPT": false
+  },
+  "btc:G2 value MVRV<1": {
+   "mean_pos": true,
+   "pos_share_ok": false,
+   "eras_pos": true,
+   "sharpe_eras": true,
+   "dd_ok": true,
+   "ACCEPT": false
+  },
+  "eth:G1a dip-buy FLAT": {
+   "mean_pos": false,
+   "pos_share_ok": false,
+   "eras_pos": false,
+   "sharpe_eras": false,
+   "dd_ok": false,
+   "ACCEPT": false
+  },
+  "eth:G1b dip-buy DOWN": {
+   "mean_pos": false,
+   "pos_share_ok": false,
+   "eras_pos": false,
+   "sharpe_eras": false,
+   "dd_ok": false,
+   "ACCEPT": false
+  },
+  "eth:G2 value MVRV<1": {
+   "mean_pos": true,
+   "pos_share_ok": false,
+   "eras_pos": false,
+   "sharpe_eras": false,
+   "dd_ok": false,
+   "ACCEPT": false
+  }
+ },
+ "main": {
+  "cagr": 0.31279366030915123,
+  "sharpe": 1.311491216299274,
+  "maxdd": -0.20204325545715485,
+  "sharpe_e1": 1.4904427963525508,
+  "sharpe_e2": 1.038581104199835
+ }
+}
